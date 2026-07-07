@@ -1,0 +1,34 @@
+{
+  "type": "extradelight:oven",
+  "consumeContainer": false,
+  "container": {
+    "count": 1,
+    "id": "extradelight:muffin_tin"
+  },
+  "cookingtime": 800,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "tag": "c:butter"
+    },
+    {
+      "tag": "extradelight:sweetener"
+    },
+    {
+      "tag": "extradelight:processed/ginger"
+    },
+    {
+      "tag": "c:eggs"
+    },
+    {
+      "tag": "c:flour"
+    },
+    {
+      "tag": "c:foods/milk"
+    }
+  ],
+  "result": {
+    "count": 6,
+    "id": "extradelight:muffin_ginger"
+  }
+}

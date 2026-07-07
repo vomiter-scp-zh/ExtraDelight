@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "c:fruit_logs"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "extradelight:fruit_planks"
+  }
+}

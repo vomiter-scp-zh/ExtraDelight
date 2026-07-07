@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "extradelight:item/cooked_wheat_seeds"
+  }
+}

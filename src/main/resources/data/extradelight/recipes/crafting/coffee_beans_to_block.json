@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "c:crops/coffee/cooked"
+    },
+    {
+      "tag": "c:crops/coffee/cooked"
+    },
+    {
+      "tag": "c:crops/coffee/cooked"
+    },
+    {
+      "tag": "c:crops/coffee/cooked"
+    },
+    {
+      "tag": "c:crops/coffee/cooked"
+    },
+    {
+      "tag": "c:crops/coffee/cooked"
+    },
+    {
+      "tag": "c:crops/coffee/cooked"
+    },
+    {
+      "tag": "c:crops/coffee/cooked"
+    },
+    {
+      "tag": "c:crops/coffee/cooked"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "extradelight:coffee_bean_sack"
+  }
+}

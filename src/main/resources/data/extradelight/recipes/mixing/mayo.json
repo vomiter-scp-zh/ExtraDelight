@@ -1,0 +1,33 @@
+{
+  "type": "extradelight:mixing_bowl",
+  "container": {
+    "count": 1,
+    "id": "minecraft:glass_bottle"
+  },
+  "fluids": [
+    {
+      "amount": 250,
+      "fluid": "extradelight:oil_fluid"
+    },
+    {
+      "amount": 250,
+      "fluid": "extradelight:vinegar_fluid"
+    }
+  ],
+  "ingredients": [
+    {
+      "tag": "extradelight:egg_or_yolk"
+    },
+    {
+      "tag": "extradelight:egg_or_yolk"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "extradelight:mayo_jar_item"
+  },
+  "stirs": 8,
+  "utensil": {
+    "item": "extradelight:whisk"
+  }
+}

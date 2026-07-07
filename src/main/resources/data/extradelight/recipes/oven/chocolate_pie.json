@@ -1,0 +1,40 @@
+{
+  "type": "extradelight:oven",
+  "consumeContainer": false,
+  "container": {
+    "count": 1,
+    "id": "extradelight:pie_dish"
+  },
+  "cookingtime": 800,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "tag": "c:cocoa/powder"
+    },
+    {
+      "tag": "c:whipped_cream"
+    },
+    {
+      "tag": "c:cocoa/powder"
+    },
+    {
+      "item": "extradelight:egg_mix"
+    },
+    {
+      "tag": "c:flour"
+    },
+    {
+      "tag": "extradelight:sweetener"
+    },
+    {
+      "item": "farmersdelight:pie_crust"
+    },
+    {
+      "tag": "extradelight:sweetener"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "farmersdelight:chocolate_pie"
+  }
+}

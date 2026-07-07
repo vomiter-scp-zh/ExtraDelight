@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "c:crops/hazelnut"
+    },
+    {
+      "tag": "c:crops/hazelnut"
+    },
+    {
+      "tag": "c:crops/hazelnut"
+    },
+    {
+      "tag": "c:crops/hazelnut"
+    },
+    {
+      "tag": "c:crops/hazelnut"
+    },
+    {
+      "tag": "c:crops/hazelnut"
+    },
+    {
+      "tag": "c:crops/hazelnut"
+    },
+    {
+      "tag": "c:crops/hazelnut"
+    },
+    {
+      "tag": "c:crops/hazelnut"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "extradelight:hazelnut_in_shell_sack"
+  }
+}

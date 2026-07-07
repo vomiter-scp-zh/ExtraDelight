@@ -1,0 +1,37 @@
+{
+  "type": "extradelight:oven",
+  "consumeContainer": false,
+  "container": {
+    "count": 1,
+    "id": "extradelight:pie_dish"
+  },
+  "cookingtime": 800,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "tag": "c:fruit/sweet_berry"
+    },
+    {
+      "tag": "c:fruit/sweet_berry"
+    },
+    {
+      "tag": "c:fruit/sweet_berry"
+    },
+    {
+      "tag": "extradelight:sweetener"
+    },
+    {
+      "tag": "c:foods/milk"
+    },
+    {
+      "item": "farmersdelight:pie_crust"
+    },
+    {
+      "tag": "c:foods/milk"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "farmersdelight:sweet_berry_cheesecake"
+  }
+}

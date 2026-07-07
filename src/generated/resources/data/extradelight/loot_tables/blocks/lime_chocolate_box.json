@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "type": "extradelight:chocolate_box",
+              "entries": [],
+              "function": "minecraft:set_contents"
+            }
+          ],
+          "name": "extradelight:lime_chocolate_box"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "extradelight:blocks/lime_chocolate_box"
+}

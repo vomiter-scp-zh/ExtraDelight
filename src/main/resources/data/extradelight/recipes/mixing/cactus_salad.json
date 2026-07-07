@@ -1,0 +1,30 @@
+{
+  "type": "extradelight:mixing_bowl",
+  "container": {
+    "count": 1,
+    "id": "minecraft:bowl"
+  },
+  "fluids": [],
+  "ingredients": [
+    {
+      "tag": "c:cactus/cooked"
+    },
+    {
+      "tag": "extradelight:processed/tomato"
+    },
+    {
+      "tag": "extradelight:processed/onion"
+    },
+    {
+      "tag": "c:cheese"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "extradelight:cactus_salad"
+  },
+  "stirs": 2,
+  "utensil": {
+    "tag": "c:spoons"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "c:cocoa_beans/roasted"
+    },
+    {
+      "tag": "c:cocoa_beans/roasted"
+    },
+    {
+      "tag": "c:cocoa_beans/roasted"
+    },
+    {
+      "tag": "c:cocoa_beans/roasted"
+    },
+    {
+      "tag": "c:cocoa_beans/roasted"
+    },
+    {
+      "tag": "c:cocoa_beans/roasted"
+    },
+    {
+      "tag": "c:cocoa_beans/roasted"
+    },
+    {
+      "tag": "c:cocoa_beans/roasted"
+    },
+    {
+      "tag": "c:cocoa_beans/roasted"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "extradelight:roasted_cocoa_bean_sack"
+  }
+}

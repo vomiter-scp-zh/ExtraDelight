@@ -1,0 +1,43 @@
+{
+  "type": "extradelight:oven",
+  "consumeContainer": false,
+  "container": {
+    "count": 1,
+    "id": "extradelight:square_pan"
+  },
+  "cookingtime": 800,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "tag": "c:flour"
+    },
+    {
+      "tag": "c:flour"
+    },
+    {
+      "tag": "c:flour"
+    },
+    {
+      "tag": "c:liquid_chocolate"
+    },
+    {
+      "tag": "c:foods/milk"
+    },
+    {
+      "tag": "c:liquid_chocolate"
+    },
+    {
+      "tag": "extradelight:sweetener"
+    },
+    {
+      "tag": "c:eggs"
+    },
+    {
+      "tag": "extradelight:sweetener"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "extradelight:chocolate_cake_block"
+  }
+}

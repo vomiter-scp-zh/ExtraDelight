@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "b": {
+      "tag": "c:bread/sliced"
+    },
+    "c": {
+      "tag": "c:cheese"
+    },
+    "m": [
+      {
+        "tag": "c:condiments/mayonnaise"
+      },
+      {
+        "tag": "c:butter"
+      },
+      {
+        "tag": "c:condiments/aioli"
+      }
+    ]
+  },
+  "pattern": [
+    " b ",
+    "mc ",
+    " b "
+  ],
+  "result": {
+    "count": 1,
+    "id": "extradelight:cheese_sandwich"
+  }
+}

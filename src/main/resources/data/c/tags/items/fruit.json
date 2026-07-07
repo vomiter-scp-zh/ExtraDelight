@@ -1,0 +1,15 @@
+{
+  "values": [
+    "#c:fruit/apple",
+    "#c:fruit/glow_berry",
+    "#c:fruit/sweet_berry",
+    "#c:fruit/melon",
+    "minecraft:chorus_fruit"
+  ],
+  "original": [
+    "extradelight:lemon",
+    "extradelight:lime",
+    "extradelight:orange",
+    "extradelight:grapefruit"
+  ]
+}

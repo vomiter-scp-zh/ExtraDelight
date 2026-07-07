@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "extradelight:egg_mix"
+    },
+    [
+      {
+        "tag": "c:foods/vegetable"
+      },
+      {
+        "tag": "extradelight:processed/vegetable"
+      }
+    ],
+    [
+      {
+        "tag": "c:foods/vegetable"
+      },
+      {
+        "tag": "extradelight:processed/vegetable"
+      }
+    ],
+    {
+      "tag": "c:cheese"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "extradelight:omelette_mix"
+  }
+}

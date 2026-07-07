@@ -1,0 +1,353 @@
+{
+  "parent": "extradelight:food",
+  "criteria": {
+    "apple_cookie": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:apple_cookie"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "gingerbread_alex": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:gingerbread_alex"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "gingerbread_cookie": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:gingerbread_cookie"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "gingerbread_creeper": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:gingerbread_creeper"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "gingerbread_diamond": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:gingerbread_diamond"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "gingerbread_emerald": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:gingerbread_emerald"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "gingerbread_pickaxe": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:gingerbread_pickaxe"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "gingerbread_steve": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:gingerbread_steve"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "gingerbread_sword": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:gingerbread_sword"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "gingerbread_villager": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:gingerbread_villager"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "glow_berry_cookie": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:glow_berry_cookie"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "nut_butter_cookie": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:nut_butter_cookie"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "pumpkin_cookie": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:pumpkin_cookie"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "sugar_cookie": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:sugar_cookie"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "sugar_cookie_alex": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:sugar_cookie_alex"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "sugar_cookie_creeper": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:sugar_cookie_creeper"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "sugar_cookie_diamond": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:sugar_cookie_diamond"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "sugar_cookie_emerald": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:sugar_cookie_emerald"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "sugar_cookie_pickaxe": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:sugar_cookie_pickaxe"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "sugar_cookie_steve": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:sugar_cookie_steve"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "sugar_cookie_sword": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:sugar_cookie_sword"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "sugar_cookie_villager": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:sugar_cookie_villager"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "extradelight.advancement.cookies.desc"
+    },
+    "frame": "challenge",
+    "hidden": false,
+    "icon": {
+      "item": "extradelight:gingerbread_cookie"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "extradelight.advancement.cookies.name"
+    }
+  },
+  "requirements": [
+    [
+      "gingerbread_cookie"
+    ],
+    [
+      "sugar_cookie_sword"
+    ],
+    [
+      "gingerbread_steve"
+    ],
+    [
+      "sugar_cookie_alex"
+    ],
+    [
+      "gingerbread_emerald"
+    ],
+    [
+      "gingerbread_sword"
+    ],
+    [
+      "sugar_cookie_steve"
+    ],
+    [
+      "nut_butter_cookie"
+    ],
+    [
+      "pumpkin_cookie"
+    ],
+    [
+      "sugar_cookie_diamond"
+    ],
+    [
+      "gingerbread_creeper"
+    ],
+    [
+      "gingerbread_diamond"
+    ],
+    [
+      "apple_cookie"
+    ],
+    [
+      "sugar_cookie"
+    ],
+    [
+      "sugar_cookie_creeper"
+    ],
+    [
+      "sugar_cookie_emerald"
+    ],
+    [
+      "gingerbread_pickaxe"
+    ],
+    [
+      "sugar_cookie_villager"
+    ],
+    [
+      "sugar_cookie_pickaxe"
+    ],
+    [
+      "gingerbread_villager"
+    ],
+    [
+      "glow_berry_cookie"
+    ],
+    [
+      "gingerbread_alex"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

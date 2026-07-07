@@ -1,0 +1,76 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "extradelight:jam_fluid_bucket"
+    },
+    {
+      "item": "minecraft:glass_bottle"
+    },
+    {
+      "item": "minecraft:glass_bottle"
+    },
+    {
+      "item": "minecraft:glass_bottle"
+    },
+    {
+      "item": "minecraft:glass_bottle"
+    }
+  ],
+  "result": {
+    "components": {
+      "extradelight:dynamic_food": {
+        "graphics": [
+          "sweet_berries"
+        ]
+      },
+      "extradelight:itemstack_handler": [
+        {
+          "item": {
+            "count": 1,
+            "id": "minecraft:sweet_berries"
+          },
+          "slot": 0
+        },
+        {
+          "item": {
+            "count": 1,
+            "id": "minecraft:sweet_berries"
+          },
+          "slot": 1
+        },
+        {
+          "item": {
+            "count": 1,
+            "id": "minecraft:sweet_berries"
+          },
+          "slot": 2
+        },
+        {
+          "item": {
+            "count": 1,
+            "id": "minecraft:sugar"
+          },
+          "slot": 3
+        },
+        {
+          "item": {
+            "count": 1,
+            "id": "minecraft:sugar"
+          },
+          "slot": 4
+        },
+        {
+          "item": {
+            "count": 1,
+            "id": "minecraft:sugar"
+          },
+          "slot": 5
+        }
+      ]
+    },
+    "count": 4,
+    "id": "extradelight:dynamic_jam"
+  }
+}

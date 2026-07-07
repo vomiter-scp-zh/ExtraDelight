@@ -1,0 +1,19 @@
+{
+  "type": "extradelight:oven",
+  "consumeContainer": false,
+  "container": {
+    "count": 1,
+    "id": "extradelight:sheet"
+  },
+  "cookingtime": 400,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "tag": "c:cookie_dough/pumpkin"
+    }
+  ],
+  "result": {
+    "count": 8,
+    "id": "extradelight:pumpkin_cookie"
+  }
+}

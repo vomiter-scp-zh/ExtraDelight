@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "c:crops/chili"
+    },
+    {
+      "tag": "c:crops/chili"
+    },
+    {
+      "tag": "c:crops/chili"
+    },
+    {
+      "tag": "c:crops/chili"
+    },
+    {
+      "tag": "c:crops/chili"
+    },
+    {
+      "tag": "c:crops/chili"
+    },
+    {
+      "tag": "c:crops/chili"
+    },
+    {
+      "tag": "c:crops/chili"
+    },
+    {
+      "tag": "c:crops/chili"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "extradelight:chili_crate"
+  }
+}

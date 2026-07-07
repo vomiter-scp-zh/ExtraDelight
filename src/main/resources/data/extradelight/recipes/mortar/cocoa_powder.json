@@ -1,0 +1,12 @@
+{
+  "type": "extradelight:mortar",
+  "fluidOut": {},
+  "grinds": 4,
+  "ingredient": {
+    "tag": "c:cocoa/solids"
+  },
+  "result": {
+    "count": 2,
+    "id": "extradelight:cocoa_powder"
+  }
+}

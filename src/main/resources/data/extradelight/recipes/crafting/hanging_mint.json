@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "c": {
+      "item": "extradelight:mint"
+    },
+    "r": {
+      "item": "farmersdelight:rope"
+    }
+  },
+  "pattern": [
+    "c c",
+    " r ",
+    "c c"
+  ],
+  "result": {
+    "count": 1,
+    "item": "extradelight:hanging_mint"
+  }
+}

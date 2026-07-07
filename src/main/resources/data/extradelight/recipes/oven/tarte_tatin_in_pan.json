@@ -1,0 +1,34 @@
+{
+  "type": "extradelight:oven",
+  "consumeContainer": true,
+  "container": {
+    "count": 1,
+    "id": "farmersdelight:skillet"
+  },
+  "cookingtime": 800,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "item": "extradelight:caramel_sauce"
+    },
+    {
+      "item": "farmersdelight:pie_crust"
+    },
+    {
+      "tag": "c:butter"
+    },
+    {
+      "tag": "c:fruit/apple"
+    },
+    {
+      "tag": "c:fruit/apple"
+    },
+    {
+      "tag": "c:fruit/apple"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "extradelight:tarte_tatin_in_pan"
+  }
+}

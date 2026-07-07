@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "b": {
+      "tag": "c:buckets/water"
+    },
+    "c": {
+      "item": "minecraft:copper_ingot"
+    },
+    "l": {
+      "item": "minecraft:lever"
+    }
+  },
+  "pattern": [
+    " l ",
+    "bcb"
+  ],
+  "result": {
+    "count": 1,
+    "id": "extradelight:tap"
+  }
+}

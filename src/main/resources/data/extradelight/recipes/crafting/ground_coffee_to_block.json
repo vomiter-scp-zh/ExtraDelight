@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "c:crops/coffee/ground"
+    },
+    {
+      "tag": "c:crops/coffee/ground"
+    },
+    {
+      "tag": "c:crops/coffee/ground"
+    },
+    {
+      "tag": "c:crops/coffee/ground"
+    },
+    {
+      "tag": "c:crops/coffee/ground"
+    },
+    {
+      "tag": "c:crops/coffee/ground"
+    },
+    {
+      "tag": "c:crops/coffee/ground"
+    },
+    {
+      "tag": "c:crops/coffee/ground"
+    },
+    {
+      "tag": "c:crops/coffee/ground"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "extradelight:ground_coffee_sack"
+  }
+}

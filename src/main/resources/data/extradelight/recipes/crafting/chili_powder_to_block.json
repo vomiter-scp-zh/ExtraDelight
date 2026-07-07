@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "c:chili/powder"
+    },
+    {
+      "tag": "c:chili/powder"
+    },
+    {
+      "tag": "c:chili/powder"
+    },
+    {
+      "tag": "c:chili/powder"
+    },
+    {
+      "tag": "c:chili/powder"
+    },
+    {
+      "tag": "c:chili/powder"
+    },
+    {
+      "tag": "c:chili/powder"
+    },
+    {
+      "tag": "c:chili/powder"
+    },
+    {
+      "tag": "c:chili/powder"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "extradelight:chili_powder_sack"
+  }
+}

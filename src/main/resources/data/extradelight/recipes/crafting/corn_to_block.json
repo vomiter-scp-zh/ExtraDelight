@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "c:crops/corn"
+    },
+    {
+      "tag": "c:crops/corn"
+    },
+    {
+      "tag": "c:crops/corn"
+    },
+    {
+      "tag": "c:crops/corn"
+    },
+    {
+      "tag": "c:crops/corn"
+    },
+    {
+      "tag": "c:crops/corn"
+    },
+    {
+      "tag": "c:crops/corn"
+    },
+    {
+      "tag": "c:crops/corn"
+    },
+    {
+      "tag": "c:crops/corn"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "extradelight:corn_crate"
+  }
+}

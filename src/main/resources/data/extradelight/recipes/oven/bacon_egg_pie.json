@@ -1,0 +1,34 @@
+{
+  "type": "extradelight:oven",
+  "consumeContainer": false,
+  "container": {
+    "count": 1,
+    "id": "extradelight:pie_dish"
+  },
+  "cookingtime": 400,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "tag": "c:eggs"
+    },
+    {
+      "tag": "c:eggs"
+    },
+    {
+      "tag": "c:eggs"
+    },
+    {
+      "item": "farmersdelight:bacon"
+    },
+    {
+      "item": "farmersdelight:pie_crust"
+    },
+    {
+      "item": "farmersdelight:bacon"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "extradelight:bacon_egg_pie"
+  }
+}

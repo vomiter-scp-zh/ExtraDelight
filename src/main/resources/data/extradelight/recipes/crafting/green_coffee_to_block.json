@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "c:crops/coffee/green"
+    },
+    {
+      "tag": "c:crops/coffee/green"
+    },
+    {
+      "tag": "c:crops/coffee/green"
+    },
+    {
+      "tag": "c:crops/coffee/green"
+    },
+    {
+      "tag": "c:crops/coffee/green"
+    },
+    {
+      "tag": "c:crops/coffee/green"
+    },
+    {
+      "tag": "c:crops/coffee/green"
+    },
+    {
+      "tag": "c:crops/coffee/green"
+    },
+    {
+      "tag": "c:crops/coffee/green"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "extradelight:green_coffee_bean_sack"
+  }
+}

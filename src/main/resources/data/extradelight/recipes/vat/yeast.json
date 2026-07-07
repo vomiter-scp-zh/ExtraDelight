@@ -1,0 +1,30 @@
+{
+  "type": "extradelight:vat",
+  "fluids": {
+    "amount": 1000,
+    "fluid": "minecraft:water"
+  },
+  "ingredients": [
+    {
+      "tag": "c:fruit"
+    }
+  ],
+  "result": {
+    "count": 16,
+    "id": "extradelight:yeast"
+  },
+  "stage_ingredients": [
+    {
+      "ingredient": {
+        "item": "extradelight:yeast"
+      },
+      "lid": false,
+      "time": 168000
+    }
+  ],
+  "stages": 1,
+  "usedItem": {
+    "count": 16,
+    "id": "minecraft:glass_bottle"
+  }
+}

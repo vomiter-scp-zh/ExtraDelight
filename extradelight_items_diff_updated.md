@@ -1,0 +1,255 @@
+# Extra Delight Items Diff - updated vomiter vs lance 2.1.1
+
+Comparison key: registry id string passed to `register("...")`.
+
+## Counts
+
+- Vomiter active: 745
+- Vomiter commented-only: 114
+- Lance active: 746
+- Lance commented-only: 0
+- Active in both: 639
+- Lance active but vomiter not active: 107
+-   of which present in vomiter comments: 106
+-   absent from vomiter entirely: 1
+- Vomiter active but lance not active: 106
+-   of which present in lance comments: 0
+-   absent from lance entirely: 106
+
+## Lance active, vomiter commented (106)
+
+- `baking_stone`
+- `black_chocolate_box`
+- `blood_chocolate_block`
+- `blood_chocolate_door`
+- `blood_chocolate_fence`
+- `blood_chocolate_fence_gate`
+- `blood_chocolate_pillar`
+- `blood_chocolate_slab`
+- `blood_chocolate_stairs`
+- `blood_chocolate_syrup_bottle`
+- `blood_chocolate_syrup_fluid_bucket`
+- `blood_chocolate_trapdoor`
+- `blue_chocolate_box`
+- `brown_chocolate_box`
+- `buttered_toast`
+- `candy_bowl_item`
+- `cinnamon_button`
+- `cinnamon_cabinet`
+- `cinnamon_door`
+- `cinnamon_fence`
+- `cinnamon_fence_gate`
+- `cinnamon_leaves`
+- `cinnamon_log`
+- `cinnamon_planks`
+- `cinnamon_pressure_plate`
+- `cinnamon_sapling`
+- `cinnamon_slab`
+- `cinnamon_stairs`
+- `cinnamon_trapdoor`
+- `cinnamon_wood`
+- `cocoa_solids`
+- `corn_cob_pipe`
+- `corn_husk_bundle`
+- `corn_seeds`
+- `cyan_chocolate_box`
+- `dark_chocolate_block`
+- `dark_chocolate_door`
+- `dark_chocolate_fence`
+- `dark_chocolate_fence_gate`
+- `dark_chocolate_pillar`
+- `dark_chocolate_slab`
+- `dark_chocolate_stairs`
+- `dark_chocolate_trapdoor`
+- `food_display`
+- `fruit_button`
+- `fruit_cabinet`
+- `fruit_door`
+- `fruit_fence`
+- `fruit_fence_gate`
+- `fruit_log`
+- `fruit_planks`
+- `fruit_pressure_plate`
+- `fruit_slab`
+- `fruit_stairs`
+- `fruit_trapdoor`
+- `fruit_wood`
+- `glow_berry_jam`
+- `glow_jam_toast`
+- `golden_apple_jam`
+- `golden_carrot_crate_block`
+- `golden_jam_toast`
+- `gourmet_hot_chocolate`
+- `gray_chocolate_box`
+- `green_chocolate_box`
+- `hazelnut_leaves`
+- `hazelnut_sapling`
+- `jam`
+- `jam_toast`
+- `jar`
+- `keg_item`
+- `light_blue_chocolate_box`
+- `light_gray_chocolate_box`
+- `lime_chocolate_box`
+- `magenta_chocolate_box`
+- `marshmallow_block`
+- `milk_chocolate_block`
+- `milk_chocolate_door`
+- `milk_chocolate_fence`
+- `milk_chocolate_fence_gate`
+- `milk_chocolate_pillar`
+- `milk_chocolate_slab`
+- `milk_chocolate_stairs`
+- `milk_chocolate_trapdoor`
+- `orange_chocolate_box`
+- `pink_chocolate_box`
+- `purple_chocolate_box`
+- `red_chocolate_box`
+- `roasted_cocoa_beans`
+- `stripped_cinnamon_log`
+- `stripped_fruit_log`
+- `stripped_fruit_wood`
+- `strippedcinnamon_wood`
+- `tap`
+- `tea`
+- `unshucked_corn`
+- `white_chocolate_block`
+- `white_chocolate_box`
+- `white_chocolate_door`
+- `white_chocolate_fence`
+- `white_chocolate_fence_gate`
+- `white_chocolate_pillar`
+- `white_chocolate_slab`
+- `white_chocolate_stairs`
+- `white_chocolate_trapdoor`
+- `xocolati`
+- `yellow_chocolate_box`
+
+## Lance active, vomiter absent (1)
+
+- `ground_cinnamon_block`
+
+## Vomiter active, lance absent (106)
+
+- `aebleflaesk`
+- `affogato`
+- `aglio_e_olio`
+- `aioli_jar_item`
+- `apple_chips`
+- `apple_slaw`
+- `bacon_egg_pie`
+- `bacon_egg_pie_slice`
+- `borscht`
+- `bruschetta`
+- `bruschetta_feast`
+- `candy_bar_salad`
+- `cheesy_garlic_bread`
+- `chicken_kiev`
+- `chili_cheese_cornbread_muffin`
+- `chili_con_carne`
+- `chili_con_carne_feast`
+- `chili_crate`
+- `chili_powder_sack`
+- `chocolate_cookie`
+- `chocolate_cookie_block`
+- `chocolate_cookie_dough`
+- `cinnamon_toast`
+- `cocoa_bean_sack`
+- `cocoa_powder`
+- `cocoa_powder_sack`
+- `cocoa_solids_sack`
+- `coffee_bean_sack`
+- `coffee_cherry_crate`
+- `corn_sack`
+- `currywurst`
+- `devilled_sausages`
+- `egg_white`
+- `egg_white_fluid_bucket`
+- `egg_yolk`
+- `evaporator`
+- `fat_potatoes`
+- `garlic`
+- `garlic_bread`
+- `garlic_clove`
+- `garlic_crate`
+- `grasshopper_pie`
+- `grasshopper_pie_slice`
+- `grated_garlic`
+- `green_coffee_bean_sack`
+- `ground_cinnamon_sack`
+- `ground_coffee_sack`
+- `hanging_chili`
+- `hanging_corn`
+- `hanging_dried_chili`
+- `hanging_garlic`
+- `hanging_ham`
+- `hanging_mint`
+- `hanging_onion`
+- `hazelnut_in_shell_sack`
+- `hazelnut_sack`
+- `hazelnut_soup`
+- `jalapeno_popper`
+- `jalapeno_stuffed_potato`
+- `juicer`
+- `lid`
+- `mallow_powder_sack`
+- `mallow_root_crate`
+- `marshmallow_slice`
+- `marshmallow_slice_feast`
+- `mississippi_mud_pie`
+- `mississippi_mud_pie_slice`
+- `mulligatawny_soup`
+- `nut_butter_cookie`
+- `nut_butter_cookie_block`
+- `nut_butter_cookie_dough`
+- `nut_butter_custard`
+- `nut_butter_ice_cream`
+- `nut_butter_milkshake`
+- `onion_bhaji`
+- `onion_soup`
+- `pamonha`
+- `panforte`
+- `panforte_slice`
+- `peanut_in_shell_sack`
+- `peanut_sack`
+- `penne`
+- `penne_all_arrabbiata`
+- `pork_and_apples`
+- `pork_and_apples_feast`
+- `potato_salad`
+- `roasted_cocoa_bean_sack`
+- `roasted_garlic`
+- `roasted_hazelnut_sack`
+- `roasted_peanut_sack`
+- `rocky_road`
+- `rombosse`
+- `salt`
+- `salt_block_item`
+- `sliced_chili`
+- `stiff_peaks`
+- `stuffed_apple`
+- `stuffed_apple_ice_cream`
+- `stuffed_apples_feast`
+- `tarte_tatin`
+- `tarte_tatin_in_pan`
+- `tarte_tatin_slice`
+- `vat`
+- `white_chili`
+- `white_chili_feast`
+- `wild_garlic_block`
+
+## Vomiter active, lance commented (0)
+
+(none)
+
+## Other status differences (9)
+
+- `apple_leaves`
+- `apple_petal_litter_item`
+- `apple_sapling`
+- `dynamic_jam`
+- `dynamic_toast`
+- `fruit_bowl`
+- `hazelnut_petal_litter_item`
+- `mint_jelly`
+- `whisk`

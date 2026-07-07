@@ -1,0 +1,32 @@
+{
+  "type": "extradelight:mortar",
+  "fluidOut": {
+    "amount": 100,
+    "id": "extradelight:oil_fluid"
+  },
+  "grinds": 4,
+  "ingredient": {
+    "type": "neoforge:difference",
+    "base": {
+      "tag": "c:seeds"
+    },
+    "subtracted": [
+      {
+        "item": "minecraft:wheat_seeds"
+      },
+      {
+        "item": "extradelight:corn_seeds"
+      },
+      {
+        "item": "extradelight:soybeans"
+      },
+      {
+        "item": "extradelight:sunflower_seeds"
+      }
+    ]
+  },
+  "result": {
+    "count": 1,
+    "id": "minecraft:bone_meal"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "type": "extradelight:oven",
+  "consumeContainer": false,
+  "container": {
+    "count": 1,
+    "id": "extradelight:sheet"
+  },
+  "cookingtime": 800,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "tag": "c:mushrooms"
+    },
+    {
+      "tag": "c:mushrooms"
+    },
+    {
+      "tag": "c:mushrooms"
+    },
+    {
+      "tag": "c:cheese"
+    },
+    {
+      "tag": "c:bread/crumbs"
+    },
+    {
+      "tag": "c:butter"
+    }
+  ],
+  "result": {
+    "count": 3,
+    "id": "extradelight:stuffed_mushrooms"
+  }
+}

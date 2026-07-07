@@ -1,0 +1,32 @@
+{
+  "type": "extradelight:mixing_bowl",
+  "container": {
+    "count": 1,
+    "id": "minecraft:bowl"
+  },
+  "fluids": [
+    {
+      "amount": 250,
+      "fluid": "extradelight:vinegar_fluid"
+    }
+  ],
+  "ingredients": [
+    {
+      "item": "minecraft:kelp"
+    },
+    {
+      "item": "minecraft:kelp"
+    },
+    {
+      "tag": "c:carrot/grated"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "id": "extradelight:seaweed_salad"
+  },
+  "stirs": 4,
+  "utensil": {
+    "tag": "c:spoons"
+  }
+}

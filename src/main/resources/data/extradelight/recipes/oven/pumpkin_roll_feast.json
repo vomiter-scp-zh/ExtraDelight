@@ -1,0 +1,43 @@
+{
+  "type": "extradelight:oven",
+  "consumeContainer": false,
+  "container": {
+    "count": 1,
+    "id": "extradelight:tray"
+  },
+  "cookingtime": 800,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "tag": "extradelight:sweetener"
+    },
+    {
+      "tag": "c:foods/milk"
+    },
+    {
+      "tag": "c:butter"
+    },
+    {
+      "tag": "c:flour"
+    },
+    {
+      "item": "extradelight:egg_mix"
+    },
+    {
+      "tag": "c:flour"
+    },
+    {
+      "item": "farmersdelight:pumpkin_slice"
+    },
+    {
+      "tag": "extradelight:sweetener"
+    },
+    {
+      "item": "farmersdelight:pumpkin_slice"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "extradelight:pumpkin_roll_feast"
+  }
+}

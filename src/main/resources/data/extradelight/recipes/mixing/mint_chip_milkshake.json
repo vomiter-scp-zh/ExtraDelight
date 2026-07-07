@@ -1,0 +1,32 @@
+{
+  "type": "extradelight:mixing_bowl",
+  "container": {
+    "count": 1,
+    "id": "minecraft:glass_bottle"
+  },
+  "fluids": [
+    {
+      "amount": 250,
+      "fluid": "minecraft:milk"
+    }
+  ],
+  "ingredients": [
+    {
+      "item": "extradelight:ice_cream"
+    },
+    {
+      "tag": "c:chocolate/chips"
+    },
+    {
+      "tag": "c:mint"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "extradelight:mint_chip_milkshake"
+  },
+  "stirs": 4,
+  "utensil": {
+    "tag": "c:spoons"
+  }
+}

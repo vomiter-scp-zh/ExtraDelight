@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "extradelight:fish_salad"
+    },
+    {
+      "tag": "c:bread/sliced"
+    },
+    {
+      "tag": "c:bread/sliced"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "extradelight:fish_salad_sandwich"
+  }
+}

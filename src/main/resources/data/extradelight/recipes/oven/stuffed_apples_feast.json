@@ -1,0 +1,43 @@
+{
+  "type": "extradelight:oven",
+  "consumeContainer": false,
+  "container": {
+    "count": 1,
+    "id": "extradelight:square_pan"
+  },
+  "cookingtime": 800,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "tag": "c:fruit/apple"
+    },
+    {
+      "tag": "c:fruit/dried"
+    },
+    {
+      "tag": "c:fruit/apple"
+    },
+    {
+      "tag": "c:fruit/apple"
+    },
+    {
+      "tag": "c:butter"
+    },
+    {
+      "tag": "c:fruit/apple"
+    },
+    {
+      "tag": "c:nuts"
+    },
+    {
+      "tag": "extradelight:sweetener"
+    },
+    {
+      "tag": "c:cinnamon/ground"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "extradelight:stuffed_apples_feast"
+  }
+}

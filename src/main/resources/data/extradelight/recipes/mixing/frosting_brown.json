@@ -1,0 +1,23 @@
+{
+  "type": "extradelight:mixing_bowl",
+  "fluids": [],
+  "ingredients": [
+    {
+      "item": "extradelight:butter"
+    },
+    {
+      "tag": "extradelight:sweetener"
+    },
+    {
+      "tag": "c:dyes/brown"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "extradelight:frosting_brown"
+  },
+  "stirs": 2,
+  "utensil": {
+    "tag": "c:spoons"
+  }
+}

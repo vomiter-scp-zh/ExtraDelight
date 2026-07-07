@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "b": {
+      "item": "minecraft:bowl"
+    },
+    "f": {
+      "tag": "extradelight:processed/fruit"
+    },
+    "s": {
+      "tag": "extradelight:sweetener"
+    },
+    "w": {
+      "tag": "c:buckets/water"
+    }
+  },
+  "pattern": [
+    "fff",
+    "sws",
+    " b "
+  ],
+  "result": {
+    "count": 1,
+    "id": "extradelight:punch_feast"
+  }
+}

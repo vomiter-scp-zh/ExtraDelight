@@ -1,0 +1,40 @@
+{
+  "type": "extradelight:oven",
+  "consumeContainer": false,
+  "container": {
+    "count": 1,
+    "id": "extradelight:sheet"
+  },
+  "cookingtime": 800,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "tag": "c:bread/sliced"
+    },
+    {
+      "tag": "c:bread/sliced"
+    },
+    {
+      "tag": "c:bread/sliced"
+    },
+    {
+      "tag": "c:bread/sliced"
+    },
+    {
+      "tag": "c:bread/sliced"
+    },
+    {
+      "tag": "c:bread/sliced"
+    },
+    {
+      "tag": "c:bread/sliced"
+    },
+    {
+      "tag": "c:bread/sliced"
+    }
+  ],
+  "result": {
+    "count": 8,
+    "id": "extradelight:toast"
+  }
+}

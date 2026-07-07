@@ -1,0 +1,13 @@
+{
+  "type": "extradelight:feast",
+  "container": {
+    "tag": "c:ice_cream"
+  },
+  "out": {
+    "id": "extradelight:stuffed_apples_feast"
+  },
+  "result": {
+    "count": 1,
+    "id": "extradelight:stuffed_apple_ice_cream"
+  }
+}

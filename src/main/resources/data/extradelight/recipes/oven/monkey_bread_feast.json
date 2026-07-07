@@ -1,0 +1,28 @@
+{
+  "type": "extradelight:oven",
+  "consumeContainer": false,
+  "container": {
+    "count": 1,
+    "id": "extradelight:square_pan"
+  },
+  "cookingtime": 800,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "tag": "c:dough"
+    },
+    {
+      "tag": "extradelight:sweetener"
+    },
+    {
+      "tag": "c:butter"
+    },
+    {
+      "tag": "c:cinnamon/ground"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "extradelight:monkey_bread_feast"
+  }
+}

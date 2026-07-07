@@ -1,0 +1,28 @@
+{
+  "type": "extradelight:oven",
+  "consumeContainer": false,
+  "container": {
+    "count": 1,
+    "id": "extradelight:sheet"
+  },
+  "cookingtime": 800,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "tag": "c:cookie_dough/chocolate_chip"
+    },
+    {
+      "tag": "c:cookie_dough/chocolate_chip"
+    },
+    {
+      "tag": "c:cookie_dough/chocolate_chip"
+    },
+    {
+      "tag": "c:cookie_dough/chocolate_chip"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "extradelight:chocolate_chip_cookie_block_item"
+  }
+}

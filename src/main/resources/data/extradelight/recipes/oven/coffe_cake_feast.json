@@ -1,0 +1,43 @@
+{
+  "type": "extradelight:oven",
+  "consumeContainer": false,
+  "container": {
+    "count": 1,
+    "id": "extradelight:square_pan"
+  },
+  "cookingtime": 800,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "tag": "c:flour"
+    },
+    {
+      "tag": "c:cinnamon/ground"
+    },
+    {
+      "tag": "c:flour"
+    },
+    {
+      "tag": "c:foods/milk"
+    },
+    {
+      "tag": "c:butter"
+    },
+    {
+      "tag": "c:foods/milk"
+    },
+    {
+      "tag": "c:eggs"
+    },
+    {
+      "tag": "extradelight:sweetener"
+    },
+    {
+      "tag": "extradelight:sweetener"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "extradelight:coffe_cake_feast"
+  }
+}

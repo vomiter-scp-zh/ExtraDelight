@@ -1,0 +1,88 @@
+package com.vomiter.extradelight.compat.jei.categories;
+
+import java.util.List;
+
+import com.vomiter.extradelight.ExtraDelight;
+import com.vomiter.extradelight.registry.ExtraDelightItems;
+import com.vomiter.extradelight.data.tags.ExtraDelightTags;
+import com.vomiter.extradelight.util.BottleFluidRegistry;
+import com.vomiter.extradelight.common.complex.workstations.chiller.ChillerRecipe;
+
+import mezz.jei.api.constants.VanillaTypes;
+import mezz.jei.api.forge.ForgeTypes;
+import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
+import mezz.jei.api.gui.drawable.IDrawable;
+import mezz.jei.api.helpers.IGuiHelper;
+import mezz.jei.api.recipe.IFocusGroup;
+import mezz.jei.api.recipe.RecipeIngredientRole;
+import mezz.jei.api.recipe.RecipeType;
+import mezz.jei.api.recipe.category.IRecipeCategory;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.Ingredient;
+
+public class ChillerRecipeCategory implements IRecipeCategory<ChillerRecipe> {
+	public static final RecipeType<ChillerRecipe> TYPE = RecipeType.create(ExtraDelight.MOD_ID, "chiller",
+			ChillerRecipe.class);
+	private final IDrawable background;
+	private final Component localizedName;
+	private final IDrawable icon;
+
+	public ChillerRecipeCategory(IGuiHelper guiHelper) {
+		background = guiHelper.createDrawable(
+				ResourceLocation.fromNamespaceAndPath(ExtraDelight.MOD_ID, "textures/gui/jei.png"), 132, 0, 124, 73);
+		localizedName = Component.translatable("extradelight.jei.chiller");
+		icon = guiHelper.createDrawableIngredient(VanillaTypes.ITEM_STACK,
+				new ItemStack(ExtraDelightItems.CHILLER.get()));
+	}
+
+	@Override
+	public RecipeType<ChillerRecipe> getRecipeType() {
+		return TYPE;
+	}
+
+	@Override
+	public Component getTitle() {
+		return localizedName;
+	}
+
+	@Override
+	public IDrawable getBackground() {
+		return background;
+	}
+
+	@Override
+	public IDrawable getIcon() {
+		return icon;
+	}
+
+	@Override
+	public void setRecipe(IRecipeLayoutBuilder builder, ChillerRecipe recipe, IFocusGroup focuses) {
+
+		for (int i = 0; i < recipe.getIngredients().size(); i++) {
+			if (i < 2)
+				builder.addSlot(RecipeIngredientRole.INPUT, 45 + i % 2 * 18, 20)
+						.addIngredients(recipe.getIngredients().get(i));
+			else
+				builder.addSlot(RecipeIngredientRole.INPUT, 45 + i % 2 * 18, 38)
+						.addIngredients(recipe.getIngredients().get(i));
+		}
+
+		builder.addSlot(RecipeIngredientRole.INPUT, this.getWidth() / 2 - 38, 1)
+				.addIngredients(ForgeTypes.FLUID_STACK, List.of(recipe.getFluid()))
+				.setFluidRenderer(1000, false, 16, 71);
+
+		builder.addSlot(RecipeIngredientRole.INPUT, 54, 56).addIngredients(Ingredient.of(recipe.getOutputContainer()));
+
+		builder.addSlot(RecipeIngredientRole.OUTPUT, 107, 30).addIngredients(Ingredient.of(recipe.output));
+
+		builder.addSlot(RecipeIngredientRole.CATALYST, 1, 1)
+				.addIngredients(Ingredient.of(BottleFluidRegistry.getBottleFromFluidWithoutSize(recipe.getFluid().getFluid()),
+						new ItemStack(recipe.getFluid().getFluid().getBucket())));
+
+		builder.addSlot(RecipeIngredientRole.CATALYST, 107, 9)
+				.addIngredients(Ingredient.of(ExtraDelightTags.CHILLING_ITEMS));
+	}
+
+}

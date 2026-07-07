@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    [
+      {
+        "tag": "c:condiments"
+      },
+      {
+        "tag": "c:gravy"
+      }
+    ],
+    {
+      "tag": "c:foods/bread"
+    },
+    {
+      "item": "extradelight:pork_tenderloin"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "extradelight:pork_tenderloin_sandwich"
+  }
+}

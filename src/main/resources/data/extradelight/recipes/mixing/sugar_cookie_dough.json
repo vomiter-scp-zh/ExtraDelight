@@ -1,0 +1,26 @@
+{
+  "type": "extradelight:mixing_bowl",
+  "fluids": [],
+  "ingredients": [
+    {
+      "tag": "c:flour"
+    },
+    {
+      "tag": "extradelight:sweetener"
+    },
+    {
+      "tag": "c:butter"
+    },
+    {
+      "tag": "c:eggs"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "extradelight:sugar_cookie_dough"
+  },
+  "stirs": 4,
+  "utensil": {
+    "tag": "c:spoons"
+  }
+}

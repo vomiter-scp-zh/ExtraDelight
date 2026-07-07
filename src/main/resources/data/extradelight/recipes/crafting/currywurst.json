@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "c:bread/sliced"
+    },
+    {
+      "tag": "c:bread/sliced"
+    },
+    {
+      "tag": "c:condiments/ketchup"
+    },
+    {
+      "item": "extradelight:curry_powder"
+    },
+    {
+      "tag": "c:sausage/cooked"
+    },
+    {
+      "tag": "c:sausage/cooked"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "id": "extradelight:currywurst"
+  }
+}

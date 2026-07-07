@@ -1,0 +1,43 @@
+{
+  "type": "extradelight:oven",
+  "consumeContainer": false,
+  "container": {
+    "count": 1,
+    "id": "extradelight:tray"
+  },
+  "cookingtime": 800,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "tag": "c:butter"
+    },
+    {
+      "tag": "extradelight:sweetener"
+    },
+    {
+      "tag": "c:cinnamon/ground"
+    },
+    {
+      "tag": "c:eggs"
+    },
+    {
+      "tag": "c:foods/milk"
+    },
+    {
+      "tag": "c:bread/sliced"
+    },
+    {
+      "tag": "c:bread/sliced"
+    },
+    {
+      "tag": "c:bread/sliced"
+    },
+    {
+      "tag": "c:bread/sliced"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "extradelight:french_toast"
+  }
+}

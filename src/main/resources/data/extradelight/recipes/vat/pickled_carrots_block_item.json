@@ -1,0 +1,44 @@
+{
+  "type": "extradelight:vat",
+  "fluids": {
+    "amount": 250,
+    "fluid": "extradelight:vinegar_fluid"
+  },
+  "ingredients": [
+    {
+      "tag": "c:crops/carrot"
+    },
+    {
+      "tag": "c:crops/carrot"
+    },
+    {
+      "tag": "c:crops/carrot"
+    },
+    {
+      "tag": "c:crops/carrot"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "extradelight:pickled_carrots_block_item"
+  },
+  "stage_ingredients": [
+    {
+      "ingredient": [],
+      "lid": true,
+      "time": 168000
+    },
+    {
+      "ingredient": {
+        "tag": "c:salt"
+      },
+      "lid": true,
+      "time": 72000
+    }
+  ],
+  "stages": 2,
+  "usedItem": {
+    "count": 1,
+    "id": "minecraft:glass_bottle"
+  }
+}

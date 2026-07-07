@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "extradelight:copy_item_handler_capability"
+            }
+          ],
+          "name": "extradelight:lime_picnic_basket"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "extradelight:blocks/lime_picnic_basket"
+}

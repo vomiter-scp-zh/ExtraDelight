@@ -1,0 +1,43 @@
+{
+  "type": "extradelight:oven",
+  "consumeContainer": false,
+  "container": {
+    "count": 1,
+    "id": "extradelight:tray"
+  },
+  "cookingtime": 1600,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "tag": "c:fruit/sweet_berry"
+    },
+    {
+      "item": "minecraft:honey_bottle"
+    },
+    {
+      "tag": "c:fruit/sweet_berry"
+    },
+    {
+      "tag": "c:fruit/sweet_berry"
+    },
+    {
+      "item": "farmersdelight:ham"
+    },
+    {
+      "tag": "c:fruit/sweet_berry"
+    },
+    {
+      "item": "farmersdelight:cooked_rice"
+    },
+    {
+      "item": "extradelight:butter"
+    },
+    {
+      "item": "farmersdelight:cooked_rice"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "farmersdelight:honey_glazed_ham_block"
+  }
+}

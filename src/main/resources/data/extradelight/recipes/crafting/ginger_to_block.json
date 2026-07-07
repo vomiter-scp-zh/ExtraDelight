@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "c:crops/ginger"
+    },
+    {
+      "tag": "c:crops/ginger"
+    },
+    {
+      "tag": "c:crops/ginger"
+    },
+    {
+      "tag": "c:crops/ginger"
+    },
+    {
+      "tag": "c:crops/ginger"
+    },
+    {
+      "tag": "c:crops/ginger"
+    },
+    {
+      "tag": "c:crops/ginger"
+    },
+    {
+      "tag": "c:crops/ginger"
+    },
+    {
+      "tag": "c:crops/ginger"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "extradelight:ginger_crate"
+  }
+}

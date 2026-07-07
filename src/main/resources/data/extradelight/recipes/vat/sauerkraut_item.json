@@ -1,0 +1,38 @@
+{
+  "type": "extradelight:vat",
+  "fluids": {
+    "amount": 250,
+    "fluid": "minecraft:water"
+  },
+  "ingredients": [
+    {
+      "tag": "extradelight:processed/cabbage"
+    },
+    {
+      "tag": "extradelight:processed/cabbage"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "id": "extradelight:sauerkraut_item"
+  },
+  "stage_ingredients": [
+    {
+      "ingredient": {
+        "tag": "c:salt"
+      },
+      "lid": false,
+      "time": 1000
+    },
+    {
+      "ingredient": [],
+      "lid": true,
+      "time": 168000
+    }
+  ],
+  "stages": 2,
+  "usedItem": {
+    "count": 2,
+    "id": "minecraft:bowl"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "type": "extradelight:oven",
+  "consumeContainer": false,
+  "container": {
+    "count": 1,
+    "id": "extradelight:muffin_tin"
+  },
+  "cookingtime": 800,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "tag": "c:corn/meal"
+    },
+    {
+      "tag": "c:flour"
+    },
+    {
+      "tag": "extradelight:sweetener"
+    },
+    {
+      "item": "extradelight:butter"
+    },
+    {
+      "item": "extradelight:egg_mix"
+    },
+    {
+      "tag": "c:cheese"
+    },
+    {
+      "tag": "extradelight:processed/chili"
+    }
+  ],
+  "result": {
+    "count": 6,
+    "id": "extradelight:chili_cheese_cornbread_muffin"
+  }
+}

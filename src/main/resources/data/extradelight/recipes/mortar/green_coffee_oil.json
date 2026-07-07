@@ -1,0 +1,12 @@
+{
+  "type": "extradelight:mortar",
+  "fluidOut": {
+    "amount": 150,
+    "id": "extradelight:oil_fluid"
+  },
+  "grinds": 4,
+  "ingredient": {
+    "tag": "c:crops/coffee/green"
+  },
+  "result": {}
+}

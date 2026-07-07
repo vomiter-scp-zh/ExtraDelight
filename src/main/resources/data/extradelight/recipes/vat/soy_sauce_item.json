@@ -1,0 +1,40 @@
+{
+  "type": "extradelight:vat",
+  "fluids": {
+    "amount": 250,
+    "fluid": "minecraft:water"
+  },
+  "ingredients": [
+    {
+      "tag": "c:soybeans/cooked"
+    },
+    {
+      "tag": "c:foods/cooked_wheat_seeds"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "extradelight:soy_sauce_item"
+  },
+  "stage_ingredients": [
+    {
+      "ingredient": {
+        "item": "extradelight:yeast"
+      },
+      "lid": true,
+      "time": 72000
+    },
+    {
+      "ingredient": {
+        "tag": "c:salt"
+      },
+      "lid": true,
+      "time": 336000
+    }
+  ],
+  "stages": 2,
+  "usedItem": {
+    "count": 1,
+    "id": "minecraft:glass_bottle"
+  }
+}

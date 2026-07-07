@@ -1,0 +1,30 @@
+{
+  "type": "extradelight:mixing_bowl",
+  "container": {
+    "count": 1,
+    "id": "minecraft:bowl"
+  },
+  "fluids": [],
+  "ingredients": [
+    {
+      "item": "minecraft:kelp"
+    },
+    {
+      "item": "minecraft:kelp"
+    },
+    {
+      "tag": "c:fish_flakes"
+    },
+    {
+      "tag": "c:fish_flakes"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "extradelight:furikake"
+  },
+  "stirs": 4,
+  "utensil": {
+    "tag": "c:spoons"
+  }
+}

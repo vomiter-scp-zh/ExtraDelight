@@ -1,0 +1,37 @@
+{
+  "type": "extradelight:oven",
+  "consumeContainer": false,
+  "container": {
+    "count": 1,
+    "id": "extradelight:pie_dish"
+  },
+  "cookingtime": 800,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "tag": "c:ground_meat/raw"
+    },
+    {
+      "tag": "c:ground_meat/raw"
+    },
+    {
+      "tag": "c:ground_meat/raw"
+    },
+    {
+      "tag": "c:mushrooms"
+    },
+    {
+      "tag": "extradelight:processed/potato"
+    },
+    {
+      "tag": "extradelight:processed/onion"
+    },
+    {
+      "item": "farmersdelight:pie_crust"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "extradelight:meat_pie_block_item"
+  }
+}

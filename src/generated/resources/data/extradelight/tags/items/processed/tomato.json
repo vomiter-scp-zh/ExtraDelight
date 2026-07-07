@@ -1,0 +1,10 @@
+{
+  "values": [
+    "extradelight:sliced_tomato",
+    {
+      "id": "#forge:crops/tomato",
+      "required": false
+    },
+    "#pizzadelight:ingredients/vegetables/tomato_layer"
+  ]
+}

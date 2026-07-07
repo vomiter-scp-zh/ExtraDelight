@@ -1,0 +1,13 @@
+{
+  "type": "extradelight:feast",
+  "container": {
+    "tag": "c:spoons"
+  },
+  "out": {
+    "id": "extradelight:cinnamon_rolls_feast"
+  },
+  "result": {
+    "count": 1,
+    "id": "extradelight:cinnamon_rolls"
+  }
+}

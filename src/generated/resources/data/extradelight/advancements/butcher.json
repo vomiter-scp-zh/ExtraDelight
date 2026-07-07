@@ -1,0 +1,728 @@
+{
+  "parent": "extradelight:start",
+  "criteria": {
+    "bbq_ribs": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:bbq_ribs"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "bbq_ribs_block_item": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:bbq_ribs_block_item"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "beef_bulgogi": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:beef_bulgogi"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "beef_wellington": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:beef_wellington"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "beef_wellington_block_item": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:beef_wellington_block_item"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "blood_chocolate_bar": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:blood_chocolate_bar"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "blood_chocolate_chips": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:blood_chocolate_chips"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "blood_chocolate_dipped_apple_slice": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:blood_chocolate_dipped_apple_slice"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "blood_chocolate_dipped_bacon": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:blood_chocolate_dipped_bacon"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "blood_chocolate_dipped_coffee_bean": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:blood_chocolate_dipped_coffee_bean"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "blood_chocolate_dipped_glow_berry": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:blood_chocolate_dipped_glow_berry"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "blood_chocolate_dipped_graham_cracker": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:blood_chocolate_dipped_graham_cracker"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "blood_chocolate_dipped_marshmallow": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:blood_chocolate_dipped_marshmallow"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "blood_chocolate_dipped_sweet_berry": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:blood_chocolate_dipped_sweet_berry"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "blood_chocolate_filled_bar": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:blood_chocolate_filled_bar"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "blood_chocolate_fondue_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:blood_chocolate_fondue_block"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "blood_chocolate_syrup_bottle": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:blood_chocolate_syrup_bottle"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "blood_chocolate_truffle": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:blood_chocolate_truffle"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "caramel_chicken": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:caramel_chicken"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "chicken_kiev": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:chicken_kiev"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "devilled_sausages": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:devilled_sausages"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "fried_brains": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:fried_brains"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "haggis": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:haggis"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "haggis_block_item": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:haggis_block_item"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "honey_chili_chicken": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:honey_chili_chicken"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "liver_onions": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:liver_onions"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "melon_lime_glazed_chicken": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:melon_lime_glazed_chicken"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "mint_lamb": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:mint_lamb"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "mint_lamb_feast": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:mint_lamb_feast"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "orange_chicken": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:orange_chicken"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "oxtail_soup": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:oxtail_soup"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "pickled_sausage_block_item": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:pickled_sausage_block_item"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "pickled_sausage_item": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:pickled_sausage_item"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "pork_and_apples": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:pork_and_apples"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "pork_and_apples_feast": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:pork_and_apples_feast"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "pot_roast_block_item": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:pot_roast_block_item"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "potroast": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:potroast"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "pulled_pork_block_item": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:pulled_pork_block_item"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "pulled_pork_sandwich": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:pulled_pork_sandwich"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "rack_lamb": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:rack_lamb"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "rack_lamb_block_item": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:rack_lamb_block_item"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "sauerkraut_and_sausage": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:sauerkraut_and_sausage"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "sausage_roll": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:sausage_roll"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "sos": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:sos"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "steak_pickled_onion_pie_item": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:steak_pickled_onion_pie_item"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "steak_pickled_onion_pie_slice": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:steak_pickled_onion_pie_slice"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "stuffed_heart": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "extradelight:stuffed_heart"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "extradelight.advancement.butcher.desc"
+    },
+    "frame": "challenge",
+    "hidden": true,
+    "icon": {
+      "item": "extradelight:bbq_ribs_block_item"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "extradelight.advancement.butcher.name"
+    }
+  },
+  "requirements": [
+    [
+      "beef_wellington_block_item"
+    ],
+    [
+      "blood_chocolate_chips"
+    ],
+    [
+      "blood_chocolate_truffle"
+    ],
+    [
+      "blood_chocolate_dipped_graham_cracker"
+    ],
+    [
+      "mint_lamb_feast"
+    ],
+    [
+      "pulled_pork_sandwich"
+    ],
+    [
+      "mint_lamb"
+    ],
+    [
+      "pork_and_apples"
+    ],
+    [
+      "orange_chicken"
+    ],
+    [
+      "bbq_ribs"
+    ],
+    [
+      "blood_chocolate_dipped_coffee_bean"
+    ],
+    [
+      "sos"
+    ],
+    [
+      "blood_chocolate_syrup_bottle"
+    ],
+    [
+      "caramel_chicken"
+    ],
+    [
+      "bbq_ribs_block_item"
+    ],
+    [
+      "blood_chocolate_filled_bar"
+    ],
+    [
+      "blood_chocolate_dipped_bacon"
+    ],
+    [
+      "blood_chocolate_fondue_block"
+    ],
+    [
+      "sauerkraut_and_sausage"
+    ],
+    [
+      "liver_onions"
+    ],
+    [
+      "beef_bulgogi"
+    ],
+    [
+      "chicken_kiev"
+    ],
+    [
+      "pot_roast_block_item"
+    ],
+    [
+      "haggis_block_item"
+    ],
+    [
+      "pork_and_apples_feast"
+    ],
+    [
+      "blood_chocolate_bar"
+    ],
+    [
+      "blood_chocolate_dipped_apple_slice"
+    ],
+    [
+      "blood_chocolate_dipped_glow_berry"
+    ],
+    [
+      "steak_pickled_onion_pie_item"
+    ],
+    [
+      "pickled_sausage_item"
+    ],
+    [
+      "sausage_roll"
+    ],
+    [
+      "oxtail_soup"
+    ],
+    [
+      "stuffed_heart"
+    ],
+    [
+      "pickled_sausage_block_item"
+    ],
+    [
+      "rack_lamb"
+    ],
+    [
+      "rack_lamb_block_item"
+    ],
+    [
+      "honey_chili_chicken"
+    ],
+    [
+      "fried_brains"
+    ],
+    [
+      "potroast"
+    ],
+    [
+      "blood_chocolate_dipped_marshmallow"
+    ],
+    [
+      "steak_pickled_onion_pie_slice"
+    ],
+    [
+      "pulled_pork_block_item"
+    ],
+    [
+      "blood_chocolate_dipped_sweet_berry"
+    ],
+    [
+      "devilled_sausages"
+    ],
+    [
+      "haggis"
+    ],
+    [
+      "melon_lime_glazed_chicken"
+    ],
+    [
+      "beef_wellington"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

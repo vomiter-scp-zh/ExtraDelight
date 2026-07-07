@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "c:cinnamon/ground"
+    },
+    {
+      "tag": "extradelight:sweetener"
+    },
+    {
+      "tag": "c:butter"
+    },
+    {
+      "tag": "c:toast"
+    },
+    {
+      "tag": "c:toast"
+    },
+    {
+      "tag": "c:toast"
+    },
+    {
+      "tag": "c:toast"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "extradelight:cinnamon_toast"
+  }
+}

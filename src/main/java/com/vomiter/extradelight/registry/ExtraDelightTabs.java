@@ -1,0 +1,35 @@
+package com.vomiter.extradelight.registry;
+
+import com.vomiter.extradelight.ExtraDelight;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.RegistryObject;
+
+public class ExtraDelightTabs {
+	public static final DeferredRegister<CreativeModeTab> TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB,
+			ExtraDelight.MOD_ID);
+
+	public static final RegistryObject<CreativeModeTab> TAB = TABS.register("tab",
+			() -> CreativeModeTab.builder().title(Component.translatable("itemGroup.extradelight.tab"))
+					.icon(() -> new ItemStack(ExtraDelightItems.WOODEN_SPOON.get()))
+					.displayItems((parameters, output) -> {
+						for (RegistryObject<? extends Item> i : ExtraDelightItems.ITEMS.getEntries())
+							if (i != ExtraDelightItems.EASTER_EGG)
+								output.accept(i.get());
+					}).build());
+
+
+	public static final RegistryObject<CreativeModeTab> AESTHETICS = TABS.register("aesthetics",
+			() -> CreativeModeTab.builder().title(Component.translatable("itemGroup.extradelight.aesthetics"))
+					.icon(() -> new ItemStack(AestheticBlocks.WALLPAPER_BLOCKS.get(0).get()))
+					.displayItems((parameters, output) -> {
+						for (RegistryObject<? extends Item> i : AestheticBlocks.ITEMS.getEntries())
+							output.accept(i.get());
+					}).build());
+
+
+}

@@ -1,0 +1,67 @@
+{
+  "type": "extradelight:oven",
+  "consumeContainer": false,
+  "container": {
+    "count": 1,
+    "id": "extradelight:square_pan"
+  },
+  "cookingtime": 800,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "item": "minecraft:baked_potato"
+    },
+    {
+      "type": "neoforge:compound",
+      "children": [
+        {
+          "tag": "c:foods/milk"
+        },
+        {
+          "tag": "extradelight:broth"
+        }
+      ]
+    },
+    {
+      "item": "minecraft:baked_potato"
+    },
+    {
+      "type": "neoforge:compound",
+      "children": [
+        {
+          "tag": "c:foods/cooked_mutton"
+        },
+        {
+          "tag": "c:mutton/cooked"
+        }
+      ]
+    },
+    {
+      "item": "farmersdelight:tomato_sauce"
+    },
+    {
+      "type": "neoforge:compound",
+      "children": [
+        {
+          "tag": "c:foods/cooked_mutton"
+        },
+        {
+          "tag": "c:mutton/cooked"
+        }
+      ]
+    },
+    {
+      "tag": "extradelight:processed/carrot"
+    },
+    {
+      "tag": "extradelight:processed/onion"
+    },
+    {
+      "tag": "extradelight:processed/cabbage"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "farmersdelight:shepherds_pie_block"
+  }
+}

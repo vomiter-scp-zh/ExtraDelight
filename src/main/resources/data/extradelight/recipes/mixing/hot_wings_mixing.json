@@ -1,0 +1,23 @@
+{
+  "type": "extradelight:mixing_bowl",
+  "fluids": [],
+  "ingredients": [
+    {
+      "tag": "c:chicken/wing/cooked"
+    },
+    {
+      "tag": "c:butter"
+    },
+    {
+      "tag": "c:condiments/hot_sauce"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "extradelight:hot_wings"
+  },
+  "stirs": 2,
+  "utensil": {
+    "tag": "c:spoons"
+  }
+}

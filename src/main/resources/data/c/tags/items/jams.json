@@ -1,0 +1,9 @@
+{
+  "values": [
+    "extradelight:dynamic_jam",
+    {
+      "id": "#c:jellies",
+      "required": false
+    }
+  ]
+}

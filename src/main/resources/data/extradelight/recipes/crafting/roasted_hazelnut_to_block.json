@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "c:crops/hazelnut/cooked"
+    },
+    {
+      "tag": "c:crops/hazelnut/cooked"
+    },
+    {
+      "tag": "c:crops/hazelnut/cooked"
+    },
+    {
+      "tag": "c:crops/hazelnut/cooked"
+    },
+    {
+      "tag": "c:crops/hazelnut/cooked"
+    },
+    {
+      "tag": "c:crops/hazelnut/cooked"
+    },
+    {
+      "tag": "c:crops/hazelnut/cooked"
+    },
+    {
+      "tag": "c:crops/hazelnut/cooked"
+    },
+    {
+      "tag": "c:crops/hazelnut/cooked"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "extradelight:roasted_hazelnut_sack"
+  }
+}
