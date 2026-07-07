@@ -475,7 +475,7 @@ public class BlockLootTables extends BlockLootSubProvider {
 		this.dropSelf(ExtraDelightBlocks.MARSHMALLOW_BLOCK.get());
 		this.dropSelf(ExtraDelightBlocks.GOLDEN_CARROT_CRATE.get());
 
-		//this.add(ExtraDelightBlocks.JAR.get(), p_248609_ -> this.createJarDrop(p_248609_));
+		this.add(ExtraDelightBlocks.JAR.get(), this::createJarDrop);
 
 		this.createFruitLeavesDrop(ExtraDelightBlocks.APPLE_LEAVES.get(), ExtraDelightBlocks.APPLE_SAPLING.get(),
 				Items.APPLE);
@@ -715,20 +715,18 @@ public class BlockLootTables extends BlockLootSubProvider {
                 ));
     }
 
-    /*
+
 	protected LootTable.Builder createJarDrop(Block block) {
 		return LootTable.lootTable()
 				.withPool(this.applyExplosionCondition(block,
 						LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F))
 								.add(LootItem.lootTableItem(block)
-										.apply(CopyComponentsFunction
-												.copyComponents(CopyComponentsFunction.Source.BLOCK_ENTITY)
-												.include(ExtraDelightComponents.FLUID.get())))));
-												
+                                        .apply(CopyFluidHandlerCapabilityFunction.copyItemHandlerCapability())
+                                )
+                ));
+
     
 	}
-	
-     */
 
 	@Override
 	protected @NotNull Iterable<Block> getKnownBlocks() {

@@ -1,6 +1,7 @@
 package com.vomiter.extradelight.registry;
 
 import com.vomiter.extradelight.ExtraDelight;
+import com.vomiter.extradelight.data.loot.CopyFluidHandlerCapabilityFunction;
 import com.vomiter.extradelight.data.loot.CopyItemHandlerCapabilityFunction;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.storage.loot.functions.LootItemFunctionType;
@@ -16,6 +17,12 @@ public final class ExtraDelightLootFunctions {
             LOOT_FUNCTION_TYPES.register(
                     "copy_item_handler_capability",
                     () -> new LootItemFunctionType(new CopyItemHandlerCapabilityFunction.Serializer())
+            );
+
+    public static final RegistryObject<LootItemFunctionType> COPY_FLUID_HANDLER_CAPABILITY =
+            LOOT_FUNCTION_TYPES.register(
+                    "copy_fluid_handler_capability",
+                    () -> new LootItemFunctionType(new CopyFluidHandlerCapabilityFunction.Serializer())
             );
 
     private ExtraDelightLootFunctions() {

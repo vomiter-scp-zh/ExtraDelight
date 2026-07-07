@@ -1,4 +1,4 @@
-// 1.20.1	2026-07-07T12:39:32.2989047	Loot Tables
+// 1.20.1	2026-07-08T06:33:22.0670564	Loot Tables
 d352d67bd1ca875ba4e8c47b3258174c03bebea4 data/extradelight/loot_tables/blocks/acacia_counter_cabinet.json
 996d62b4358c764a005a882d84cd59842656b316 data/extradelight/loot_tables/blocks/acacia_dried_corn_fence.json
 8d9f3204ebcdfc60bb4d21588771ee240b200969 data/extradelight/loot_tables/blocks/acacia_food_display.json
@@ -426,6 +426,7 @@ d237343508dd300baabff83fa40d4344ee0c4fee data/extradelight/loot_tables/blocks/ha
 a9c67b43ce37a9ed127bb74fafb3432bcce27274 data/extradelight/loot_tables/blocks/honey_cheesecake.json
 de0ff13299cee7b4186780ee833d80d3c7a9a30e data/extradelight/loot_tables/blocks/honey_cookie_block.json
 ec4e9652b7f9134d5dbfa4d54fe2dffeb33cc477 data/extradelight/loot_tables/blocks/hotdish_block.json
+b91f9d588932de9532497e07d8ab2c6eb4bf7ce8 data/extradelight/loot_tables/blocks/jar.json
 d665567c2e220e37cfe9bc2f1243c19c4bae2b16 data/extradelight/loot_tables/blocks/jar_display_block.json
 c85b50b70601913de30215888168b71112f43e94 data/extradelight/loot_tables/blocks/jelly_black_block.json
 0ca6ede698587e8028ec9240d76421e93b89907c data/extradelight/loot_tables/blocks/jelly_blue_block.json

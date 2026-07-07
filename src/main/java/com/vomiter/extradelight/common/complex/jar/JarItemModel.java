@@ -1,6 +1,7 @@
 package com.vomiter.extradelight.common.complex.jar;
 
 import com.vomiter.extradelight.ExtraDelight;
+import com.vomiter.extradelight.registry.ExtraDelightBlocks;
 import com.vomiter.extradelight.registry.ExtraDelightItems;
 import com.vomiter.extradelight.util.RenderUtil;
 import net.minecraftforge.client.extensions.common.IClientFluidTypeExtensions;
@@ -18,12 +19,10 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.model.geom.EntityModelSet;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.Sheets;
-import net.minecraft.client.renderer.blockentity.BlockEntityRenderDispatcher;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemDisplayContext;
@@ -32,18 +31,14 @@ import net.minecraft.world.level.material.Fluid;
 
 public class JarItemModel extends BlockEntityWithoutLevelRenderer {
 	private static JarItemModel instance;
-	ModelResourceLocation rc
-            = new ModelResourceLocation(ResourceLocation.fromNamespaceAndPath(ExtraDelight.MOD_ID, "extra/jar"), "");
-	IRenderable<ModelData> bm = BakedModelRenderable.of(rc).withModelDataContext();
-
-	public JarItemModel(BlockEntityRenderDispatcher blockEntityRenderDispatcher, EntityModelSet entityModelSet) {
-		super(blockEntityRenderDispatcher, entityModelSet);
+	public JarItemModel() {
+		super(Minecraft.getInstance().getBlockEntityRenderDispatcher(), Minecraft.getInstance().getEntityModels());
 	}
 
 	public static JarItemModel getInstance() {
 		if (instance == null) {
-			instance = new JarItemModel(Minecraft.getInstance().getBlockEntityRenderDispatcher(),
-					Minecraft.getInstance().getEntityModels());
+			instance = new JarItemModel(
+            );
 		}
 		return instance;
 	}
@@ -66,15 +61,14 @@ public class JarItemModel extends BlockEntityWithoutLevelRenderer {
 				ps.translate(0, 0.25f, 0f);
 
 			}
+            var state = ExtraDelightBlocks.JAR.get().defaultBlockState();
+            Minecraft.getInstance().getBlockRenderer().renderSingleBlock(state, ps, mbs, packedLight, overlay);
 
-			bm.render(ps, mbs, texture -> RenderType.entityCutout(texture), packedLight, overlay, 0, ModelData.EMPTY);
-
-			VertexConsumer vertexConsumer = mbs.getBuffer(Sheets.translucentCullBlockSheet());
+            VertexConsumer vertexConsumer = mbs.getBuffer(Sheets.translucentCullBlockSheet());
 			Matrix4f mat = ps.last().pose();
 			Matrix3f matrix3f = ps.last().normal();
             stack.getCapability(ForgeCapabilities.FLUID_HANDLER_ITEM).ifPresent(f -> {
                 if (f != null && !f.getFluidInTank(0).isEmpty()) {
-        			ps.pushPose();
 
                     FluidStack fluidStack = f.getFluidInTank(0).copy();
                     Fluid fluid = fluidStack.getFluid();
@@ -85,9 +79,9 @@ public class JarItemModel extends BlockEntityWithoutLevelRenderer {
                             new Vector3f(5f / 16f, ((float) f.getFluidInTank(0).getAmount() / 1000f) * (6f / 16f), 5f / 16f), vertexConsumer,
                             mat, matrix3f, fluidTypeExtensions.getTintColor(fluidStack),
                             RenderUtil.getUV(fluidTypeExtensions.getStillTexture()), packedLight, overlay, ps);
-                    ps.popPose();
                 }
             });
+            ps.popPose();
         }
 	}
 }

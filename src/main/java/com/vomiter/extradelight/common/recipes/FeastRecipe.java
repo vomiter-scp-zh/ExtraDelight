@@ -141,6 +141,6 @@ public class FeastRecipe implements Recipe<SimpleRecipeWrapper> {
 
     @Override
     public ResourceLocation getId() {
-        return null;
+        return id;
     }
 }

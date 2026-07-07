@@ -7,8 +7,8 @@ import com.vomiter.extradelight.registry.ExtraDelightBlockEntities;
 import com.vomiter.extradelight.util.BlockEntityUtils;
 import com.vomiter.extradelight.util.BottleFluidRegistry;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.Tag;
 import net.minecraft.network.Connection;
 import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.world.InteractionHand;
@@ -118,16 +118,19 @@ public class JarBlockEntity extends ExtraDelightCapabilityBlockEntity {
 		readNBT(tag);
 	}
 
-	void readNBT(CompoundTag nbt) {
-		tank.readFromNBT(nbt);
-	}
+    void readNBT(CompoundTag nbt) {
+        if (nbt.contains(FLUID_TAG, Tag.TAG_COMPOUND)) {
+            tank.readFromNBT(nbt.getCompound(FLUID_TAG));
+        } else {
+            tank.setFluid(FluidStack.EMPTY);
+        }
+    }
 
-	CompoundTag writeNBT(CompoundTag tag) {
-
-		tank.writeToNBT(tag);
-
-		return tag;
-	}
+    CompoundTag writeNBT(CompoundTag tag) {
+        CompoundTag fluidTag = tank.writeToNBT(new CompoundTag());
+        tag.put(FLUID_TAG, fluidTag);
+        return tag;
+    }
 
 	@Override
 	public void load(@Nonnull CompoundTag nbt) {

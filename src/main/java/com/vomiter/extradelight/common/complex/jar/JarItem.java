@@ -1,17 +1,21 @@
 package com.vomiter.extradelight.common.complex.jar;
 
 import java.util.List;
+import java.util.function.Consumer;
 
 
 import com.vomiter.extradelight.common.complex.jardisplay.IDisplayInteractable;
 import com.vomiter.extradelight.common.complex.jardisplay.JarDisplayBlockEntity;
 import net.minecraft.ChatFormatting;
+import net.minecraft.client.model.HumanoidModel;
+import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.BlockItem;
@@ -22,9 +26,13 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.client.extensions.common.IClientItemExtensions;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.fluids.capability.IFluidHandler;
 import net.minecraftforge.items.ItemStackHandler;
+import vectorwing.farmersdelight.client.ClientSetup;
 
 public class JarItem extends BlockItem implements IDisplayInteractable {
 
@@ -77,5 +85,20 @@ public class JarItem extends BlockItem implements IDisplayInteractable {
                 }
         );
 	}
+
+    @OnlyIn(Dist.CLIENT)
+    public void initializeClient(Consumer<IClientItemExtensions> consumer) {
+        consumer.accept(new IClientItemExtensions() {
+            private static BlockEntityWithoutLevelRenderer renderer = new JarItemModel();
+
+            public BlockEntityWithoutLevelRenderer getCustomRenderer() {
+                return renderer;
+            }
+
+            public HumanoidModel.@org.jetbrains.annotations.Nullable ArmPose getArmPose(LivingEntity living, InteractionHand hand, ItemStack stack) {
+                return stack.getOrCreateTag().contains("FlipTimeStamp") ? ClientSetup.SKILLET_FLIP : null;
+            }
+        });
+    }
 
 }

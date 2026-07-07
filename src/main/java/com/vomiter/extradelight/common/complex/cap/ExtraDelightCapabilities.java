@@ -6,6 +6,7 @@ import com.vomiter.extradelight.common.complex.portable.chocolatebox.ChocolateBo
 import com.vomiter.extradelight.common.complex.portable.picnicbasket.PicnicBasketBlock;
 import com.vomiter.extradelight.common.complex.portable.picnicbasket.PicnicBasketBlockEntity;
 import com.vomiter.extradelight.registry.ExtraDelightBlockEntities;
+import com.vomiter.extradelight.registry.ExtraDelightItems;
 import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
@@ -95,6 +96,11 @@ public class ExtraDelightCapabilities {
         registerFluidHandler(
                 ExtraDelightBlockEntities.MORTAR.get(),
                 (be, side) -> be.getFluidTank()
+        );
+
+        registerFluidHandler(
+                ExtraDelightBlockEntities.JAR.get(),
+                (be, side) -> be.getTank()
         );
 
         registerItemHandler(
@@ -211,5 +217,12 @@ public class ExtraDelightCapabilities {
                     new BlockEntityTagItemHandlerProvider(stack, slot)
             );
         });
+
+        if(stack.is(ExtraDelightItems.JAR.get())){
+            event.addCapability(
+                    ResourceLocation.fromNamespaceAndPath(ExtraDelight.MOD_ID, "block_entity_fluid"),
+                    new BlockEntityTagFluidHandlerProvider(stack, 1000)
+            );
+        }
     }
 }
