@@ -2,6 +2,7 @@ package com.vomiter.extradelight.common.complex.displays.wreath;
 
 import javax.annotation.Nonnull;
 
+import com.vomiter.extradelight.common.complex.cap.ExtraDelightCapabilityBlockEntity;
 import com.vomiter.extradelight.registry.ExtraDelightBlockEntities;
 
 import net.minecraft.core.BlockPos;
@@ -19,7 +20,7 @@ import net.minecraftforge.common.util.Lazy;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 
-public class WreathEntity extends BlockEntity implements MenuProvider {
+public class WreathEntity extends ExtraDelightCapabilityBlockEntity implements MenuProvider {
 
 	public static final String TAG = "inv";
 //	private final LazyOptional<IItemHandlerModifiable> handler = LazyOptional.of(this::createHandler);

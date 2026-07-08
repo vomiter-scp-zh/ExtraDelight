@@ -6,7 +6,7 @@
   },
   "ingredients": [
     {
-      "type": "neoforge:compound",
+      "type": "extradelight:compound",
       "children": [
         {
           "tag": "c:fruit"

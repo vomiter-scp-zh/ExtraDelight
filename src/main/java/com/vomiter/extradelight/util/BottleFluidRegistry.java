@@ -6,7 +6,7 @@ import java.util.Optional;
 
 import com.vomiter.extradelight.registry.ExtraDelightFluids;
 import com.vomiter.extradelight.registry.ExtraDelightItems;
-import com.vomiter.extradelight.common.fluids.SizedFluidIngredient;
+import com.vomiter.extradelight.common.recipes.ingredients.SizedFluidIngredient;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.material.Fluid;

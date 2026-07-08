@@ -1,0 +1,72 @@
+package com.vomiter.extradelight.common.items.dynamic;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.vomiter.extradelight.ExtraDelight;
+import com.vomiter.extradelight.common.items.dynamic.api.IDynamic;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.level.Level;
+
+public class DynamicJam extends Item implements IDynamic {
+	public static final ResourceLocation base_model = ResourceLocation.fromNamespaceAndPath(ExtraDelight.MOD_ID,
+			"extra/dynamics/jam/jam_jar");
+	public static final ResourceLocation missing_model = ResourceLocation.fromNamespaceAndPath(ExtraDelight.MOD_ID,
+			"extra/dynamics/jam/jam_missing");
+
+	public DynamicJam(Properties properties) {
+		super(properties);
+	}
+
+	@Override
+	public List<ResourceLocation> getPieces(ItemStack itemStack) {
+		List<ResourceLocation> i = new ArrayList<ResourceLocation>();
+
+		i.add(base_model);
+
+		return i;
+	}
+
+	@Override
+	public void appendHoverText(ItemStack stack, Level context, List<Component> tooltip, TooltipFlag isAdvanced) {
+        /*
+		ItemContainerContents comp = stack.getComponents().get(ExtraDelightComponents.ITEMSTACK_HANDLER.get());
+
+		if (comp != null) {
+			{
+				if (isAdvanced.hasShiftDown()) {
+					if (comp.nonEmptyItems() != null) {
+						tooltip.add(Component.translatable("tooltip.dynamic.ingredients"));
+						for (ItemStack s : comp.nonEmptyItems()) {
+							tooltip.add(Component.literal(" - ").append(Component.translatable(s.getDescriptionId())));
+						}
+					}
+				} else {
+					tooltip.add(Component.translatable("tooltip.see_more").withColor(0xFFAAAAAA));
+				}
+			}
+		}
+
+         */
+	}
+
+	@Override
+	public Component getName(ItemStack itemStack) {
+        /*
+		DynamicItemComponent dyn = itemStack.getComponents().get(ExtraDelightComponents.DYNAMIC_FOOD.get());
+
+		if (dyn != null) {
+			return Component.translatable("extradelight.jam." + dyn.graphics().get(0));
+
+		}
+
+         */
+
+		return Component.translatable(getDescriptionId());
+	}
+
+}

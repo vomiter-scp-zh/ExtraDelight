@@ -88,8 +88,10 @@ public class ExtraDelightBlockEntities {
                             ExtraDelightBlocks.GREEN_CHOCOLATE_BOX.get(), ExtraDelightBlocks.RED_CHOCOLATE_BOX.get(),
                             ExtraDelightBlocks.BLACK_CHOCOLATE_BOX.get(), ExtraDelightBlocks.PURPLE_CHOCOLATE_BOX.get())
                     .build(null));
+
     public static final RegistryObject<BlockEntityType<TapBlockEntity>> TAP = TILES.register("tap",
             () -> BlockEntityType.Builder.of(TapBlockEntity::new, ExtraDelightBlocks.TAP.get()).build(null));
+
     public static final RegistryObject<BlockEntityType<KegBlockEntity>> KEG = TILES.register("keg",
             () -> BlockEntityType.Builder.of(KegBlockEntity::new, ExtraDelightBlocks.KEG.get()).build(null));
 
@@ -160,6 +162,7 @@ public class ExtraDelightBlockEntities {
     public static final RegistryObject<BlockEntityType<CornHuskDollBlockEntity>> CORN_HUSK_DOLL = TILES
 			.register("corn_husk_doll", () -> BlockEntityType.Builder
 					.of(CornHuskDollBlockEntity::new, AestheticBlocks.CORN_HUSK_DOLL.get()).build(null));
+
     public static final RegistryObject<BlockEntityType<CandyBowlEntity>> CANDY_BOWL = TILES
             .register("candy_bowl", () -> BlockEntityType.Builder
                     .of(CandyBowlEntity::new, ExtraDelightBlocks.CANDY_BOWL.get()).build(null));

@@ -2,6 +2,7 @@ package com.vomiter.extradelight.common.complex.displays.knife;
 
 import javax.annotation.Nonnull;
 
+import com.vomiter.extradelight.common.complex.cap.ExtraDelightCapabilityBlockEntity;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.entity.player.Inventory;
@@ -23,7 +24,7 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import vectorwing.farmersdelight.common.tag.ModTags;
 
-public class KnifeBlockEntity extends BlockEntity implements MenuProvider {
+public class KnifeBlockEntity extends ExtraDelightCapabilityBlockEntity implements MenuProvider {
 
 //	private final LazyOptional<IItemHandlerModifiable> handler = LazyOptional.of(this::createHandler);
 	public static final String TAG = "inv";

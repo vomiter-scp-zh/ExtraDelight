@@ -6,7 +6,7 @@
   },
   "grinds": 4,
   "ingredient": {
-    "type": "neoforge:difference",
+    "type": "forge:difference",
     "base": {
       "tag": "c:seeds"
     },

@@ -12,7 +12,7 @@
       "item": "minecraft:baked_potato"
     },
     {
-      "type": "neoforge:compound",
+      "type": "extradelight:compound",
       "children": [
         {
           "tag": "c:foods/milk"
@@ -26,7 +26,7 @@
       "item": "minecraft:baked_potato"
     },
     {
-      "type": "neoforge:compound",
+      "type": "extradelight:compound",
       "children": [
         {
           "tag": "c:foods/cooked_mutton"
@@ -40,7 +40,7 @@
       "item": "farmersdelight:tomato_sauce"
     },
     {
-      "type": "neoforge:compound",
+      "type": "extradelight:compound",
       "children": [
         {
           "tag": "c:foods/cooked_mutton"

@@ -21,7 +21,7 @@
       "item": "extradelight:meringue"
     },
     {
-      "type": "neoforge:difference",
+      "type": "forge:difference",
       "base": {
         "tag": "c:foods/berry"
       },

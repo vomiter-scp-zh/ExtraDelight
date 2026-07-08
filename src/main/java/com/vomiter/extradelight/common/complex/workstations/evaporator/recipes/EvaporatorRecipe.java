@@ -4,7 +4,7 @@ import com.google.gson.JsonObject;
 import com.vomiter.extradelight.registry.ExtraDelightBlocks;
 import com.vomiter.extradelight.registry.ExtraDelightRecipes;
 
-import com.vomiter.extradelight.common.fluids.SizedFluidIngredient;
+import com.vomiter.extradelight.common.recipes.ingredients.SizedFluidIngredient;
 import com.vomiter.extradelight.util.JsonStackTransformer;
 import net.minecraft.core.RegistryAccess;
 import net.minecraft.network.FriendlyByteBuf;

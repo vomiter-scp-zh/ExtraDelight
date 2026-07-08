@@ -5,7 +5,7 @@ import java.util.Map.Entry;
 import java.util.function.Predicate;
 
 import com.vomiter.extradelight.common.fluids.FluidKey;
-import com.vomiter.extradelight.common.fluids.SizedFluidIngredient;
+import com.vomiter.extradelight.common.recipes.ingredients.SizedFluidIngredient;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.IFluidTank;

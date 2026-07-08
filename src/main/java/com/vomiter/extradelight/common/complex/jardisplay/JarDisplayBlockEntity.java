@@ -2,6 +2,7 @@ package com.vomiter.extradelight.common.complex.jardisplay;
 
 import javax.annotation.Nonnull;
 
+import com.vomiter.extradelight.common.complex.cap.ExtraDelightCapabilityBlockEntity;
 import com.vomiter.extradelight.registry.ExtraDelightBlockEntities;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
@@ -16,7 +17,7 @@ import net.minecraftforge.common.util.Lazy;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 
-public class JarDisplayBlockEntity extends BlockEntity {
+public class JarDisplayBlockEntity extends ExtraDelightCapabilityBlockEntity {
 	public static final String TAG = "inv";
 	private final ItemStackHandler items = createHandler();
 	private final Lazy<IItemHandler> itemHandler = Lazy.of(() -> items);

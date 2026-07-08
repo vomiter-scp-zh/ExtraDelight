@@ -5,17 +5,15 @@ import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.ShapedRecipe;
+import net.minecraft.world.item.crafting.SmithingTransformRecipe;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 
-@Mixin(ShapedRecipe.Serializer.class)
-public class ShapedMixin {
+@Mixin(SmithingTransformRecipe.Serializer.class)
+public class SmithingTrimMixin {
     @WrapOperation(
-            method = "fromJson(Lnet/minecraft/resources/ResourceLocation;Lcom/google/gson/JsonObject;)Lnet/minecraft/world/item/crafting/ShapedRecipe;",
-            at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/crafting/ShapedRecipe;" +
-                    "itemStackFromJson(Lcom/google/gson/JsonObject;)" +
-                    "Lnet/minecraft/world/item/ItemStack;"
-            )
+            method = "fromJson(Lnet/minecraft/resources/ResourceLocation;Lcom/google/gson/JsonObject;)Lnet/minecraft/world/item/crafting/SmithingTransformRecipe;",
+            at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/crafting/ShapedRecipe;itemStackFromJson(Lcom/google/gson/JsonObject;)Lnet/minecraft/world/item/ItemStack;")
     )
     private static ItemStack ed$getItemId(JsonObject jsonObject, Operation<ItemStack> original){
         if(jsonObject.has("id") && !jsonObject.has("item")){

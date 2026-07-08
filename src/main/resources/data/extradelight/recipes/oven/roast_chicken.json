@@ -15,7 +15,7 @@
       "tag": "c:gravy"
     },
     {
-      "type": "neoforge:compound",
+      "type": "extradelight:compound",
       "children": [
         {
           "tag": "c:foods/bread"

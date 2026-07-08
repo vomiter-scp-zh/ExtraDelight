@@ -6,7 +6,8 @@
   "mixins": [
     "FireMixin",
     "ShapedMixin",
-    "ShapelessMixin"
+    "ShapelessMixin",
+    "SmithingTrimMixin"
   ],
   "client": [
   ],

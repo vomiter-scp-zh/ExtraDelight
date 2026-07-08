@@ -5,7 +5,7 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.vomiter.extradelight.registry.ExtraDelightRecipes;
-import com.vomiter.extradelight.common.fluids.SizedFluidIngredient;
+import com.vomiter.extradelight.common.recipes.ingredients.SizedFluidIngredient;
 import com.vomiter.extradelight.common.complex.workstations.vat.VatBlockEntity;
 
 import com.vomiter.extradelight.util.JsonStackTransformer;

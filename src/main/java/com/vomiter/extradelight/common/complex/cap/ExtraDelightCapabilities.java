@@ -74,9 +74,25 @@ public class ExtraDelightCapabilities {
 
     public static void registerCapabilities() {
         registerItemHandler(
+                ExtraDelightBlockEntities.CANDY_BOWL.get(),
+                (be, side) -> be.getItemHandler()
+        );
+
+        registerItemHandler(
                 ExtraDelightBlockEntities.DRYING_RACK.get(),
                 (be, side) -> be.getItemHandler()
         );
+
+        registerItemHandler(
+                ExtraDelightBlockEntities.FOOD_DISPLAY.get(),
+                (be, side) -> be.getItemHandler()
+        );
+
+        registerItemHandler(
+                ExtraDelightBlockEntities.KNIFE_BLOCK.get(),
+                (be, side) -> be.getItemHandler()
+        );
+
 
         registerItemHandler(
                 ExtraDelightBlockEntities.MIXING_BOWL.get(),
@@ -118,8 +134,33 @@ public class ExtraDelightCapabilities {
                 }
         );
 
+        registerItemHandler(
+                ExtraDelightBlockEntities.SPICE_RACK.get(),
+                (be, side) -> be.getItemHandler()
+        );
+
+        registerItemHandler(
+                ExtraDelightBlockEntities.WREATH.get(),
+                (be, side) -> be.getItemHandler()
+        );
+
+        registerItemHandler(
+                ExtraDelightBlockEntities.COUNTER_CABINET_BLOCK.get(),
+                (be, side) -> be.getItemHandler()
+        );
+
+        registerItemHandler(
+                ExtraDelightBlockEntities.SINK_BLOCK.get(),
+                (be, side) -> be.getItemHandler()
+        );
+
         registerFluidHandler(
                 ExtraDelightBlockEntities.TAP.get(),
+                (be, side) -> be.getFluidHandler()
+        );
+
+        registerFluidHandler(
+                ExtraDelightBlockEntities.SINK_BLOCK.get(),
                 (be, side) -> be.getFluidHandler()
         );
 

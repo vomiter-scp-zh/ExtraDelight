@@ -7,7 +7,7 @@ import javax.annotation.Nonnull;
 import com.vomiter.extradelight.registry.ExtraDelightBlockEntities;
 import com.vomiter.extradelight.registry.ExtraDelightRecipes;
 import com.vomiter.extradelight.common.complex.cap.ExtraDelightSyncedCapabilityBlockEntity;
-import com.vomiter.extradelight.common.fluids.SizedFluidIngredient;
+import com.vomiter.extradelight.common.recipes.ingredients.SizedFluidIngredient;
 import com.vomiter.extradelight.util.BlockEntityUtils;
 import com.vomiter.extradelight.common.complex.workstations.evaporator.recipes.EvaporatorRecipe;
 import com.vomiter.extradelight.common.complex.workstations.evaporator.recipes.EvaporatorRecipeWrapper;

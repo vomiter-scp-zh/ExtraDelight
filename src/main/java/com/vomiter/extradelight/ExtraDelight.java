@@ -5,6 +5,7 @@ import com.vomiter.extradelight.common.complex.jar.JarRenderer;
 import com.vomiter.extradelight.common.complex.portable.picnicbasket.PicnicBasketRenderer;
 import com.vomiter.extradelight.common.complex.portable.picnicbasket.PicnicBasketScreen;
 import com.vomiter.extradelight.common.complex.jardisplay.JarDisplayRenderer;
+import com.vomiter.extradelight.common.recipes.IngredientRegistry;
 import com.vomiter.extradelight.registry.*;
 import com.vomiter.extradelight.common.complex.cabinet.countercabinet.CounterCabinetRenderer;
 import com.vomiter.extradelight.common.complex.cabinet.countercabinet.CounterCabinetScreen;
@@ -23,7 +24,6 @@ import com.vomiter.extradelight.common.complex.cap.ExtraDelightCapabilities;
 import com.vomiter.extradelight.common.complex.portable.chocolatebox.ChocolateBoxRenderer;
 import com.vomiter.extradelight.common.complex.fluid_handler.funnel.FunnelRenderer;
 import com.vomiter.extradelight.common.complex.fluid_handler.keg.KegRenderer;
-import com.vomiter.extradelight.common.fluids.SizedFluidIngredient;
 import com.vomiter.extradelight.common.complex.workstations.chiller.ChillerScreen;
 import com.vomiter.extradelight.common.complex.workstations.doughshaping.DoughShapingScreen;
 import com.vomiter.extradelight.common.complex.workstations.dryingrack.DryingRackRenderer;
@@ -48,7 +48,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.common.ForgeMod;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.common.crafting.CraftingHelper;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
@@ -90,16 +89,13 @@ public class ExtraDelight
         ExtraDelightRecipes.RECIPE_SERIALIZERS.register(modBus);
         ExtraDelightTabs.TABS.register(modBus);
         ExtraDelightMobEffects.register(modBus);
-        CraftingHelper.register(
-                SizedFluidIngredient.Serializer.ID,
-                SizedFluidIngredient.Serializer.INSTANCE
-        );
         ExtraDelightWorldGen.FEATURES.register(modBus);
         ExtraDelightFeatures.FEATURES.register(modBus);
         FoliagePlacerRegistry.PLACER.register(modBus);
         ExtraDelightParticles.PARTICLE_TYPES.register(modBus);
         ExtraDelightLootModifiers.LOOT_MODIFIER_SERIALIZERS.register(modBus);
         ExtraDelightLootFunctions.LOOT_FUNCTION_TYPES.register(modBus);
+        IngredientRegistry.register();
 
         MinecraftForge.EVENT_BUS.addGenericListener(ItemStack.class, ExtraDelightCapabilities::attachItemCapabilities);
 

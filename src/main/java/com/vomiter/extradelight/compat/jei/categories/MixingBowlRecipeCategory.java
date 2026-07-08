@@ -3,7 +3,7 @@ package com.vomiter.extradelight.compat.jei.categories;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.vomiter.extradelight.ExtraDelight;
 import com.vomiter.extradelight.registry.ExtraDelightItems;
-import com.vomiter.extradelight.common.fluids.SizedFluidIngredient;
+import com.vomiter.extradelight.common.recipes.ingredients.SizedFluidIngredient;
 import com.vomiter.extradelight.util.BottleFluidRegistry;
 import com.vomiter.extradelight.common.complex.workstations.mixingbowl.recipes.MixingBowlRecipe;
 import mezz.jei.api.constants.VanillaTypes;

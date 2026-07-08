@@ -9,7 +9,7 @@
   "experience": 1.0,
   "ingredients": [
     {
-      "type": "neoforge:compound",
+      "type": "extradelight:compound",
       "children": [
         {
           "tag": "extradelight:processed/fruit"

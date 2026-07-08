@@ -2,6 +2,7 @@ package com.vomiter.extradelight.common.complex.displays.fruitbowl;
 
 import javax.annotation.Nonnull;
 
+import com.vomiter.extradelight.common.complex.cap.ExtraDelightCapabilityBlockEntity;
 import com.vomiter.extradelight.registry.ExtraDelightBlockEntities;
 import com.vomiter.extradelight.util.BlockEntityUtils;
 
@@ -17,7 +18,7 @@ import net.minecraftforge.common.util.Lazy;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 
-public class FruitBowlBlockEntity extends BlockEntity {
+public class FruitBowlBlockEntity extends ExtraDelightCapabilityBlockEntity {
 	public static final String TAG = "inv";
 
 	private final ItemStackHandler items = createHandler();

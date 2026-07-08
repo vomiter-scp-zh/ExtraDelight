@@ -2,6 +2,7 @@ package com.vomiter.extradelight.common.complex.displays.spice;
 
 import javax.annotation.Nonnull;
 
+import com.vomiter.extradelight.common.complex.cap.ExtraDelightCapabilityBlockEntity;
 import com.vomiter.extradelight.registry.ExtraDelightBlockEntities;
 
 import net.minecraft.core.BlockPos;
@@ -20,7 +21,7 @@ import net.minecraftforge.common.util.Lazy;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 
-public class SpiceRackEntity extends BlockEntity implements MenuProvider {
+public class SpiceRackEntity extends ExtraDelightCapabilityBlockEntity implements MenuProvider {
 
 	public static final String TAG = "inv";
 

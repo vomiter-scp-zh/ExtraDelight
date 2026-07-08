@@ -9,7 +9,7 @@
   "experience": 1.0,
   "ingredients": [
     {
-      "type": "neoforge:compound",
+      "type": "extradelight:compound",
       "children": [
         {
           "tag": "c:foods/cookie"
@@ -20,7 +20,7 @@
       ]
     },
     {
-      "type": "neoforge:compound",
+      "type": "extradelight:compound",
       "children": [
         {
           "tag": "c:foods/cookie"
@@ -31,7 +31,7 @@
       ]
     },
     {
-      "type": "neoforge:compound",
+      "type": "extradelight:compound",
       "children": [
         {
           "tag": "c:foods/cookie"

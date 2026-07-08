@@ -5,7 +5,7 @@ import com.vomiter.extradelight.registry.ExtraDelightFluids;
 import com.vomiter.extradelight.registry.ExtraDelightItems;
 import com.vomiter.extradelight.registry.ExtraDelightRecipes;
 import com.vomiter.extradelight.common.complex.cap.ExtraDelightCapabilityBlockEntity;
-import com.vomiter.extradelight.common.fluids.SizedFluidIngredient;
+import com.vomiter.extradelight.common.recipes.ingredients.SizedFluidIngredient;
 import com.vomiter.extradelight.common.complex.workstations.FancyTank;
 import com.vomiter.extradelight.common.complex.workstations.IFancyTankHandler;
 import com.vomiter.extradelight.common.complex.workstations.mixingbowl.recipes.MixingBowlRecipe;

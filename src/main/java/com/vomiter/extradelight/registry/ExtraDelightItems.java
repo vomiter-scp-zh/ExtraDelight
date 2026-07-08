@@ -19,6 +19,8 @@ import com.vomiter.extradelight.common.items.*;
 import com.vomiter.extradelight.common.items.corn.CornSilkTeaItem;
 import com.vomiter.extradelight.common.items.corn.CorncobPipe;
 import com.vomiter.extradelight.common.items.corn.ShuckableCorn;
+import com.vomiter.extradelight.common.items.dynamic.DynamicJam;
+import com.vomiter.extradelight.common.items.dynamic.DynamicToast;
 import com.vomiter.extradelight.common.items.garlic.GarlicCureDrinkableItem;
 import com.vomiter.extradelight.common.items.garlic.GarlicCureItem;
 import com.vomiter.extradelight.common.items.garlic.GarlicTooltipItem;
@@ -2794,14 +2796,10 @@ public class ExtraDelightItems {
 					() -> new GarlicTooltipItem(bowlFoodItem(EDFoods.PENNE_ALL_ARRABBIATA), true))
 			.advancementMeal().finish();
 
-    /* NOT PRIORITIZED
 	public static final RegistryObject<Item> DYNAMIC_TOAST = ITEMS.register("dynamic_toast",
-			() -> new DynamicToast(new Item.Properties()
-					.component(ExtraDelightComponents.ITEMSTACK_HANDLER.get(), ItemContainerContents.EMPTY)
-					.food(EDFoods.BUTTERED_TOAST)));
+			() -> new DynamicToast(new Item.Properties().food(EDFoods.BUTTERED_TOAST)));
 	public static final RegistryObject<Item> DYNAMIC_JAM = ITEMS.register("dynamic_jam",
 			() -> new DynamicJam(new Item.Properties().craftRemainder(Items.GLASS_BOTTLE).food(EDFoods.JAM)));
-	*/
 
 	public static final RegistryObject<Item> HAZELNUT_PETAL_LITTER_ITEM = ExtraDelightItems.ITEMS.register(
 			"hazelnut_petal_litter_item",
