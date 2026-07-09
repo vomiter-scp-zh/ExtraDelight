@@ -10,6 +10,7 @@
     "SmithingTrimMixin"
   ],
   "client": [
+    "ItemStackClientMixin"
   ],
   "injectors": {
     "defaultRequire": 1

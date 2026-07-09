@@ -3023,11 +3023,14 @@ public class ExtraDelightItems {
     public static final RegistryObject<Item> JAM_FLUID_BUCKET = ITEMS.register("jam_fluid_bucket",
             () -> stack1bucketItem(ExtraDelightFluids.JAM));
 
+    /*
     public static final RegistryObject<Item> GOLDEN_JAM_FLUID_BUCKET = ITEMS.register("golden_jam_fluid_bucket",
             () -> stack1bucketItem(ExtraDelightFluids.GOLDEN_JAM));
 
     public static final RegistryObject<Item> GLOW_JAM_FLUID_BUCKET = ITEMS.register("glow_jam_fluid_bucket",
             () -> stack1bucketItem(ExtraDelightFluids.GLOW_JAM));
+
+     */
 
     public static final RegistryObject<Item> TEA_FLUID_BUCKET = ITEMS.register("tea_fluid_bucket",
             () -> stack1bucketItem(ExtraDelightFluids.TEA));
@@ -3149,9 +3152,11 @@ public class ExtraDelightItems {
         DispenserBlock.registerBehavior(ExtraDelightItems.EGG_MIX_FLUID_BUCKET.get(), DispenseFluidContainer.getInstance());
         DispenserBlock.registerBehavior(ExtraDelightItems.GLOW_BERRY_JUICE_FLUID_BUCKET.get(),
                 DispenseFluidContainer.getInstance());
+        /*
         DispenserBlock.registerBehavior(ExtraDelightItems.GLOW_JAM_FLUID_BUCKET.get(), DispenseFluidContainer.getInstance());
-        DispenserBlock.registerBehavior(ExtraDelightItems.GOLDEN_JAM_FLUID_BUCKET.get(),
-                DispenseFluidContainer.getInstance());
+        DispenserBlock.registerBehavior(ExtraDelightItems.GOLDEN_JAM_FLUID_BUCKET.get(), DispenseFluidContainer.getInstance());
+
+         */
         DispenserBlock.registerBehavior(ExtraDelightItems.GRAVY_FLUID_BUCKET.get(), DispenseFluidContainer.getInstance());
         DispenserBlock.registerBehavior(ExtraDelightItems.HOT_COCOA_FLUID_BUCKET.get(), DispenseFluidContainer.getInstance());
         DispenserBlock.registerBehavior(ExtraDelightItems.JAM_FLUID_BUCKET.get(), DispenseFluidContainer.getInstance());

@@ -2,7 +2,9 @@ package com.vomiter.extradelight.util.debug;
 
 import com.mojang.authlib.GameProfile;
 import com.mojang.brigadier.CommandDispatcher;
+import com.vomiter.extradelight.DataComponents;
 import com.vomiter.extradelight.ExtraDelight;
+import com.vomiter.extradelight.common.items.dynamic.api.IDynamic;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
 import net.minecraft.core.BlockPos;
@@ -46,6 +48,20 @@ public final class ExtraDelightDropTestCommand {
                 Commands.literal("extradelight_drop_test")
                         .requires(source -> source.hasPermission(2))
                         .executes(context -> run(context.getSource()))
+        );
+        dispatcher.register(
+                Commands.literal("extradelight_get_dyn")
+                        .requires(source -> source.hasPermission(2))
+                        .executes(context -> {
+                                var item = context.getSource().getPlayer().getMainHandItem();
+                                if(item.getItem() instanceof IDynamic dynamic){
+                                    ExtraDelight.LOGGER.info("pieces = {}", dynamic.getPieces(item));
+                                    ExtraDelight.LOGGER.info("items = {}", DataComponents.getDynamicIngredients(item));
+                                    ExtraDelight.LOGGER.info("items names = {}", DataComponents.getDynamicIngredients(item).stream().map(ItemStack::getHoverName).toList());
+                                }
+                                return 1;
+                            }
+                        )
         );
     }
 

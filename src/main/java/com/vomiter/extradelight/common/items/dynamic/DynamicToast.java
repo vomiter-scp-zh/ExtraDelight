@@ -1,16 +1,24 @@
 package com.vomiter.extradelight.common.items.dynamic;
 
-import java.util.ArrayList;
-import java.util.List;
-
+import com.mojang.datafixers.util.Pair;
+import com.vomiter.extradelight.DataComponents;
 import com.vomiter.extradelight.ExtraDelight;
 import com.vomiter.extradelight.common.items.dynamic.api.IDynamic;
+import com.vomiter.extradelight.common.items.dynamic.client.DynamicClientHelper;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class DynamicToast extends Item implements IDynamic {
 	static final ResourceLocation base_model = ResourceLocation.fromNamespaceAndPath(ExtraDelight.MOD_ID,
@@ -22,93 +30,54 @@ public class DynamicToast extends Item implements IDynamic {
 		super(properties);
 	}
 
-	@Override
-	public List<ResourceLocation> getPieces(ItemStack itemStack) {
+    @Override
+    public ResourceLocation getBaseModel() {
+        return base_model;
+    }
 
-		List<ResourceLocation> i = new ArrayList<ResourceLocation>();
+    @Override
+    public ResourceLocation getMissingModel() {
+        return missing_model;
+    }
 
-		i.add(base_model);
+    @Override
+    public String getPrefix() {
+        return "extra/dynamics/toast/";
+    }
 
-        /*
-		DynamicItemComponent comp = itemStack.getComponents().get(ExtraDelightComponents.DYNAMIC_FOOD.get());
-		ItemContainerContents items = itemStack.getComponents().get(ExtraDelightComponents.ITEMSTACK_HANDLER.get());
-		if (comp != null && items != null) {
-			{
-				if (comp.graphics().size() > 0) {
-					ResourceLocation rc = missing_model;
-					String str = "extra/dynamics/toast/";
-
-					for (ItemStack s : items.nonEmptyItems()) {
-//					ItemStack s = items.getStackInSlot(1);
-						if (!s.is(ExtraDelightTags.TOAST)) {
-							if (s.getItem() instanceof IDynamic id) {
-								DynamicItemComponent dyn = s.get(ExtraDelightComponents.DYNAMIC_FOOD.get());
-								rc = ExtraDelight.modLoc(str + "dynamic_jam/" + dyn.graphics().get(0));
-							} else
-								rc = ExtraDelight.modLoc(str + comp.graphics().get(0));
-
-							i.add(rc);
-						}
-					}
-				} else
-					i.add(missing_model);
-			}
-		} else
-			i.add(missing_model);
-
-         */
-
-//		i.add(bm);
-		return i;
+    @Override
+	public void appendHoverText(@NotNull ItemStack stack,
+                                Level context,
+                                @NotNull List<Component> tooltip,
+                                @NotNull TooltipFlag isAdvanced) {
+        if(context != null && context.isClientSide()) DynamicClientHelper.appendTooltipForToast(stack, context, tooltip, isAdvanced);
 	}
 
-	@Override
-	public void appendHoverText(ItemStack stack, Level context, List<Component> tooltip,
-                                TooltipFlag isAdvanced) {
-        /*
-		ItemContainerContents comp = stack.getComponents().get(ExtraDelightComponents.ITEMSTACK_HANDLER.get());
-
-		if (comp != null) {
-			{
-				if (comp.nonEmptyItems() != null) {
-					tooltip.add(Component.translatable("tooltip.dynamic.ingredients"));
-					for (ItemStack s : comp.nonEmptyItems()) {
-						tooltip.add(Component.literal(" - ").append(s.getItem().getName(s)));
-						if (isAdvanced.hasShiftDown()) {
-							s.getItem().appendHoverText(stack, context, tooltip, isAdvanced);
-						}
-					}
-					if (!isAdvanced.hasShiftDown())
-						tooltip.add(Component.translatable("tooltip.see_more").withColor(0xFF555555));
-				}
-			}
-		}
-
-         */
-	}
-
-	@Override
-	public Component getName(ItemStack itemStack) {
-        /*
-		ItemContainerContents comp = itemStack.getComponents().get(ExtraDelightComponents.ITEMSTACK_HANDLER.get());
-		if (comp != null) {
-			if (comp.getSlots() > 1)
-			{
-				for(ItemStack stack : comp.nonEmptyItems())
-				{
-					if(!stack.is(ExtraDelightTags.TOAST))
-					{
-						return Component.translationArg(Component.translatable(this.getDescriptionId(itemStack),
-								stack.getItem().getName(stack)));
-					}
-				}
-				
-			}
-		}
-		
-         */
-
-		return Component.translatable("dynamic.toast");
-	}
-
+    @Override
+    public FoodProperties getFoodProperties(ItemStack stack, @Nullable LivingEntity entity) {
+        var items = DataComponents.getDynamicIngredients(stack);
+        int nutrition = 0;
+        float saturation = 0;
+        int foodCount = 0;
+        List<Pair<MobEffectInstance, Float>> effects = new ArrayList<>();
+        for (ItemStack item : items) {
+            var food = item.getFoodProperties(entity);
+            if(food != null){
+                nutrition += food.getNutrition();
+                saturation += food.getSaturationModifier();
+                effects.addAll(food.getEffects());
+                foodCount ++;
+            }
+        }
+        var foodBuilder = new FoodProperties.Builder()
+                .nutrition(nutrition)
+                .saturationMod(saturation / (float) foodCount);
+        for (Pair<MobEffectInstance, Float> effect : effects) {
+            foodBuilder.effect(
+                    effect::getFirst,
+                    effect.getSecond()
+            );
+        }
+        return foodBuilder.build();
+    }
 }

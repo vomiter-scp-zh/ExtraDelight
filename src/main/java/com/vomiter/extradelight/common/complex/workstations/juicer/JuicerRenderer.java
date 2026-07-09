@@ -34,17 +34,11 @@ import net.minecraft.world.level.material.Fluid;
 
 public class JuicerRenderer implements BlockEntityRenderer<JuicerBlockEntity> {
 
-    ModelResourceLocation crankRC = new ModelResourceLocation(
-            ResourceLocation.fromNamespaceAndPath(ExtraDelight.MOD_ID, "extra/juicer_crank"),
-            ""
-    );
+    ResourceLocation crankRC = ExtraDelight.modLoc("extra/juicer_crank");
 
     IRenderable<ModelData> crank;
 
-    ModelResourceLocation plateRC = new ModelResourceLocation(
-            ResourceLocation.fromNamespaceAndPath(ExtraDelight.MOD_ID, "extra/juicer_plate"),
-            ""
-    );
+    ResourceLocation plateRC = ExtraDelight.modLoc("extra/juicer_plate");
 
     IRenderable<ModelData> plate;
 //	float rotationY = 0;

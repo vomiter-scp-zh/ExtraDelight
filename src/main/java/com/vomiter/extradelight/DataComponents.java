@@ -1,6 +1,7 @@
 package com.vomiter.extradelight;
 
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.ListTag;
 import net.minecraft.nbt.Tag;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
@@ -11,11 +12,44 @@ import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.block.state.properties.Property;
 
 import java.util.HashMap;
+import java.util.List;
 
 public class DataComponents {
     public static final ResourceLocation MEAL = ResourceLocation.fromNamespaceAndPath("farmersdelight", "meal");
     public static final ResourceLocation CONTAINER = ResourceLocation.fromNamespaceAndPath("farmersdelight", "container");
     public static final ResourceLocation CHILL = ResourceLocation.fromNamespaceAndPath("extradelight", "chill");
+
+    public static final ResourceLocation DYNAMIC = ExtraDelight.modLoc("dynamic");
+    public static final ResourceLocation INGREDIENTS = ExtraDelight.modLoc("ingredients");
+
+    public static List<ItemStack> getDynamicIngredients(ItemStack stack){
+        var root = stack.getTag();
+        if(root != null && root.contains(DYNAMIC.toString(), Tag.TAG_COMPOUND)){
+            if(root.getCompound(DYNAMIC.toString()).contains(INGREDIENTS.toString(), Tag.TAG_LIST)){
+                var list = root.getCompound(DYNAMIC.toString()).getList(INGREDIENTS.toString(), Tag.TAG_COMPOUND);
+                var items = list.stream().map(tag -> ItemStack.of((CompoundTag) tag));
+                return items.toList();
+            }
+        }
+
+        return List.of();
+    }
+
+    public static void setDynamicIngredient(ItemStack stack, List<ItemStack> graphics) {
+        CompoundTag root = stack.getOrCreateTag();
+
+        CompoundTag dynamic = root.getCompound(DYNAMIC.toString());
+        ListTag list = new ListTag();
+
+        for (ItemStack graphic : graphics) {
+            if (!graphic.isEmpty()) {
+                list.add(graphic.save(new CompoundTag()));
+            }
+        }
+
+        dynamic.put(INGREDIENTS.toString(), list);
+        root.put(DYNAMIC.toString(), dynamic);
+    }
 
     public static final String BLOCK_STATE_TAG = "BlockStateTag";
 

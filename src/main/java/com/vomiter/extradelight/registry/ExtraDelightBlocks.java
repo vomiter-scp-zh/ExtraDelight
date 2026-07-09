@@ -1158,6 +1158,7 @@ public class ExtraDelightBlocks {
             () -> new LiquidBlock(ExtraDelightFluids.JAM.FLUID.get(), BlockBehaviour.Properties.copy(Blocks.WATER)
                     .noCollission().strength(100.0F).noLootTable().liquid()));
 
+    /*
     public static final RegistryObject<LiquidBlock> GOLDEN_JAM_FLUID_BLOCK = BLOCKS.register("golden_jam_fluid_block",
             () -> new LiquidBlock(ExtraDelightFluids.GOLDEN_JAM.FLUID.get(), BlockBehaviour.Properties
                     .copy(Blocks.WATER).noCollission().strength(100.0F).noLootTable().liquid()));
@@ -1165,6 +1166,7 @@ public class ExtraDelightBlocks {
     public static final RegistryObject<LiquidBlock> GLOW_JAM_FLUID_BLOCK = BLOCKS.register("glow_jam_fluid_block",
             () -> new LiquidBlock(ExtraDelightFluids.GLOW_JAM.FLUID.get(), BlockBehaviour.Properties
                     .copy(Blocks.WATER).noCollission().strength(100.0F).noLootTable().liquid()));
+     */
 
     public static final RegistryObject<LiquidBlock> TEA_FLUID_BLOCK = BLOCKS.register("tea_fluid_block",
             () -> new HotFluidBlock(ExtraDelightFluids.TEA.FLUID.get(), BlockBehaviour.Properties

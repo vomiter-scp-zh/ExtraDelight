@@ -4,6 +4,7 @@ import java.util.List;
 import com.vomiter.extradelight.util.ItemUtils;
 
 import net.minecraft.ChatFormatting;
+import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.particles.ItemParticleOption;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -21,12 +22,14 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.storage.loot.LootParams;
-import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParams;
 import net.minecraft.world.phys.Vec3;
+import org.jetbrains.annotations.NotNull;
 import vectorwing.farmersdelight.common.Configuration;
 import vectorwing.farmersdelight.common.utility.TextUtils;
+
+import javax.annotation.ParametersAreNonnullByDefault;
 
 public class ShuckableCorn extends Item {
 
@@ -42,18 +45,20 @@ public class ShuckableCorn extends Item {
 	}
 
 	@Override
-	public int getUseDuration(ItemStack stack) {
+	public int getUseDuration(@NotNull ItemStack stack) {
 		return 16;
 	}
 
 	@Override
-	public InteractionResultHolder<ItemStack> use(Level pLevel, Player pPlayer, InteractionHand pUsedHand) {
+	public @NotNull InteractionResultHolder<ItemStack> use(@NotNull Level pLevel, Player pPlayer, InteractionHand pUsedHand) {
 		ItemStack itemstack = pPlayer.getItemInHand(pUsedHand);
 		pPlayer.startUsingItem(pUsedHand);
 		return InteractionResultHolder.consume(itemstack);
 	}
 
 	@Override
+    @ParametersAreNonnullByDefault
+    @MethodsReturnNonnullByDefault
 	public ItemStack finishUsingItem(ItemStack pStack, Level pLevel, LivingEntity pLivingEntity) {
 		if (pLivingEntity instanceof Player p) {
 			int c = Math.min(pStack.getCount(), 8);
@@ -93,12 +98,16 @@ public class ShuckableCorn extends Item {
 		return pStack;
 	}
 
-	@Override
+    @ParametersAreNonnullByDefault
+    @MethodsReturnNonnullByDefault
+    @Override
 	public UseAnim getUseAnimation(ItemStack pStack) {
 		return UseAnim.BOW;
 	}
 
-	@Override
+    @ParametersAreNonnullByDefault
+    @MethodsReturnNonnullByDefault
+    @Override
 	public void appendHoverText(ItemStack stack, Level context, List<Component> tooltip,
 			TooltipFlag isAdvanced) {
 		if (Configuration.ENABLE_FOOD_EFFECT_TOOLTIP.get()) {

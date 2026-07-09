@@ -1,0 +1,17 @@
+{
+  "type": "extradelight:dynamic_toast",
+  "category": "misc",
+  "graphic": "dynamic",
+  "ingredients": [
+    {
+      "tag": "c:toast"
+    },
+    {
+      "item": "extradelight:dynamic_jam"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "item": "extradelight:dynamic_toast"
+  }
+}

@@ -1,6 +1,8 @@
 package com.vomiter.extradelight;
 
 import com.mojang.logging.LogUtils;
+import com.vomiter.extradelight.client.ExtraDelightClientEvents;
+import com.vomiter.extradelight.common.ExtraDelightEvents;
 import com.vomiter.extradelight.common.complex.jar.JarRenderer;
 import com.vomiter.extradelight.common.complex.portable.picnicbasket.PicnicBasketRenderer;
 import com.vomiter.extradelight.common.complex.portable.picnicbasket.PicnicBasketScreen;
@@ -98,8 +100,10 @@ public class ExtraDelight
         IngredientRegistry.register();
 
         MinecraftForge.EVENT_BUS.addGenericListener(ItemStack.class, ExtraDelightCapabilities::attachItemCapabilities);
+        ExtraDelightEvents.init();
 
         if(FMLEnvironment.dist.isClient()){
+            ExtraDelightClientEvents.init(modBus);
             modBus.addListener(this::clientSetup);
         }
 

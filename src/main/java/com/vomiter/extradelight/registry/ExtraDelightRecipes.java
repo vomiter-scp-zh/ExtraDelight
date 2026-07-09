@@ -3,6 +3,8 @@ package com.vomiter.extradelight.registry;
 import java.util.function.Supplier;
 
 import com.vomiter.extradelight.ExtraDelight;
+import com.vomiter.extradelight.common.recipes.DynamicJamRecipe;
+import com.vomiter.extradelight.common.recipes.DynamicToastRecipe;
 import com.vomiter.extradelight.common.recipes.FeastRecipe;
 import com.vomiter.extradelight.common.recipes.ToolOnBlockRecipe;
 import com.vomiter.extradelight.common.complex.workstations.chiller.ChillerRecipe;
@@ -59,17 +61,17 @@ public class ExtraDelightRecipes {
             () -> registerRecipeType("evaporator"));
     public static final Supplier<RecipeType<JuicerRecipe>> JUICER = RECIPE_TYPES.register("juicer",
             () -> registerRecipeType("juicer"));
+    public static final Supplier<RecipeType<DynamicJamRecipe>> DYNAMIC_JAM = RECIPE_TYPES.register("dynamic_jam",
+            () -> registerRecipeType("dynamic_jam"));
+    public static final Supplier<RecipeType<DynamicToastRecipe>> DYNAMIC_TOAST = RECIPE_TYPES.register("dynamic_toast",
+            () -> registerRecipeType("dynamic_toast"));
 
 
     /*
 	public static final Supplier<RecipeType<ShapedWithJarRecipe>> SHAPED_JAR = RECIPE_TYPES.register("shaped_jar",
 			() -> registerRecipeType("shaped_jar"));
-	public static final Supplier<RecipeType<DynamicJamRecipe>> DYNAMIC_JAM = RECIPE_TYPES.register("dynamic_jam",
-			() -> registerRecipeType("dynamic_jam"));
 //	public static final Supplier<RecipeType<DynamicSandwichRecipe>> DYNAMIC_SANDWICH = RECIPE_TYPES
 //			.register("dynamic_sandwich", () -> registerRecipeType("dynamic_sandwich"));
-	public static final Supplier<RecipeType<DynamicToastRecipe>> DYNAMIC_TOAST = RECIPE_TYPES.register("dynamic_toast",
-			() -> registerRecipeType("dynamic_toast"));
 	public static final Supplier<RecipeType<BottleFluidRegistryRecipe>> BOTTLE_FLUID_REGISTRY = RECIPE_TYPES
 			.register("fluid_registry", () -> registerRecipeType("fluid_registry"));
 
@@ -111,6 +113,10 @@ public class ExtraDelightRecipes {
             EvaporatorRecipe.Serializer::new);
     public static final Supplier<RecipeSerializer<?>> JUICER_SERIALIZER = RECIPE_SERIALIZERS.register("juicer",
             JuicerRecipe.Serializer::new);
+    public static final Supplier<RecipeSerializer<?>> DYNAMIC_JAM_SERIALIZER = RECIPE_SERIALIZERS
+            .register("dynamic_jam", DynamicJamRecipe.Serializer::new);
+    public static final Supplier<RecipeSerializer<?>> DYNAMIC_TOAST_SERIALIZER = RECIPE_SERIALIZERS
+            .register("dynamic_toast", DynamicToastRecipe.Serializer::new);
 
 
 	/*
@@ -125,12 +131,8 @@ public class ExtraDelightRecipes {
 
 	public static final Supplier<RecipeSerializer<?>> SHAPED_JAR_SERIALIZER = RECIPE_SERIALIZERS.register("shaped_jar",
 			ShapedWithJarRecipe.Serializer::new);
-	public static final Supplier<RecipeSerializer<?>> DYNAMIC_JAM_SERIALIZER = RECIPE_SERIALIZERS
-			.register("dynamic_jam", DynamicJamRecipe.Serializer::new);
 //	public static final Supplier<RecipeSerializer<?>> DYNAMIC_SANDWICH_SERIALIZER = RECIPE_SERIALIZERS
 //			.register("dynamic_sandwich", DynamicSandwichRecipe.Serializer::new);
-	public static final Supplier<RecipeSerializer<?>> DYNAMIC_TOAST_SERIALIZER = RECIPE_SERIALIZERS
-			.register("dynamic_toast", DynamicToastRecipe.Serializer::new);
 	public static final Supplier<RecipeSerializer<?>> BOTTLE_FLUID_SERIALIZER = RECIPE_SERIALIZERS
 			.register("bottle_fluid", BottleFluidRegistryRecipe.Serializer::new);
 

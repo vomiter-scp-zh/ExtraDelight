@@ -3,12 +3,10 @@ package com.vomiter.extradelight.common.recipes.ingredients;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
+import com.vomiter.extradelight.DataComponents;
 import com.vomiter.extradelight.ExtraDelight;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.nbt.ListTag;
-import net.minecraft.nbt.Tag;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
@@ -30,7 +28,7 @@ public class ExtraDelightDynamicIngredient extends AbstractIngredient {
 
     private static final String COMPONENTS = "components";
     private static final String DYNAMIC_FOOD = "extradelight:dynamic_food";
-    private static final String GRAPHICS = "graphics";
+    private static final String DYNAMIC_INGREDIENTS = "dynamic_ingredients";
 
     @Nullable
     private final Item item;
@@ -38,9 +36,9 @@ public class ExtraDelightDynamicIngredient extends AbstractIngredient {
     @Nullable
     private final TagKey<Item> tag;
 
-    private final List<String> graphics;
+    private final List<Ingredient> ingredients;
 
-    public ExtraDelightDynamicIngredient(@Nullable Item item, @Nullable TagKey<Item> tag, List<String> graphics) {
+    public ExtraDelightDynamicIngredient(@Nullable Item item, @Nullable TagKey<Item> tag, List<Ingredient> ingredients) {
         super(makeValues(item, tag));
 
         if ((item == null) == (tag == null)) {
@@ -49,7 +47,7 @@ public class ExtraDelightDynamicIngredient extends AbstractIngredient {
 
         this.item = item;
         this.tag = tag;
-        this.graphics = List.copyOf(graphics);
+        this.ingredients = List.copyOf(ingredients);
     }
 
     private static Stream<? extends Ingredient.Value> makeValues(@Nullable Item item, @Nullable TagKey<Item> tag) {
@@ -78,44 +76,21 @@ public class ExtraDelightDynamicIngredient extends AbstractIngredient {
             return false;
         }
 
-        if (this.graphics.isEmpty()) {
+        if (this.ingredients.isEmpty()) {
             return true;
         }
 
-        List<String> stackGraphics = readGraphicsFromStack(stack);
+        List<ItemStack> stackGraphics = DataComponents.getDynamicIngredients(stack);
 
-        return stackGraphics.stream().anyMatch(this.graphics::contains);
-    }
-
-    private static List<String> readGraphicsFromStack(ItemStack stack) {
-        CompoundTag root = stack.getTag();
-        if (root == null) {
-            return List.of();
+        for (ItemStack stackGraphic : stackGraphics) {
+            for (Ingredient requiredGraphic : this.ingredients) {
+                if (requiredGraphic.test(stackGraphic)) {
+                    return true;
+                }
+            }
         }
 
-        //{ "extradelight:dynamic_food": { "graphics": [...] } }
-        CompoundTag dynamicFood = null;
-
-        if (root.contains(DYNAMIC_FOOD, Tag.TAG_COMPOUND)) {
-            dynamicFood = root.getCompound(DYNAMIC_FOOD);
-        }
-
-        if (dynamicFood == null || !dynamicFood.contains(GRAPHICS, Tag.TAG_LIST)) {
-            return List.of();
-        }
-
-        return readStringList(dynamicFood, GRAPHICS);
-    }
-
-    private static List<String> readStringList(CompoundTag tag, String key) {
-        ListTag listTag = tag.getList(key, Tag.TAG_STRING);
-        List<String> result = new ArrayList<>();
-
-        for (int i = 0; i < listTag.size(); i++) {
-            result.add(listTag.getString(i));
-        }
-
-        return result;
+        return false;
     }
 
     @Override
@@ -147,11 +122,11 @@ public class ExtraDelightDynamicIngredient extends AbstractIngredient {
         JsonObject dynamicFood = new JsonObject();
         JsonArray graphicsArray = new JsonArray();
 
-        for (String graphic : this.graphics) {
-            graphicsArray.add(graphic);
+        for (Ingredient graphic : this.ingredients) {
+            graphicsArray.add(graphic.toJson());
         }
 
-        dynamicFood.add(GRAPHICS, graphicsArray);
+        dynamicFood.add(DYNAMIC_INGREDIENTS, graphicsArray);
         components.add(DYNAMIC_FOOD, dynamicFood);
         json.add(COMPONENTS, components);
 
@@ -165,19 +140,17 @@ public class ExtraDelightDynamicIngredient extends AbstractIngredient {
             TagKey<Item> tag = null;
 
             if (json.has("items")) {
-                ResourceLocation itemId
-                        = ResourceLocation.tryParse(GsonHelper.getAsString(json, "items"));
+                ResourceLocation itemId = ResourceLocation.tryParse(GsonHelper.getAsString(json, "items"));
                 item = BuiltInRegistries.ITEM.getOptional(itemId)
                         .orElseThrow(() -> new IllegalArgumentException("Unknown item: " + itemId));
             }
 
             if (json.has("tag")) {
-                ResourceLocation tagId
-                        = ResourceLocation.tryParse(GsonHelper.getAsString(json, "tag"));
+                ResourceLocation tagId = ResourceLocation.tryParse(GsonHelper.getAsString(json, "tag"));
                 tag = TagKey.create(Registries.ITEM, tagId);
             }
 
-            List<String> graphics = parseGraphics(json);
+            List<Ingredient> graphics = parseGraphics(json);
 
             return new ExtraDelightDynamicIngredient(item, tag, graphics);
         }
@@ -199,10 +172,10 @@ public class ExtraDelightDynamicIngredient extends AbstractIngredient {
             }
 
             int graphicsSize = buffer.readVarInt();
-            List<String> graphics = new ArrayList<>();
+            List<Ingredient> graphics = new ArrayList<>();
 
             for (int i = 0; i < graphicsSize; i++) {
-                graphics.add(buffer.readUtf());
+                graphics.add(Ingredient.fromNetwork(buffer));
             }
 
             return new ExtraDelightDynamicIngredient(item, tag, graphics);
@@ -219,14 +192,14 @@ public class ExtraDelightDynamicIngredient extends AbstractIngredient {
                 buffer.writeResourceLocation(ingredient.tag.location());
             }
 
-            buffer.writeVarInt(ingredient.graphics.size());
+            buffer.writeVarInt(ingredient.ingredients.size());
 
-            for (String graphic : ingredient.graphics) {
-                buffer.writeUtf(graphic);
+            for (Ingredient graphic : ingredient.ingredients) {
+                graphic.toNetwork(buffer);
             }
         }
 
-        private static List<String> parseGraphics(JsonObject json) {
+        private static List<Ingredient> parseGraphics(JsonObject json) {
             if (!json.has(COMPONENTS)) {
                 return List.of();
             }
@@ -239,15 +212,19 @@ public class ExtraDelightDynamicIngredient extends AbstractIngredient {
 
             JsonObject dynamicFood = GsonHelper.getAsJsonObject(components, DYNAMIC_FOOD);
 
-            if (!dynamicFood.has(GRAPHICS)) {
+            if (!dynamicFood.has(DYNAMIC_INGREDIENTS)) {
                 return List.of();
             }
 
-            JsonArray graphicsArray = GsonHelper.getAsJsonArray(dynamicFood, GRAPHICS);
-            List<String> graphics = new ArrayList<>();
+            JsonArray graphicsArray = GsonHelper.getAsJsonArray(dynamicFood, DYNAMIC_INGREDIENTS);
+            List<Ingredient> graphics = new ArrayList<>();
 
             for (JsonElement element : graphicsArray) {
-                graphics.add(element.getAsString());
+                Ingredient ingredient = Ingredient.fromJson(element, false);
+
+                if (!ingredient.isEmpty()) {
+                    graphics.add(ingredient);
+                }
             }
 
             return graphics;
