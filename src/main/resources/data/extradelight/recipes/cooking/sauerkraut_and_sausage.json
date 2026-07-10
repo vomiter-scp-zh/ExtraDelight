@@ -1,0 +1,33 @@
+{
+  "type": "farmersdelight:cooking",
+  "container": {
+    "count": 1,
+    "id": "minecraft:bowl"
+  },
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "tag": "c:sausage/raw"
+    },
+    {
+      "tag": "c:sauerkraut"
+    },
+    {
+      "tag": "c:foods/raw_bacon"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "tag": "extradelight:processed/onion"
+    },
+    {
+      "tag": "extradelight:processed/apple"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "count": 2,
+    "id": "extradelight:sauerkraut_and_sausage"
+  }
+}

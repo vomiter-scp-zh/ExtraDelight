@@ -1,0 +1,43 @@
+{
+  "type": "extradelight:oven",
+  "consumeContainer": false,
+  "container": {
+    "count": 1,
+    "id": "extradelight:square_pan"
+  },
+  "cookingtime": 400,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "tag": "extradelight:broth"
+    },
+    {
+      "tag": "c:meat/roast/raw"
+    },
+    {
+      "tag": "c:cooking_oil"
+    },
+    {
+      "tag": "extradelight:processed/onion"
+    },
+    {
+      "tag": "extradelight:processed/potato"
+    },
+    {
+      "tag": "extradelight:processed/carrot"
+    },
+    {
+      "tag": "extradelight:processed/onion"
+    },
+    {
+      "tag": "extradelight:processed/potato"
+    },
+    {
+      "tag": "extradelight:processed/carrot"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "extradelight:pot_roast_block_item"
+  }
+}

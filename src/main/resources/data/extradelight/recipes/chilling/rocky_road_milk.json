@@ -1,0 +1,32 @@
+{
+  "type": "extradelight:chiller",
+  "consumeContainer": false,
+  "container": {
+    "count": 1,
+    "id": "extradelight:tray"
+  },
+  "cookingtime": 800,
+  "experience": 0.35,
+  "fluid": {
+    "amount": 250,
+    "id": "extradelight:milk_chocolate_syrup_fluid"
+  },
+  "ingredients": [
+    {
+      "tag": "c:gummies"
+    },
+    {
+      "tag": "c:foods/cookie"
+    },
+    {
+      "tag": "c:marshmallow"
+    },
+    {
+      "tag": "c:nuts/cooked"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "extradelight:rocky_road"
+  }
+}

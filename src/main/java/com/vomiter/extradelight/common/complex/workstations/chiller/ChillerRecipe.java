@@ -183,7 +183,9 @@ public class ChillerRecipe implements Recipe<ChillerRecipeWrapper> {
             FluidStack fluid = FluidStack.EMPTY;
             if (json.has("fluid") && !json.get("fluid").isJsonNull()) {
                 JsonObject fluidJson = GsonHelper.getAsJsonObject(json, "fluid");
-                fluid = readFluidStack(fluidJson);
+                if (fluidJson.has("id")){
+                    fluid = readFluidStack(fluidJson);
+                }
             }
 
             ItemStack output = ShapedRecipe.itemStackFromJson(JsonStackTransformer.addItemForIdFormat(GsonHelper.getAsJsonObject(json, "result")));

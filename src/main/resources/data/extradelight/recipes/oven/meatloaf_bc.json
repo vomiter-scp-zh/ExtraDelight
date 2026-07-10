@@ -1,0 +1,37 @@
+{
+  "type": "extradelight:oven",
+  "consumeContainer": false,
+  "container": {
+    "count": 1,
+    "id": "extradelight:loaf_pan"
+  },
+  "cookingtime": 1600,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "tag": "c:condiments/ketchup"
+    },
+    {
+      "tag": "c:bread/crumbs"
+    },
+    {
+      "item": "extradelight:egg_mix"
+    },
+    {
+      "tag": "c:ground_meat/raw"
+    },
+    {
+      "tag": "c:ground_meat/raw"
+    },
+    {
+      "tag": "c:ground_meat/raw"
+    },
+    {
+      "tag": "extradelight:processed/onion"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "extradelight:meatloaf_feast"
+  }
+}

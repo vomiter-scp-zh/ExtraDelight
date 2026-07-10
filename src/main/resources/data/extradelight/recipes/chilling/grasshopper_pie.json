@@ -1,0 +1,32 @@
+{
+  "type": "extradelight:chiller",
+  "consumeContainer": true,
+  "container": {
+    "count": 1,
+    "id": "farmersdelight:pie_crust"
+  },
+  "cookingtime": 800,
+  "experience": 0.35,
+  "fluid": {
+    "amount": 250,
+    "id": "extradelight:whipped_cream_fluid"
+  },
+  "ingredients": [
+    {
+      "tag": "c:dyes/lime"
+    },
+    {
+      "tag": "c:mint"
+    },
+    {
+      "item": "extradelight:marshmallow_fluff_bottle"
+    },
+    {
+      "tag": "c:chocolate/chips"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "extradelight:grasshopper_pie"
+  }
+}

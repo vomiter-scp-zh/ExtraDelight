@@ -100,7 +100,11 @@ public class ToolOnBlockRecipe implements Recipe<SimpleRecipeWrapper> {
 
         @Override
         public ToolOnBlockRecipe fromJson(ResourceLocation recipeId, JsonObject json) {
-            ItemStack inStack = ShapedRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(json, "in"));
+            ItemStack inStack = ShapedRecipe.itemStackFromJson(
+                    JsonStackTransformer.addItemForIdFormat(
+                            GsonHelper.getAsJsonObject(json, "in")
+                    )
+            );
             if (!(inStack.getItem() instanceof BlockItem in)) {
                 throw new JsonSyntaxException("'in' must be a BlockItem: " + inStack);
             }

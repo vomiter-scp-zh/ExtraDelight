@@ -1,0 +1,33 @@
+{
+  "type": "farmersdelight:cooking",
+  "container": {
+    "count": 1,
+    "id": "farmersdelight:cooked_rice"
+  },
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "tag": "c:chicken/cubed/raw"
+    },
+    {
+      "item": "minecraft:honey_bottle"
+    },
+    {
+      "tag": "extradelight:processed/chili"
+    },
+    {
+      "tag": "extradelight:processed/garlic"
+    },
+    {
+      "tag": "extradelight:processed/ginger"
+    },
+    {
+      "tag": "c:condiments/soy_sauce"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "count": 2,
+    "id": "extradelight:honey_chili_chicken"
+  }
+}

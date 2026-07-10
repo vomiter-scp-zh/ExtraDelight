@@ -1,14 +1,10 @@
 package com.vomiter.extradelight.common.recipes;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.mojang.datafixers.util.Pair;
-
 import com.vomiter.extradelight.DataComponents;
 import com.vomiter.extradelight.ExtraDelight;
 import com.vomiter.extradelight.common.items.dynamic.DynamicJam;
@@ -21,6 +17,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.GsonHelper;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.ShapedRecipe;
@@ -28,6 +25,10 @@ import net.minecraftforge.items.wrapper.RecipeWrapper;
 import org.jetbrains.annotations.Nullable;
 import vectorwing.farmersdelight.client.recipebook.CookingPotRecipeBookTab;
 import vectorwing.farmersdelight.common.crafting.CookingPotRecipe;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class DynamicJamRecipe extends CookingPotRecipe {
 
@@ -48,13 +49,20 @@ public class DynamicJamRecipe extends CookingPotRecipe {
 	public ItemStack getResultItem(RegistryAccess provider) {
 		ItemStack stack = super.getResultItem(provider);
 		if (stack.getItem() instanceof DynamicJam jam) {
-			List<ItemStack> stacks = new ArrayList<ItemStack>();
-			for (Ingredient i : this.getIngredients()) {
-				if (i.getItems().length > 0)
-					stacks.add(i.getItems()[0]);
-			}
+            List<ItemStack> l = new ArrayList<>();
+            for (int i = 0; i < getIngredients().size(); i++) {
+                ItemStack s = Arrays.stream(getIngredients().get(i)
+                        .getItems())
+                        .filter(stack1 -> !stack1.is(Items.BARRIER))
+                        .findFirst()
+                        .orElse(ItemStack.EMPTY);
+                if (!s.isEmpty()) {
+                    l.add(s);
+                }
+            }
+            DataComponents.setDynamicIngredient(stack, l);
 
-		} else {
+        } else {
 			ExtraDelight.LOGGER.error("DynamicJamRecipe result not DynamicJam!");
 		}
 
@@ -69,21 +77,6 @@ public class DynamicJamRecipe extends CookingPotRecipe {
 			int nutrition = 0;
 			float saturation = 0;
 			List<Pair<MobEffectInstance, Float>> effects = new ArrayList<>();
-
-			List<ItemStack> l = new ArrayList<>();
-			for (int i = 0; i < inv.getContainerSize() - 2; i++) {
-				ItemStack s = inv.getItem(i);
-				if (s != null && !s.isEmpty()) {
-					l.add(s);
-                    var food = s.getFoodProperties(null);
-                    if(food != null){
-                        nutrition += food.getNutrition();
-                        saturation += food.getSaturationModifier();
-                        effects.addAll(food.getEffects());
-                    }
-                }
-			}
-            DataComponents.setDynamicIngredient(stack, l);
 
 //			stack.set(ExtraDelightComponents.DYNAMIC_FOOD.get(), new DynamicItemComponent(List.of(graphic)));
 //			stack.set(ExtraDelightComponents.ITEMSTACK_HANDLER.get(), ItemContainerContents.fromItems(l));

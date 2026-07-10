@@ -7,7 +7,14 @@
     "FireMixin",
     "ShapedMixin",
     "ShapelessMixin",
-    "SmithingTrimMixin"
+    "SmithingTrimMixin",
+    "IngredientMixin",
+    "IngredientTagValueMixin",
+    "RecipeMixin",
+    "CampfireMixin",
+    "ChanceResultMixin",
+    "CookingMixin",
+    "CuttingMixin"
   ],
   "client": [
     "ItemStackClientMixin"

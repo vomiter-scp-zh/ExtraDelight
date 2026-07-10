@@ -1,0 +1,30 @@
+{
+  "type": "farmersdelight:cooking",
+  "container": {
+    "count": 1,
+    "id": "extradelight:serving_pot"
+  },
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "item": "extradelight:croutons"
+    },
+    {
+      "tag": "c:butter"
+    },
+    {
+      "tag": "extradelight:broth"
+    },
+    {
+      "tag": "extradelight:processed/onion"
+    },
+    {
+      "tag": "c:eggs"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "count": 1,
+    "id": "extradelight:stuffing_feast"
+  }
+}

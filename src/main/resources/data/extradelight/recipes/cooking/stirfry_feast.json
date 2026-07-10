@@ -1,0 +1,34 @@
+{
+  "type": "farmersdelight:cooking",
+  "container": {
+    "count": 1,
+    "id": "minecraft:bowl"
+  },
+  "cookingtime": 400,
+  "experience": 0.35,
+  "ingredients": [
+    {
+      "tag": "c:meat/raw"
+    },
+    {
+      "tag": "c:meat/raw"
+    },
+    {
+      "tag": "extradelight:processed/vegetable"
+    },
+    {
+      "tag": "extradelight:processed/vegetable"
+    },
+    {
+      "tag": "extradelight:processed/vegetable"
+    },
+    {
+      "tag": "extradelight:processed/vegetable"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "count": 1,
+    "id": "extradelight:stirfry_block_item"
+  }
+}

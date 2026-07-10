@@ -3,10 +3,7 @@ package com.vomiter.extradelight.registry;
 import java.util.function.Supplier;
 
 import com.vomiter.extradelight.ExtraDelight;
-import com.vomiter.extradelight.common.recipes.DynamicJamRecipe;
-import com.vomiter.extradelight.common.recipes.DynamicToastRecipe;
-import com.vomiter.extradelight.common.recipes.FeastRecipe;
-import com.vomiter.extradelight.common.recipes.ToolOnBlockRecipe;
+import com.vomiter.extradelight.common.recipes.*;
 import com.vomiter.extradelight.common.complex.workstations.chiller.ChillerRecipe;
 import com.vomiter.extradelight.common.complex.workstations.doughshaping.recipes.DoughShapingRecipe;
 import com.vomiter.extradelight.common.complex.workstations.dryingrack.DryingRackRecipe;
@@ -21,6 +18,7 @@ import com.vomiter.extradelight.common.complex.workstations.vat.recipes.VatRecip
 import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeType;
+import net.minecraft.world.item.crafting.SimpleCraftingRecipeSerializer;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
@@ -66,14 +64,14 @@ public class ExtraDelightRecipes {
     public static final Supplier<RecipeType<DynamicToastRecipe>> DYNAMIC_TOAST = RECIPE_TYPES.register("dynamic_toast",
             () -> registerRecipeType("dynamic_toast"));
 
+    public static final Supplier<RecipeType<BottleFluidRegistryRecipe>> BOTTLE_FLUID_REGISTRY = RECIPE_TYPES
+            .register("fluid_registry", () -> registerRecipeType("fluid_registry"));
 
     /*
 	public static final Supplier<RecipeType<ShapedWithJarRecipe>> SHAPED_JAR = RECIPE_TYPES.register("shaped_jar",
 			() -> registerRecipeType("shaped_jar"));
 //	public static final Supplier<RecipeType<DynamicSandwichRecipe>> DYNAMIC_SANDWICH = RECIPE_TYPES
 //			.register("dynamic_sandwich", () -> registerRecipeType("dynamic_sandwich"));
-	public static final Supplier<RecipeType<BottleFluidRegistryRecipe>> BOTTLE_FLUID_REGISTRY = RECIPE_TYPES
-			.register("fluid_registry", () -> registerRecipeType("fluid_registry"));
 
 	// Dynamic Names
 //	public static final DeferredHolder<RecipeType<?>, RecipeType<Recipe<?>>> DYNAMIC_SMELT = RECIPE_TYPES
@@ -133,11 +131,14 @@ public class ExtraDelightRecipes {
 			ShapedWithJarRecipe.Serializer::new);
 //	public static final Supplier<RecipeSerializer<?>> DYNAMIC_SANDWICH_SERIALIZER = RECIPE_SERIALIZERS
 //			.register("dynamic_sandwich", DynamicSandwichRecipe.Serializer::new);
-	public static final Supplier<RecipeSerializer<?>> BOTTLE_FLUID_SERIALIZER = RECIPE_SERIALIZERS
-			.register("bottle_fluid", BottleFluidRegistryRecipe.Serializer::new);
-
-	public static final Supplier<SimpleCraftingRecipeSerializer<?>> DOUGH =
-			RECIPE_SERIALIZERS.register("flour_dough", () -> new SimpleCraftingRecipeSerializer<>(FlourDoughRecipe::new));
 
      */
+
+    public static final Supplier<RecipeSerializer<?>> BOTTLE_FLUID_SERIALIZER = RECIPE_SERIALIZERS
+            .register("bottle_fluid", BottleFluidRegistryRecipe.Serializer::new);
+
+
+    public static final Supplier<SimpleCraftingRecipeSerializer<?>> DOUGH =
+            RECIPE_SERIALIZERS.register("flour_dough", () -> new SimpleCraftingRecipeSerializer<>(FlourDoughRecipe::new));
+
 }

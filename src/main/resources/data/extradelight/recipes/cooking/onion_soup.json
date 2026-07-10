@@ -1,0 +1,33 @@
+{
+  "type": "farmersdelight:cooking",
+  "container": {
+    "count": 1,
+    "id": "minecraft:bowl"
+  },
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "tag": "extradelight:processed/onion"
+    },
+    {
+      "tag": "extradelight:processed/onion"
+    },
+    {
+      "tag": "c:butter"
+    },
+    {
+      "tag": "extradelight:broth"
+    },
+    {
+      "tag": "c:bread/sliced"
+    },
+    {
+      "tag": "c:cheese"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "count": 3,
+    "id": "extradelight:onion_soup"
+  }
+}

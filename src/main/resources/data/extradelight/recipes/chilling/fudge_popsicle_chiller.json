@@ -1,0 +1,23 @@
+{
+  "type": "extradelight:chiller",
+  "consumeContainer": true,
+  "container": {
+    "count": 4,
+    "id": "minecraft:stick"
+  },
+  "cookingtime": 800,
+  "experience": 0.35,
+  "fluid": {},
+  "ingredients": [
+    {
+      "tag": "c:ice_cream"
+    },
+    {
+      "tag": "c:cocoa/powder"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "extradelight:fudge_popsicle"
+  }
+}

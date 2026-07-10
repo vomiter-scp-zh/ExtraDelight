@@ -1,0 +1,33 @@
+{
+  "type": "farmersdelight:cooking",
+  "container": {
+    "count": 1,
+    "id": "minecraft:bowl"
+  },
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "tag": "extradelight:broth"
+    },
+    {
+      "tag": "c:sauerkraut"
+    },
+    {
+      "tag": "c:foods/raw_bacon"
+    },
+    {
+      "tag": "extradelight:processed/carrot"
+    },
+    {
+      "tag": "extradelight:processed/onion"
+    },
+    {
+      "tag": "extradelight:processed/potato"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "count": 3,
+    "id": "extradelight:sauerkraut_soup"
+  }
+}

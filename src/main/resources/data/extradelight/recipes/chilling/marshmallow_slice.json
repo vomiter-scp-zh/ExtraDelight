@@ -1,0 +1,29 @@
+{
+  "type": "extradelight:chiller",
+  "consumeContainer": true,
+  "container": {
+    "count": 1,
+    "id": "extradelight:square_pan"
+  },
+  "cookingtime": 800,
+  "experience": 0.35,
+  "fluid": {
+    "amount": 250,
+    "id": "extradelight:marshmallow_fluff_fluid"
+  },
+  "ingredients": [
+    {
+      "tag": "c:foods/cookie/sugar"
+    },
+    {
+      "tag": "c:jams"
+    },
+    {
+      "tag": "c:foods/cookie/sugar"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "extradelight:marshmallow_slice_feast"
+  }
+}

@@ -14,6 +14,7 @@ public final class ExtraDelightDebugEvents {
     @SubscribeEvent
     public static void onRegisterCommands(RegisterCommandsEvent event) {
         ExtraDelightDropTestCommand.register(event.getDispatcher());
+        ExtraDelightItemCommand.register(event.getDispatcher());
     }
 
     @SubscribeEvent

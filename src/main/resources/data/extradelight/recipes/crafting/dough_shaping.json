@@ -9,7 +9,7 @@
       "tag": "minecraft:planks"
     },
     {
-      "tag": "c:flour"
+      "tag": "forge:string"
     }
   ],
   "result": {
