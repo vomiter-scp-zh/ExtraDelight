@@ -4,9 +4,9 @@
 	"parent": "block/block",
 	"render_type": "cutout",
 	"textures": {
-		"0": "farmersdelight:block/tray_top",
+		"0": "farmersdelight:block/tray",
 		"1": "extradelight:block/rack_ribs",
-		"particle": "farmersdelight:block/tray_top"
+		"particle": "farmersdelight:block/tray"
 	},
 	"elements": [
 		{

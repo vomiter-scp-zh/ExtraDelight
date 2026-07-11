@@ -199,7 +199,8 @@ public class EDItemTags2 extends ItemTagsProvider {
 		tag(ExtraDelightTags.STORAGE_BLOCKS_ITEM_ORANGE).add(SummerCitrus.ORANGE_CRATE_ITEM.get());
 		tag(ExtraDelightTags.STORAGE_BLOCKS_ITEM_GRAPEFRUIT).add(SummerCitrus.GRAPEFRUIT_CRATE_ITEM.get());
 
-		tag(CompatTags.UPRIGHT_ON_BELT).add(ExtraDelightItems.COOKING_OIL.get(), ExtraDelightItems.VINEGAR.get(),
+		tag(CompatTags.UPRIGHT_ON_BELT).add(
+                ExtraDelightItems.COOKING_OIL.get(), ExtraDelightItems.VINEGAR.get(),
 				ExtraDelightItems.BLOOD_CHOCOLATE_SYRUP_BOTTLE.get(), ExtraDelightItems.GRAVY.get(),
 				ExtraDelightItems.DARK_CHOCOLATE_SYRUP_BOTTLE.get(), ExtraDelightItems.YEAST.get(),
 				ExtraDelightItems.MILK_CHOCOLATE_SYRUP_BOTTLE.get(), ExtraDelightItems.GLOW_BERRY_JUICE.get(),
@@ -208,7 +209,7 @@ public class EDItemTags2 extends ItemTagsProvider {
 				ExtraDelightItems.SEAWEED_SALAD.get(), ExtraDelightItems.WHIPPED_CREAM.get(),
 				ExtraDelightItems.EGG_MIX.get(), ExtraDelightItems.SCRAMBLED_EGGS.get(),
 				ExtraDelightItems.OMELETTE_MIX.get(), ExtraDelightItems.EGG_SALAD.get(),
-				ExtraDelightItems.FURIKAKE.get(), ExtraDelightItems.CURRY_POWDER.get(), 
+				ExtraDelightItems.FURIKAKE.get(), ExtraDelightItems.CURRY_POWDER.get(),
 				ExtraDelightItems.SWEET_BERRY_PIE_ITEM.get(), ExtraDelightItems.GLOW_BERRY_PIE_ITEM.get(),
 				ExtraDelightItems.CHEESECAKE_ITEM.get(), ExtraDelightItems.HONEY_CHEESECAKE_ITEM.get(),
 				ExtraDelightItems.PUMPKIN_CHEESECAKE_ITEM.get(), ExtraDelightItems.CHOCOLATE_CHEESECAKE_ITEM.get(),
@@ -284,8 +285,8 @@ public class EDItemTags2 extends ItemTagsProvider {
 				ExtraDelightItems.ONION_SOUP.get(), ExtraDelightItems.FAT_POTATOES.get(),
 				ExtraDelightItems.PANFORTE.get(), ExtraDelightItems.BORSCHT.get(),
 				ExtraDelightItems.DEVILLED_SAUSAGES.get(), ExtraDelightItems.AGLIO_E_OLIO.get(),
-				ExtraDelightItems.PENNE_ALL_ARRABIATA.get()).addTag(ExtraDelightTags.CONDIMENTS);
-		tag(CompatTags.UPRIGHT_ON_BELT).add(Fermentation.SAUERKRAUT_ITEM.get(), Fermentation.KIMCHI_ITEM.get(),
+				ExtraDelightItems.PENNE_ALL_ARRABIATA.get(),
+                Fermentation.SAUERKRAUT_ITEM.get(), Fermentation.KIMCHI_ITEM.get(),
 				Fermentation.MISO_PASTE_ITEM.get(), Fermentation.FISH_SAUCE_ITEM.get(), Fermentation.NATTO_ITEM.get(),
 				Fermentation.SOAKED_SOYBEANS_ITEM.get(), Fermentation.MASHED_SOYBEANS_ITEM.get(),
 				Fermentation.SOY_MILK.get(), Fermentation.GAZPACHO.get(), Fermentation.EDAMAME.get(),
@@ -309,9 +310,10 @@ public class EDItemTags2 extends ItemTagsProvider {
 				SummerCitrus.MELON_RIND_STIRFRY.get(), SummerCitrus.LIME_SOUFFLE.get(),
 				SummerCitrus.CHEESE_SOUFFLE.get(), SummerCitrus.PRESERVED_LEMON_PASTA.get(),
 				SummerCitrus.MELON_LIME_GLAZED_CHICKEN.get(), SummerCitrus.KYIV_CAKE_ITEM.get(),
-				SummerCitrus.RAW_BAKED_ALASKA_ITEM.get(), SummerCitrus.BAKED_ALASKA_ITEM.get());
+				SummerCitrus.RAW_BAKED_ALASKA_ITEM.get(), SummerCitrus.BAKED_ALASKA_ITEM.get()
+        ).addTag(ExtraDelightTags.CONDIMENTS);
 
-                
+
 
 		for (EDItemGenerator.Drink d : EDItemGenerator.drinks) {
 			parseTaNTag(d);

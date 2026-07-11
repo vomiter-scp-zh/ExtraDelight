@@ -38,7 +38,12 @@ public class DynamicToastRecipe extends ShapelessRecipe {
 //
 //	}
 
-	public String getGraphic() {
+    @Override
+    public boolean isSpecial() {
+        return true;
+    }
+
+    public String getGraphic() {
         return "";
 	}
 

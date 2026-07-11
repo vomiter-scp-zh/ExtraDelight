@@ -43,6 +43,12 @@ public class DoughShapingRecipe extends SingleItemRecipe {
 		return this.group;
 	}
 
+    @Override
+    public boolean isSpecial() {
+        return true;
+    }
+
+
     public static class Serializer implements RecipeSerializer<DoughShapingRecipe> {
 
         @Override

@@ -57,6 +57,12 @@ public class MixingBowlRecipe implements Recipe<MixingBowlRecipeWrapper> {
         return id;
     }
 
+    @Override
+    public boolean isSpecial() {
+        return true;
+    }
+
+
     public @NotNull NonNullList<Ingredient> getIngredients() {
 		return this.ingredients;
 	}

@@ -27,11 +27,7 @@ import com.vomiter.extradelight.worldgen.features.trees.ExtraDelightTreeGrowers;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.DyeColor;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.*;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -556,11 +552,9 @@ public class SummerCitrus {
 			.register("purple_picnic_basket", () -> new BlockItem(SummerCitrus.PURPLE_PICNIC_BASKET.get(),
 					stack1Item()));
 
-    /*
+
 	public static final RegistryObject<Item> CITRUS_PATTERN_ITEM = ExtraDelightItems.ITEMS.register(
 			"citrus_rind_banner_item",
 			() -> new BannerPatternItem(ExtraDelightBanners.CITRUS_PATTERN_TAG, stack1Item()));
-
-     */
 
 }

@@ -2,6 +2,7 @@ package com.vomiter.extradelight;
 
 import com.mojang.logging.LogUtils;
 import com.vomiter.extradelight.client.ExtraDelightClientEvents;
+import com.vomiter.extradelight.common.ExtraCompostable;
 import com.vomiter.extradelight.common.ExtraDelightEvents;
 import com.vomiter.extradelight.common.complex.jar.JarRenderer;
 import com.vomiter.extradelight.common.complex.portable.picnicbasket.PicnicBasketRenderer;
@@ -97,6 +98,8 @@ public class ExtraDelight
         ExtraDelightParticles.PARTICLE_TYPES.register(modBus);
         ExtraDelightLootModifiers.LOOT_MODIFIER_SERIALIZERS.register(modBus);
         ExtraDelightLootFunctions.LOOT_FUNCTION_TYPES.register(modBus);
+        ExtraDelightBanners.BANNER_PATTERNS.register(modBus);
+        ExtraDelightPaintings.PAINTING_VARIANTS.register(modBus);
         IngredientRegistry.register();
 
         MinecraftForge.EVENT_BUS.addGenericListener(ItemStack.class, ExtraDelightCapabilities::attachItemCapabilities);
@@ -117,7 +120,7 @@ public class ExtraDelight
             ExtraDelightCapabilities.setupSlotCountMap();
             ExtraDelightItems.setup();
             ExtraDelightBlocks.setup();
-
+            ExtraCompostable.setup();
         });
     }
 

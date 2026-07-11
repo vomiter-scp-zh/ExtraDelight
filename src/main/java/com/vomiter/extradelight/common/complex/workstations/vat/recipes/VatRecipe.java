@@ -78,7 +78,12 @@ public class VatRecipe implements Recipe<VatRecipeWrapper> {
 		return this.fluid;
 	}
 
-	@Override
+    @Override
+    public boolean isSpecial() {
+        return true;
+    }
+
+    @Override
 	public boolean matches(VatRecipeWrapper input, Level level) {
 		List<ItemStack> inputs = new ArrayList<>();
 		int i = 0;

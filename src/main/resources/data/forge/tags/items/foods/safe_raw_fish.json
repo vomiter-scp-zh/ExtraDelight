@@ -1,0 +1,9 @@
+{
+  "remove": [
+    "minecraft:pufferfish"
+  ],
+  "values": [{
+    "id":     "#forge:raw_fishes"
+  }
+  ]
+}

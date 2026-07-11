@@ -1,0 +1,42 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    }
+  ],
+  "type": "create:mixing",
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "item": "minecraft:bowl"
+    },
+    {
+      "item": "minecraft:bowl"
+    },
+    {
+      "tag": "c:crops/hazelnut/cooked"
+    },
+    {
+      "tag": "c:drinks/milk"
+    },
+    {
+      "tag": "extradelight:processed/onion"
+    },
+    {
+      "tag": "extradelight:processed/potato"
+    },
+    {
+      "tag": "c:butter"
+    },
+    {
+      "tag": "c:foods/cooked_bacon"
+    }
+  ],
+  "results": [
+    {
+      "count": 2,
+      "id": "extradelight:hazelnut_soup"
+    }
+  ]
+}

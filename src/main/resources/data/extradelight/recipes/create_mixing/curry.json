@@ -1,0 +1,32 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    }
+  ],
+  "type": "create:mixing",
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "item": "extradelight:serving_pot"
+    },
+    {
+      "tag": "c:foods/raw_chicken"
+    },
+    {
+      "item": "extradelight:curry_powder"
+    },
+    {
+      "tag": "extradelight:broth"
+    },
+    {
+      "tag": "c:crops/onion"
+    }
+  ],
+  "results": [
+    {
+      "id": "extradelight:curry_feast"
+    }
+  ]
+}

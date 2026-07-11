@@ -21,7 +21,13 @@ public class FlourDoughRecipe extends CustomRecipe {
 		super(id, category);
 	}
 
-	@Override
+    @Override
+    public boolean isSpecial() {
+        return true;
+    }
+
+
+    @Override
 	public boolean matches(CraftingContainer container, Level level) {
 		ItemStack wheatStack = ItemStack.EMPTY;
 		ItemStack waterStack = ItemStack.EMPTY;

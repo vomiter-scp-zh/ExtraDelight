@@ -8,7 +8,7 @@
 		"4": "extradelight:block/tray_bottom_gravy",
 		"particle": "extradelight:block/mashedpotatogravy",
 		"tray_top": "extradelight:block/bowl_top",
-		"tray_side": "farmersdelight:block/tray_top"
+		"tray_side": "farmersdelight:block/tray"
 	},
 	"elements": [
 		{

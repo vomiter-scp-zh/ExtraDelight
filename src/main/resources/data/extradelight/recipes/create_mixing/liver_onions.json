@@ -1,0 +1,26 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    }
+  ],
+  "type": "create:mixing",
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "item": "minecraft:bowl"
+    },
+    {
+      "tag": "c:liver"
+    },
+    {
+      "tag": "extradelight:processed/onion"
+    }
+  ],
+  "results": [
+    {
+      "id": "extradelight:liver_onions"
+    }
+  ]
+}

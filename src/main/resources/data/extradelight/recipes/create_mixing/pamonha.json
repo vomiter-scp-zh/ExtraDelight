@@ -1,0 +1,30 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    }
+  ],
+  "type": "create:mixing",
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "tag": "c:seeds/corn"
+    },
+    {
+      "tag": "c:seeds/corn"
+    },
+    {
+      "tag": "c:drinks/milk"
+    },
+    {
+      "item": "extradelight:corn_husk"
+    }
+  ],
+  "results": [
+    {
+      "count": 2,
+      "id": "extradelight:pamonha"
+    }
+  ]
+}

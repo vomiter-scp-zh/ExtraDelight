@@ -1,0 +1,24 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    }
+  ],
+  "type": "create:mixing",
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "item": "minecraft:paper"
+    },
+    {
+      "item": "extradelight:caramel_sauce"
+    }
+  ],
+  "results": [
+    {
+      "count": 2,
+      "id": "extradelight:caramel_candy"
+    }
+  ]
+}

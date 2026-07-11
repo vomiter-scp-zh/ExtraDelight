@@ -1,0 +1,35 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    }
+  ],
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "item": "minecraft:glass_bottle"
+    },
+    {
+      "tag": "extradelight:sweetener"
+    },
+    {
+      "tag": "c:cocoa/solids"
+    },
+    {
+      "type": "fluid_stack",
+      "amount": 100,
+      "fluid": "extradelight:cocoa_butter_fluid"
+    },
+    {
+      "type_": "fluid_tag",
+      "amount": 50,
+      "fluidTag": "c:blood"
+    }
+  ],
+  "results": [
+    {
+      "id": "extradelight:blood_chocolate_syrup_bottle"
+    }
+  ]
+}

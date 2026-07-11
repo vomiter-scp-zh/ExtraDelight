@@ -42,7 +42,13 @@ public class BottleFluidRegistryRecipe implements Recipe<SimpleRecipeWrapper> {
         return id;
     }
 
-	@Override
+    @Override
+    public boolean isSpecial() {
+        return true;
+    }
+
+
+    @Override
 	public boolean matches(SimpleRecipeWrapper input, Level level) {
 		return false;
 	}

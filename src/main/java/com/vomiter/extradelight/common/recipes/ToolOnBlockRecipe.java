@@ -52,6 +52,12 @@ public class ToolOnBlockRecipe implements Recipe<SimpleRecipeWrapper> {
         this.id = id;
 	}
 
+    @Override
+    public boolean isSpecial() {
+        return true;
+    }
+
+
     public @NotNull ResourceLocation getId(){
         return id;
     }

@@ -44,7 +44,13 @@ public class MeltingPotRecipe implements Recipe<SimpleContainer> {
 		return this.input.test(input.getItem(0));
 	}
 
-	@Override
+    @Override
+    public boolean isSpecial() {
+        return true;
+    }
+
+
+    @Override
 	public ItemStack assemble(SimpleContainer input, RegistryAccess registries) {
 		return new ItemStack(Items.STICK); // Because other mods expect something regardless
 	}

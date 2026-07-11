@@ -1,0 +1,26 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    }
+  ],
+  "type": "create:mixing",
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "item": "minecraft:bowl"
+    },
+    {
+      "tag": "c:flour"
+    },
+    {
+      "tag": "extradelight:broth"
+    }
+  ],
+  "results": [
+    {
+      "id": "extradelight:gravy_boat_item"
+    }
+  ]
+}

@@ -6,7 +6,7 @@
 	"textures": {
 		"3": "extradelight:block/bruschetta",
 		"particle": "extradelight:block/bruschetta",
-		"tray_top": "farmersdelight:block/tray_top",
+		"tray_top": "farmersdelight:block/tray",
 		"tray_bottom": "farmersdelight:block/tray_bottom"
 	},
 	"elements": [

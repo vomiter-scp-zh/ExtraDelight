@@ -47,6 +47,12 @@ public class MortarRecipe extends SingleItemRecipe {
 	}
 
     @Override
+    public boolean isSpecial() {
+        return true;
+    }
+
+
+    @Override
     public boolean matches(Container input, Level p_44003_) {
         return this.ingredient.test(input.getItem(0));
     }

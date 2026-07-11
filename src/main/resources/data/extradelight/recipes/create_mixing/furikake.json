@@ -1,0 +1,32 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    }
+  ],
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "item": "minecraft:bowl"
+    },
+    {
+      "item": "minecraft:kelp"
+    },
+    {
+      "item": "minecraft:kelp"
+    },
+    {
+      "tag": "c:fish_flakes"
+    },
+    {
+      "tag": "c:fish_flakes"
+    }
+  ],
+  "results": [
+    {
+      "count": 4,
+      "id": "extradelight:furikake"
+    }
+  ]
+}

@@ -80,7 +80,12 @@ public class ChillerRecipe implements Recipe<ChillerRecipeWrapper> {
 		return this.container;
 	}
 
-	@Override
+    @Override
+    public boolean isSpecial() {
+        return true;
+    }
+
+    @Override
 	public String getGroup() {
 		return this.group;
 	}

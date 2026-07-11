@@ -52,15 +52,17 @@ public class EDItemTagsDifficult extends ItemTagsProvider {
 				ExtraDelightItems.SCRAMBLED_EGGS.get());
         tag(ExtraDelightTags.TOAST_TOPPING).add(ExtraDelightItems.BUTTER.get(),
                 ExtraDelightItems.PEANUT_BUTTER_BOTTLE.get(), ExtraDelightItems.HAZELNUT_SPREAD_BOTTLE.get(),
-                ExtraDelightItems.MARSHMALLOW_FLUFF_BOTTLE.get()
+                ExtraDelightItems.MARSHMALLOW_FLUFF_BOTTLE.get(),
                 /*
                 ExtraDelightItems.JAM.get(),
                 ExtraDelightItems.GLOW_BERRY_JAM.get(),
 				ExtraDelightItems.GOLDEN_APPLE_JAM.get(),
+
+                 */
                 Fermentation.YEAST_SPREAD.get(),
                 ExtraDelightItems.DYNAMIC_JAM.get()
 
-                 */
+
         );
         //tag(CommonTags.Items.FOODS_MILK).add(Fermentation.SOY_MILK.get());
         tag(ItemTags.create(ResourceLocation.fromNamespaceAndPath("forge", "foods/vegetables")))
@@ -70,26 +72,6 @@ public class EDItemTagsDifficult extends ItemTagsProvider {
                 .addTag(ExtraDelightTags.PROCESSED_POTATO).addTag(ExtraDelightTags.PROCESSED_ONION)
         //.addOptionalTag(CommonTags.FOODS_SAFE_RAW_FISH.location())
         ;
-        /* TODO: CHECK HOW FOOD WORKS
-		tag(ItemTags.CAMEL_FOOD).add(ExtraDelightItems.CACTUS.get());
-		tag(ItemTags.CHICKEN_FOOD).add(ExtraDelightItems.CORN_SEEDS.get(), ExtraDelightItems.CHILI_SEEDS.get(),
-				ExtraDelightItems.HAZELNUTS.get(), ExtraDelightItems.PEANUTS.get(),
-				ExtraDelightItems.SUNFLOWER_SEEDS.get(), Fermentation.CUCUMBER_SEED.get(), Fermentation.SOYBEANS.get());
-		tag(ItemTags.COW_FOOD).add(ExtraDelightItems.CORN_HUSK.get(), ExtraDelightItems.DRIED_CORN_HUSK.get(),
-				Fermentation.SOYBEAN_POD.get(), Fermentation.SOYBEANS.get());
-		tag(ItemTags.FROG_FOOD).add(ExtraDelightItems.AGAR_AGAR.get());
-		tag(ItemTags.GOAT_FOOD).add(Fermentation.SOYBEAN_POD.get(), Fermentation.SOYBEANS.get());
-		tag(ItemTags.LLAMA_FOOD).add(ExtraDelightItems.CORN_HUSK_BUNDLE.get(),
-				ExtraDelightItems.DRIED_CORN_HUSK_BUNDLE.get());
-		tag(ItemTags.PARROT_FOOD).add(ExtraDelightItems.CORN_SEEDS.get(), ExtraDelightItems.CHILI_SEEDS.get(),
-				ExtraDelightItems.HAZELNUTS.get(), ExtraDelightItems.PEANUTS.get(),
-				ExtraDelightItems.SUNFLOWER_SEEDS.get(), Fermentation.CUCUMBER_SEED.get(), Fermentation.SOYBEANS.get());
-		tag(ItemTags.PIG_FOOD).add(ExtraDelightItems.CORN_COB.get(), ExtraDelightItems.GINGER.get(),
-				ExtraDelightItems.MALLOW_ROOT.get(), Fermentation.CUCUMBER.get());
-		tag(ItemTags.SHEEP_FOOD).add(ExtraDelightItems.CORN_HUSK.get(), ExtraDelightItems.DRIED_CORN_HUSK.get(),
-				Fermentation.SOYBEAN_POD.get(), Fermentation.SOYBEANS.get());
-
-         */
         tag(ItemTags.create(ResourceLocation.fromNamespaceAndPath("forge", "foods/fruits")));
         tag(ItemTags.create(ResourceLocation.fromNamespaceAndPath("forge", "foods/berries")));
 
@@ -112,10 +94,5 @@ public class EDItemTagsDifficult extends ItemTagsProvider {
             tag(ItemTags.create(ResourceLocation.fromNamespaceAndPath("forge", "dye")))
                     .addTag(ItemTags.create(ResourceLocation.fromNamespaceAndPath("forge", "dyed/" + dyeColor.getName().toLowerCase(Locale.ROOT))));
         }
-        tag(CompatTags.UPRIGHT_ON_BELT)
-                //.add(ExtraDelightItems.JAM.get(),
-                        //ExtraDelightItems.GLOW_BERRY_JAM.get(), ExtraDelightItems.GOLDEN_APPLE_JAM.get(),);
-        ;
-
     }
 }
