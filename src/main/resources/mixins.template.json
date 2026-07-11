@@ -16,6 +16,7 @@
     "recipe.CookingMixin",
     "recipe.CuttingMixin",
     "recipe.CreateMixingMixin",
+    "recipe.RecipeManagerMixin",
     "animal_food.CamelMixin",
     "animal_food.ChickenMixin",
     "animal_food.AnimalMixin",

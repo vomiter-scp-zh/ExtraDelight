@@ -33,7 +33,8 @@ public class IngredientTagValueMixin {
                     if(path.contains("foods/")) paths.add(path.replace("foods/", ""));
                     if(path.endsWith("knife")) paths.add(path.replace("knife","knives"));
                     if(path.equals("foods/berry") || path.equals("berry")) paths.add("berries");
-
+                    if (path.equals("strings")) paths.add("string");
+                    if (path.equals("stones")) paths.add("stone");
 
                     AdditionalTagKeyThreadLocal.tagkeys.get().addAll(
                             paths.stream().map(p -> TagKey.create(

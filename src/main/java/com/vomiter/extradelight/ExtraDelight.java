@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import com.vomiter.extradelight.client.ExtraDelightClientEvents;
 import com.vomiter.extradelight.common.ExtraCompostable;
 import com.vomiter.extradelight.common.ExtraDelightEvents;
+import com.vomiter.extradelight.common.complex.cornhuskdoll.CornHuskDollRenderer;
 import com.vomiter.extradelight.common.complex.jar.JarRenderer;
 import com.vomiter.extradelight.common.complex.portable.picnicbasket.PicnicBasketRenderer;
 import com.vomiter.extradelight.common.complex.portable.picnicbasket.PicnicBasketScreen;
@@ -163,6 +164,8 @@ public class ExtraDelight
 
             MenuScreens.register(ExtraDelightContainers.PICNIC_BASKET_MENU.get(), PicnicBasketScreen::new);
             BlockEntityRenderers.register(ExtraDelightBlockEntities.PICNIC_BASKET.get(), PicnicBasketRenderer::new);
+
+            BlockEntityRenderers.register(ExtraDelightBlockEntities.CORN_HUSK_DOLL.get(), CornHuskDollRenderer::new);
 
         });
     }

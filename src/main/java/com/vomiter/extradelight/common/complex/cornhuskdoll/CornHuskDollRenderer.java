@@ -19,8 +19,8 @@ import net.minecraft.world.phys.Vec3;
 
 public class CornHuskDollRenderer implements BlockEntityRenderer<CornHuskDollBlockEntity> {
 
-	final ModelResourceLocation model_down = new  ModelResourceLocation(ResourceLocation.fromNamespaceAndPath(ExtraDelight.MOD_ID, "extra/corn_husk_doll"), "");
-	final ModelResourceLocation model_up = new ModelResourceLocation(ResourceLocation.fromNamespaceAndPath(ExtraDelight.MOD_ID, "extra/corn_husk_doll_hang"), "");
+	final ResourceLocation model_down = ResourceLocation.fromNamespaceAndPath(ExtraDelight.MOD_ID, "extra/corn_husk_doll");
+	final ResourceLocation model_up = ResourceLocation.fromNamespaceAndPath(ExtraDelight.MOD_ID, "extra/corn_husk_doll_hang");
 
 	public CornHuskDollRenderer(BlockEntityRendererProvider.Context cxt) {
 
