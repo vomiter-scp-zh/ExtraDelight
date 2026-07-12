@@ -15,8 +15,9 @@ import org.spongepowered.asm.mixin.injection.At;
 
 @Mixin(Animal.class)
 public class AnimalMixin {
-    @WrapMethod(method = "isFood")
+    @WrapMethod(method = "isFood", require = 0)
     private boolean ed$extraFood(ItemStack stack, Operation<Boolean> original){
+        if(original.call(stack)) return true;
         var self = (Animal)(Object)this;
         if (self.getType().equals(EntityType.COW) || self.getType().equals(EntityType.SHEEP)){
             var food = Ingredient.of(

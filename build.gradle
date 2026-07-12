@@ -48,7 +48,12 @@ dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
     annotationProcessor("org.spongepowered:mixin:${mixin_version}:processor")
     implementation fg.deobf("curse.maven:farmers-delight-398521:8083474")
-    implementation fg.deobf("curse.maven:butchercraft-265715:6058842")
+    compileOnly fg.deobf("curse.maven:butchercraft-265715:6058842")
+    runtimeOnly fg.deobf("curse.maven:butchercraft-265715:6058842")
+
+    //runtimeOnly fg.deobf("curse.maven:butchery-973620:8156002")
+    implementation fg.deobf("curse.maven:tofucraftreload-317469:7788417")
+    implementation fg.deobf("curse.maven:bagus-lib-866533:6944371")
 
     runtimeOnly fg.deobf("curse.maven:tough-as-nails-246391:5815863")
     runtimeOnly fg.deobf("curse.maven:glitchcore-955399:5787839")

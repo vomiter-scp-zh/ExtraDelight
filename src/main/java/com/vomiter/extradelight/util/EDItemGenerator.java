@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.function.Supplier;
 
 
+import com.vomiter.extradelight.client.ExtraDelightClientEvents;
 import com.vomiter.extradelight.registry.ExtraDelightItems;
 import com.vomiter.extradelight.data.advancement.EDAdvancementGenerator;
 import net.minecraft.world.item.Item;
@@ -67,18 +68,18 @@ public class EDItemGenerator {
 
 
 	public EDItemGenerator butchercraftToolTip() {
-		//ExtraDelightNeoForgeClientEvents.butchercraft.add(item);
+		ExtraDelightClientEvents.butchercraft.add(item);
 		return this;
 	}
 
 
     public EDItemGenerator feastToolTip() {
-        //ExtraDelightNeoForgeClientEvents.feasts.add(item);
+        ExtraDelightClientEvents.feasts.add(item);
         return this;
     }
 
     public EDItemGenerator servingToolTip() {
-        //ExtraDelightNeoForgeClientEvents.servings.add(item);
+        ExtraDelightClientEvents.servings.add(item);
         return this;
     }
 
