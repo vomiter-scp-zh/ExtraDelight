@@ -1201,18 +1201,6 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "mint_jelly": {
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "extradelight:mint_jelly"
-            ]
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
     "miso_paste_item": {
       "conditions": {
         "items": [
@@ -2000,9 +1988,6 @@
     ],
     [
       "sliced_onion"
-    ],
-    [
-      "mint_jelly"
     ],
     [
       "potato_sticks"

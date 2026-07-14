@@ -1,6 +1,8 @@
 package com.vomiter.extradelight.common.items.dynamic.client;
 
 import com.vomiter.extradelight.DataComponents;
+import com.vomiter.extradelight.common.items.dynamic.DynamicDelegate;
+import com.vomiter.extradelight.common.items.dynamic.DynamicJam;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.resources.language.I18n;
 import net.minecraft.network.chat.Component;
@@ -18,10 +20,10 @@ public class DynamicClientHelper {
     public static Component getDynamicHoverNameForJam(ItemStack stack) {
         var items = DataComponents.getDynamicIngredients(stack);
         for (ItemStack item : items) {
-            var itemId = ForgeRegistries.ITEMS.getKey(item.getItem());
+            var itemId = DynamicDelegate.getDelegateString(item.getItem());
             if (itemId == null) continue;
-            if(I18n.exists("extradelight.jam." + itemId.getPath())){
-                return Component.translatable("extradelight.jam." + itemId.getPath());
+            if(I18n.exists("extradelight.jam." + itemId)){
+                return Component.translatable("extradelight.jam." + itemId);
             }
         }
         return null;
@@ -30,16 +32,12 @@ public class DynamicClientHelper {
     public static Component getDynamicHoverNameForToast(ItemStack stack) {
         var items = DataComponents.getDynamicIngredients(stack);
         for (ItemStack item : items) {
-            var itemsInJam = DataComponents.getDynamicIngredients(item);
-            for (ItemStack itemInJam : itemsInJam) {
-                var itemJamId = ForgeRegistries.ITEMS.getKey(itemInJam.getItem());
-                if(I18n.exists("extradelight.jam." + itemJamId.getPath())){
-                    return Component
-                            .translatable(
-                                    "item.extradelight.dynamic_toast",
-                                    itemInJam.getHoverName()
-                            );
-                }
+            if (item.getItem() instanceof DynamicJam){
+                return Component
+                        .translatable(
+                                "item.extradelight.dynamic_toast",
+                                item.getHoverName()
+                        );
             }
         }
         return null;

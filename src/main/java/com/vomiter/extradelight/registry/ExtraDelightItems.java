@@ -1785,8 +1785,6 @@ public class ExtraDelightItems {
 			.register("cinnamon_popsicle", () -> new Item(foodItem(FoodValues.POPSICLE))).advancementDessert().finish();
 	public static final RegistryObject<Item> BEET_MINT_SALAD = EDItemGenerator
 			.register("beet_mint_salad", () -> new Item(foodItem(EDFoods.BEET_MINT))).advancementMeal().finish();
-	public static final RegistryObject<Item> MINT_JELLY = EDItemGenerator
-			.register("mint_jelly", () -> new Item(foodItem(EDFoods.JAM))).advancementIngredients().finish();
 	public static final RegistryObject<Item> CRACKERS = EDItemGenerator
 			.register("crackers", () -> new Item(foodItem(EDFoods.CRACKER))).advancementSnack().finish();
 	public static final RegistryObject<Item> CROQUE_MONSIEUR = EDItemGenerator

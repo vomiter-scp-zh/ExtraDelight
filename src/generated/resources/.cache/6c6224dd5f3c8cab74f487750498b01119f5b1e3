@@ -1,10 +1,10 @@
-// 1.20.1	2026-07-11T11:17:23.2245656	Tags for minecraft:item mod id extradelightd
+// 1.20.1	2026-07-14T17:06:24.501801	Tags for minecraft:item mod id extradelightd
 99383cc727f220dc820f5ee1687ad3d58173e54e data/c/tags/items/chocolate/milk/bar.json
 9d0524256b2b7b17e81ab1a459ebbef974121648 data/c/tags/items/jammable.json
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/c/tags/items/jam/fruit.json
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/c/tags/items/jam/glow_berry.json
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/c/tags/items/jam/golden_apple.json
-759be2646004d45b2ec631b4ed1a223a26c6d8d9 data/c/tags/items/jam/mint.json
+35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/c/tags/items/jam/mint.json
 35ef4fdafe30ea200b240a23917e9570942790fa data/c/tags/items/jam/mundane.json
 9c04660519b1e0be7c11dbefcb0434e399de0d84 data/c/tags/items/miso_soup_ingredients.json
 dbe633b5259ebab35c625d640d42f738ba78cdb4 data/extradelight/tags/items/toast_topping.json

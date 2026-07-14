@@ -7,6 +7,7 @@ import com.google.gson.JsonParseException;
 import com.mojang.datafixers.util.Pair;
 import com.vomiter.extradelight.DataComponents;
 import com.vomiter.extradelight.ExtraDelight;
+import com.vomiter.extradelight.common.items.dynamic.DynamicDelegate;
 import com.vomiter.extradelight.common.items.dynamic.DynamicJam;
 import com.vomiter.extradelight.registry.ExtraDelightRecipes;
 import com.vomiter.extradelight.util.JsonStackTransformer;
@@ -51,11 +52,17 @@ public class DynamicJamRecipe extends CookingPotRecipe {
 		if (stack.getItem() instanceof DynamicJam jam) {
             List<ItemStack> l = new ArrayList<>();
             for (int i = 0; i < getIngredients().size(); i++) {
-                ItemStack s = Arrays.stream(getIngredients().get(i)
-                        .getItems())
-                        .filter(stack1 -> !stack1.is(Items.BARRIER))
-                        .findFirst()
-                        .orElse(ItemStack.EMPTY);
+                var delegatePair = DynamicDelegate.getDelegateFromIngredient(getIngredients().get(i));
+                ItemStack s;
+                if (delegatePair != null){
+                    s = delegatePair.key().getDefaultInstance();
+                } else {
+                    s = Arrays.stream(getIngredients().get(i)
+                                    .getItems())
+                            .filter(stack1 -> !stack1.is(Items.BARRIER))
+                            .findFirst()
+                            .orElse(ItemStack.EMPTY);
+                }
                 if (!s.isEmpty()) {
                     l.add(s);
                 }

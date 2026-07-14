@@ -57,10 +57,14 @@ public class DynamicFoodItemOverrides extends ItemOverrides {
                 );
             }
             var finalPieces = new ArrayList<BakedModel>();
+
             finalPieces.add(
                     Minecraft.getInstance().getModelManager().getModel(customizable.getBaseModel()
                     )
             );
+
+
+
             finalPieces.addAll(pieces);
 
 			try {

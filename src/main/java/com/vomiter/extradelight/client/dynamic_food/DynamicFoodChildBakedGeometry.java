@@ -25,20 +25,51 @@ import net.minecraft.world.level.block.state.BlockState;
 
 public class DynamicFoodChildBakedGeometry implements BakedModel {
 	private final List<BakedModel> childrenModels;
-	
+    private static final float LAYER_OFFSET = 0.0005F;
 
-	public DynamicFoodChildBakedGeometry(List<BakedModel> childrenModels) {
+
+    public DynamicFoodChildBakedGeometry(List<BakedModel> childrenModels) {
 		this.childrenModels = childrenModels;
 	}
 
-	@Override
+    private static BakedQuad offsetQuad(BakedQuad quad, float offset) {
+        if (offset == 0.0F) {
+            return quad;
+        }
+
+        int[] vertices = quad.getVertices().clone();
+        int vertexStride = vertices.length / 4;
+
+        for (int vertex = 0; vertex < 4; vertex++) {
+            int zIndex = vertex * vertexStride + 2;
+
+            float z = Float.intBitsToFloat(vertices[zIndex]);
+            vertices[zIndex] = Float.floatToRawIntBits(z + offset);
+        }
+
+        return new BakedQuad(
+                vertices,
+                quad.getTintIndex(),
+                quad.getDirection(),
+                quad.getSprite(),
+                quad.isShade()
+        );
+    }
+
+
+    @Override
 	@NotNull
 	@SuppressWarnings("deprecation")
 	public List<BakedQuad> getQuads(@Nullable BlockState state, @Nullable Direction side, @NotNull RandomSource rand) {
 		List<BakedQuad> bakedQuads = new ArrayList<>();
-		for (BakedModel bakedModel : childrenModels) {
-			bakedQuads.addAll(bakedModel.getQuads(state, side, rand));
-		}
+        for (int layer = 0; layer < childrenModels.size(); layer++) {
+            BakedModel bakedModel = childrenModels.get(layer);
+            float offset = layer * LAYER_OFFSET;
+
+            for (BakedQuad quad : bakedModel.getQuads(state, side, rand)) {
+                bakedQuads.add(offsetQuad(quad, offset));
+            }
+        }
 		return bakedQuads;
 	}
 

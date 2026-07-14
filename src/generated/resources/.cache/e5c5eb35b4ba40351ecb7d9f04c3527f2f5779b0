@@ -1,4 +1,4 @@
-// 1.20.1	2026-07-07T06:10:18.7720941	Advancements
+// 1.20.1	2026-07-14T17:06:24.5287115	Advancements
 70200610679e005d7630f92e1c97871992c5251e data/extradelight/advancements/badfood.json
 1bb5074e75143baf7f6fad9afd93338c5a4aad66 data/extradelight/advancements/burn_mint.json
 86b402ba68b31ae5e05abe36dfe6be3af75d35cc data/extradelight/advancements/butcher.json
@@ -21,7 +21,7 @@ a32fa0f6d9bad3e1a678f5207da7c5ac0f1d06cc data/extradelight/advancements/food.jso
 3c32508cf29922aabef8db919018cf175d623021 data/extradelight/advancements/grater.json
 59df88230057427b0e2c1e7b608135dec40eade8 data/extradelight/advancements/grind.json
 a7556fd4c5436a73d2ec48c6a5b95d4fe2782f8d data/extradelight/advancements/hellskitchen.json
-c3ddd093a63ff54536e991cc664a4054e2bd3a02 data/extradelight/advancements/ingredients.json
+c32c08cb22d1b67c34d0fe1944ef2d3f0ec54591 data/extradelight/advancements/ingredients.json
 26e3e9ee99e2a55fe9971feb7424f37dc1c60343 data/extradelight/advancements/jelly.json
 8c980710af576f85e27fdc3465aae35f08411875 data/extradelight/advancements/jellyall.json
 7a20c35ac9d5a243c475c96f60ead9b5599c726d data/extradelight/advancements/keg.json

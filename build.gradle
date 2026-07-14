@@ -49,7 +49,7 @@ dependencies {
     annotationProcessor("org.spongepowered:mixin:${mixin_version}:processor")
     implementation fg.deobf("curse.maven:farmers-delight-398521:8083474")
     compileOnly fg.deobf("curse.maven:butchercraft-265715:6058842")
-    runtimeOnly fg.deobf("curse.maven:butchercraft-265715:6058842")
+    //runtimeOnly fg.deobf("curse.maven:butchercraft-265715:6058842")
 
     //runtimeOnly fg.deobf("curse.maven:butchery-973620:8156002")
     implementation fg.deobf("curse.maven:tofucraftreload-317469:7788417")
@@ -59,6 +59,18 @@ dependencies {
     runtimeOnly fg.deobf("curse.maven:glitchcore-955399:5787839")
 
     implementation fg.deobf("curse.maven:create-328085:7178761")
+
+
+    compileOnly fg.deobf("curse.maven:architectury-api-419699:5137938")
+    compileOnly fg.deobf("curse.maven:rhino-416294:6186971")
+    compileOnly fg.deobf("curse.maven:kubejs-238086:8020595")
+
+    runtimeOnly fg.deobf("curse.maven:architectury-api-419699:5137938")
+    runtimeOnly fg.deobf("curse.maven:rhino-416294:6186971")
+    runtimeOnly fg.deobf("curse.maven:kubejs-238086:8020595")
+
+    /*
+     */
 }
 
 //devRuntime.project(":common", true)
