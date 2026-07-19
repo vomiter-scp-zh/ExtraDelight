@@ -24,7 +24,6 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class ExtraDelightCompoundIngredient extends AbstractIngredient {
-    public static final Serializer SERIALIZER = new Serializer();
 
     private final List<Ingredient> children;
     private final boolean isSimple;
@@ -108,7 +107,7 @@ public class ExtraDelightCompoundIngredient extends AbstractIngredient {
 
     @Override
     public @NotNull IIngredientSerializer<? extends Ingredient> getSerializer() {
-        return SERIALIZER;
+        return Serializer.INSTANCE;
     }
 
     @Override

@@ -80,7 +80,7 @@ public class MortarRecipe extends SingleItemRecipe {
             FluidStack fluidOut = FluidStack.EMPTY;
             if (json.has("fluidOut") && !json.get("fluidOut").isJsonNull()) {
                 JsonObject fluidJson = GsonHelper.getAsJsonObject(json, "fluidOut");
-                if (fluidJson.has("fluid")) {
+                if (fluidJson.has("id")) {
                     fluidOut = readFluidStack(fluidJson);
                 }
             }
@@ -119,7 +119,7 @@ public class MortarRecipe extends SingleItemRecipe {
         }
 
         private static FluidStack readFluidStack(JsonObject json) {
-            ResourceLocation fluidId = ResourceLocation.tryParse(GsonHelper.getAsString(json, "fluid"));
+            ResourceLocation fluidId = ResourceLocation.tryParse(GsonHelper.getAsString(json, "id"));
             Fluid fluid = ForgeRegistries.FLUIDS.getValue(fluidId);
 
             if (fluid == null || fluid == Fluids.EMPTY) {

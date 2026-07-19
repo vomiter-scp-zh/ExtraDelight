@@ -11,7 +11,7 @@
     },
     {
       "amount": 50,
-      "tag": "c:blood"
+      "tag": "forge:blood"
     }
   ],
   "ingredients": [
