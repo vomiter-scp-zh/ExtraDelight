@@ -287,7 +287,7 @@ public class OvenBlockEntity extends ExtraDelightSyncedCapabilityBlockEntity
 
 	protected boolean canCook(OvenRecipe recipe) {
 		if (hasInput()) {
-			ItemStack resultStack = recipe.getResultItem(this.level.registryAccess());
+			ItemStack resultStack = recipe.assemble(new RecipeWrapper(inventory), this.level.registryAccess()).copy();
 
 			// Vessel Required
 			if (inventory.getStackInSlot(CONTAINER_SLOT).getItem() != recipe.getOutputContainer().getItem())
@@ -325,7 +325,7 @@ public class OvenBlockEntity extends ExtraDelightSyncedCapabilityBlockEntity
 		cookTime = 0;
 		mealContainerStack = recipe.getOutputContainer();
 		ItemStack containerInputStack = inventory.getStackInSlot(CONTAINER_SLOT);
-		ItemStack resultStack = recipe.getResultItem(this.level.registryAccess());
+		ItemStack resultStack = recipe.assemble(new RecipeWrapper(inventory), this.level.registryAccess());
 		ItemStack storedMealStack = inventory.getStackInSlot(OUTPUT_SLOT);
 		if (storedMealStack.isEmpty()) {
 			inventory.setStackInSlot(OUTPUT_SLOT, resultStack.copy());

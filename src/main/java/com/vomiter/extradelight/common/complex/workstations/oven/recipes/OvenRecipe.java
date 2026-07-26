@@ -4,6 +4,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
+import com.vomiter.extradelight.DataComponents;
 import com.vomiter.extradelight.registry.ExtraDelightItems;
 import com.vomiter.extradelight.registry.ExtraDelightRecipes;
 import com.vomiter.extradelight.util.JsonStackTransformer;
@@ -22,6 +23,7 @@ import org.jetbrains.annotations.Nullable;
 
 public class OvenRecipe implements Recipe<RecipeWrapper> {
 	public static final int INPUT_SLOTS = 9;
+    public static final int CONTAINER_SLOT = 10;
 
     private final ResourceLocation id;
 	private final String group;
@@ -113,7 +115,11 @@ public class OvenRecipe implements Recipe<RecipeWrapper> {
 
     @Override
     public @NotNull ItemStack assemble(@NotNull RecipeWrapper recipeWrapper, @NotNull RegistryAccess registryAccess) {
-        return this.output.copy();
+        var result = this.output.copy();
+        if(recipeWrapper.getItem(CONTAINER_SLOT).isDamageableItem()){
+            DataComponents.setStack(result, DataComponents.CONTAINER, recipeWrapper.getItem(CONTAINER_SLOT).copy());
+        }
+        return result;
     }
 
     @Override
@@ -123,7 +129,7 @@ public class OvenRecipe implements Recipe<RecipeWrapper> {
 
     @Override
     public @NotNull ItemStack getResultItem(@NotNull RegistryAccess registryAccess) {
-        return this.output;
+        return this.output.copy();
     }
 
     @Override
