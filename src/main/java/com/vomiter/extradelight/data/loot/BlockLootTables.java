@@ -39,6 +39,7 @@ import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePrope
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition.Builder;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
+import vectorwing.farmersdelight.common.registry.ModBlocks;
 import vectorwing.farmersdelight.common.registry.ModItems;
 
 public class BlockLootTables extends BlockLootSubProvider {
@@ -154,10 +155,11 @@ public class BlockLootTables extends BlockLootSubProvider {
 		feast(ExtraDelightBlocks.BBQ_RIBS_FEAST.get(), ExtraDelightItems.BBQ_RIBS_FEAST_ITEM.get(), Items.BOWL);
 		feast(ExtraDelightBlocks.PULLED_PORK_FEAST.get(), ExtraDelightItems.PULLED_PORK_FEAST_ITEM.get(), Items.BOWL);
 
-		feast(ExtraDelightBlocks.RACK_LAMB.get(), ExtraDelightItems.RACK_LAMB_FEAST_ITEM.get(), Items.BOWL);
+		feast(ExtraDelightBlocks.RACK_LAMB.get(), ExtraDelightItems.RACK_LAMB_FEAST_ITEM.get(), ExtraDelightItems.TRAY.get());
 		feast(ExtraDelightBlocks.STIRFRY.get(), ExtraDelightItems.STIRFRY_FEAST_ITEM.get(), Items.BOWL);
-		feast(ExtraDelightBlocks.BEEF_WELLINGTON.get(), ExtraDelightItems.BEEF_WELLINGTON_FEAST_ITEM.get(), Items.BOWL);
-		feast(ExtraDelightBlocks.HAGGIS.get(), ExtraDelightItems.HAGGIS_FEAST_ITEM.get(), Items.BOWL);
+		feast(ExtraDelightBlocks.BEEF_WELLINGTON.get(), ExtraDelightItems.BEEF_WELLINGTON_FEAST_ITEM.get(), ExtraDelightItems.TRAY.get());
+		feast(ExtraDelightBlocks.HAGGIS.get(), ExtraDelightItems.HAGGIS_FEAST_ITEM.get(), ExtraDelightItems.TRAY.get());
+        feast(Fermentation.CHEESYMITE_SCROLL_BLOCK.get(), Fermentation.CHEESYMITE_SCROLL_BLOCK_ITEM.get(), ExtraDelightItems.SQUARE_PAN.get());
 
 		feast(ExtraDelightBlocks.JELLY_WHITE.get(), ExtraDelightItems.JELLY_WHITE_FEAST_ITEM.get(), Items.BOWL);
 		feast(ExtraDelightBlocks.JELLY_ORANGE.get(), ExtraDelightItems.JELLY_ORANGE_FEAST_ITEM.get(), Items.BOWL);

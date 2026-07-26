@@ -939,6 +939,7 @@ public class ExtraDelightBlocks {
 	public static final RegistryObject<RecipeFeastBlock> STUFFED_APPLES_FEAST = BLOCKS.register("stuffed_apples",
 			() -> new RecipeFeastBlock(Block.Properties.copy(Blocks.WHITE_WOOL).mapColor(MapColor.COLOR_BROWN),
 					true, pan));
+
 	public static final RegistryObject<PieBlock> TARTE_TATIN = ExtraDelightBlocks.BLOCKS.register("tarte_tatin",
 			() -> new PieBlock(Block.Properties.copy(Blocks.CAKE), ExtraDelightItems.TARTE_TATIN_SLICE) {
 				@Override

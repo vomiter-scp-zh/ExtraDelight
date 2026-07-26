@@ -65,6 +65,7 @@ dependencies {
     compileOnly fg.deobf("curse.maven:rhino-416294:6186971")
     compileOnly fg.deobf("curse.maven:kubejs-238086:8020595")
 
+    /*
     runtimeOnly fg.deobf("curse.maven:architectury-api-419699:5137938")
     runtimeOnly fg.deobf("curse.maven:rhino-416294:6186971")
     runtimeOnly fg.deobf("curse.maven:kubejs-238086:8020595")
