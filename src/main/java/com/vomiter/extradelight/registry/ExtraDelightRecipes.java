@@ -1,10 +1,6 @@
 package com.vomiter.extradelight.registry;
 
-import java.util.function.Supplier;
-
 import com.vomiter.extradelight.ExtraDelight;
-import com.vomiter.extradelight.common.complex.dynamic_feast.DynamicContainerOvenRecipe;
-import com.vomiter.extradelight.common.recipes.*;
 import com.vomiter.extradelight.common.complex.workstations.chiller.ChillerRecipe;
 import com.vomiter.extradelight.common.complex.workstations.doughshaping.recipes.DoughShapingRecipe;
 import com.vomiter.extradelight.common.complex.workstations.dryingrack.DryingRackRecipe;
@@ -16,12 +12,15 @@ import com.vomiter.extradelight.common.complex.workstations.mixingbowl.recipes.M
 import com.vomiter.extradelight.common.complex.workstations.mortar.recipes.MortarRecipe;
 import com.vomiter.extradelight.common.complex.workstations.oven.recipes.OvenRecipe;
 import com.vomiter.extradelight.common.complex.workstations.vat.recipes.VatRecipe;
+import com.vomiter.extradelight.common.recipes.*;
 import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.item.crafting.SimpleCraftingRecipeSerializer;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+
+import java.util.function.Supplier;
 
 public class ExtraDelightRecipes {
 	public static final DeferredRegister<RecipeType<?>> RECIPE_TYPES = DeferredRegister
@@ -35,13 +34,6 @@ public class ExtraDelightRecipes {
     }
     public static final DeferredRegister<RecipeSerializer<?>> RECIPE_SERIALIZERS = DeferredRegister
             .create(ForgeRegistries.RECIPE_SERIALIZERS, ExtraDelight.MOD_ID);
-
-
-    public static final Supplier<RecipeType<DynamicContainerOvenRecipe>> OVEN_DYNAMIC_CONTAINER = RECIPE_TYPES.register("oven_dynamic_container",
-            () -> registerRecipeType("oven_dynamic_container"));
-    public static final Supplier<RecipeSerializer<?>> OVEN_DYNAMIC_CONTAINER_SERIALIZER = RECIPE_SERIALIZERS.register("oven_dynamic_container",
-            OvenRecipe.Serializer::new);
-
 
     public static final Supplier<RecipeType<OvenRecipe>> OVEN = RECIPE_TYPES.register("oven",
 			() -> registerRecipeType("oven"));

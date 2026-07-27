@@ -4,7 +4,8 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
-import com.vomiter.extradelight.DataComponents;
+import com.vomiter.extradelight.common.complex.dynamic_feast.IDynamicContainer;
+import com.vomiter.extradelight.common.complex.workstations.oven.OvenBlockEntity;
 import com.vomiter.extradelight.registry.ExtraDelightItems;
 import com.vomiter.extradelight.registry.ExtraDelightRecipes;
 import com.vomiter.extradelight.util.JsonStackTransformer;
@@ -116,8 +117,9 @@ public class OvenRecipe implements Recipe<RecipeWrapper> {
     @Override
     public @NotNull ItemStack assemble(@NotNull RecipeWrapper recipeWrapper, @NotNull RegistryAccess registryAccess) {
         var result = this.output.copy();
-        if(recipeWrapper.getItem(CONTAINER_SLOT).isDamageableItem()){
-            DataComponents.setStack(result, DataComponents.CONTAINER, recipeWrapper.getItem(CONTAINER_SLOT).copy());
+        var container = recipeWrapper.getItem(OvenBlockEntity.CONTAINER_SLOT).copyWithCount(1);
+        if (result.getItem() instanceof IDynamicContainer dynamicContainer){
+            dynamicContainer.setContainer(result, container);
         }
         return result;
     }

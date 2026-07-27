@@ -1,4 +1,4 @@
-package com.vomiter.extradelight.common.items.dynamic;
+package com.vomiter.extradelight.common.complex.dynamic_feast;
 
 import com.vomiter.extradelight.DataComponents;
 import net.minecraft.sounds.SoundEvent;
@@ -9,7 +9,7 @@ import net.minecraft.world.item.SolidBucketItem;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.block.Block;
 
-public class DynamicContainerFeastItem extends SolidBucketItem {
+public class DynamicContainerFeastItem extends SolidBucketItem implements IDynamicContainer {
 
     public DynamicContainerFeastItem(
             Block p_151187_,

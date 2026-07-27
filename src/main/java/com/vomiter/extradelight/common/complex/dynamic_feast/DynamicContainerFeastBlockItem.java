@@ -11,7 +11,7 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.Nullable;
 
-public class DynamicContainerFeastBlockItem extends BlockItem {
+public class DynamicContainerFeastBlockItem extends BlockItem implements IDynamicContainer {
     public DynamicContainerFeastBlockItem(Block block, Properties properties) {
         super(block, properties);
     }
