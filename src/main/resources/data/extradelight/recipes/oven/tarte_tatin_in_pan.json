@@ -1,5 +1,5 @@
 {
-  "type": "extradelight:oven",
+  "type": "extradelight:oven_dynamic_container",
   "consumeContainer": true,
   "container": {
     "count": 1,

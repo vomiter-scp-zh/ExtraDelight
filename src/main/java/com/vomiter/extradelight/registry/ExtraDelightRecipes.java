@@ -3,6 +3,7 @@ package com.vomiter.extradelight.registry;
 import java.util.function.Supplier;
 
 import com.vomiter.extradelight.ExtraDelight;
+import com.vomiter.extradelight.common.complex.dynamic_feast.DynamicContainerOvenRecipe;
 import com.vomiter.extradelight.common.recipes.*;
 import com.vomiter.extradelight.common.complex.workstations.chiller.ChillerRecipe;
 import com.vomiter.extradelight.common.complex.workstations.doughshaping.recipes.DoughShapingRecipe;
@@ -32,9 +33,17 @@ public class ExtraDelightRecipes {
             }
         };
     }
+    public static final DeferredRegister<RecipeSerializer<?>> RECIPE_SERIALIZERS = DeferredRegister
+            .create(ForgeRegistries.RECIPE_SERIALIZERS, ExtraDelight.MOD_ID);
 
 
-	public static final Supplier<RecipeType<OvenRecipe>> OVEN = RECIPE_TYPES.register("oven",
+    public static final Supplier<RecipeType<DynamicContainerOvenRecipe>> OVEN_DYNAMIC_CONTAINER = RECIPE_TYPES.register("oven_dynamic_container",
+            () -> registerRecipeType("oven_dynamic_container"));
+    public static final Supplier<RecipeSerializer<?>> OVEN_DYNAMIC_CONTAINER_SERIALIZER = RECIPE_SERIALIZERS.register("oven_dynamic_container",
+            OvenRecipe.Serializer::new);
+
+
+    public static final Supplier<RecipeType<OvenRecipe>> OVEN = RECIPE_TYPES.register("oven",
 			() -> registerRecipeType("oven"));
     public static final Supplier<RecipeType<MixingBowlRecipe>> MIXING_BOWL = RECIPE_TYPES.register("mixing_bowl",
             () -> registerRecipeType("mixing_bowl"));
@@ -84,8 +93,6 @@ public class ExtraDelightRecipes {
      */
 
 	// Serializers
-	public static final DeferredRegister<RecipeSerializer<?>> RECIPE_SERIALIZERS = DeferredRegister
-			.create(ForgeRegistries.RECIPE_SERIALIZERS, ExtraDelight.MOD_ID);
 
 	public static final Supplier<RecipeSerializer<?>> OVEN_SERIALIZER = RECIPE_SERIALIZERS.register("oven",
 			OvenRecipe.Serializer::new);

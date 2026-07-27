@@ -12,6 +12,8 @@ import com.vomiter.extradelight.common.complex.displays.spice.SpiceRackEntity;
 import com.vomiter.extradelight.common.complex.displays.spice.SpiceRackFullBlock;
 import com.vomiter.extradelight.common.complex.displays.wreath.WreathEntity;
 import com.vomiter.extradelight.common.complex.cabinet.sink.SinkCabinetBlockEntity;
+import com.vomiter.extradelight.common.complex.dynamic_feast.DynamicContainerFeastBlock;
+import com.vomiter.extradelight.common.complex.dynamic_feast.DynamicContainerFeastBlockEntity;
 import com.vomiter.extradelight.common.complex.jar.JarBlockEntity;
 import com.vomiter.extradelight.common.complex.portable.chocolatebox.ChocolateBoxBlockEntity;
 import com.vomiter.extradelight.common.complex.fluid_handler.funnel.FunnelBlockEntity;
@@ -38,6 +40,14 @@ import vectorwing.farmersdelight.common.registry.ModBlockEntityTypes;
 public class ExtraDelightBlockEntities {
     public static final DeferredRegister<BlockEntityType<?>> TILES = DeferredRegister
             .create(ForgeRegistries.BLOCK_ENTITY_TYPES, ExtraDelight.MOD_ID);
+
+    public static final RegistryObject<BlockEntityType<DynamicContainerFeastBlockEntity>> DYNAMIC_CONTAINER_FEAST
+            = TILES.register("dynamic_container_feast", () -> BlockEntityType.Builder.of(
+                    DynamicContainerFeastBlockEntity::new,
+                    ForgeRegistries.BLOCKS.getValues().stream()
+                    .filter(block -> block instanceof DynamicContainerFeastBlock)
+                    .toArray(Block[]::new)
+    ).build(null));
 
     public static final RegistryObject<BlockEntityType<OvenBlockEntity>> OVEN = TILES.register(
             "oven", () -> BlockEntityType.Builder.of(OvenBlockEntity::new, ExtraDelightBlocks.OVEN.get()).build(null));

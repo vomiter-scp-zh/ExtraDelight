@@ -148,11 +148,11 @@ public class BlockLootTables extends BlockLootSubProvider {
 				createSlabItemTable(ExtraDelightBlocks.BUTTER_SLAB_BLOCK.get()));
 		this.dropSelf(ExtraDelightBlocks.BUTTER_STAIRS_BLOCK.get());
 
-		feast(ExtraDelightBlocks.HASH_FEAST.get(), ExtraDelightItems.HASH_FEAST_ITEM.get(), Items.BOWL);
-		feast(ExtraDelightBlocks.POT_ROAST_FEAST.get(), ExtraDelightItems.POT_ROAST_FEAST_ITEM.get(), Items.BOWL);
+		feast(ExtraDelightBlocks.HASH_FEAST.get(), ExtraDelightItems.HASH_FEAST_ITEM.get(), ModItems.SKILLET.get());
+		feast(ExtraDelightBlocks.POT_ROAST_FEAST.get(), ExtraDelightItems.POT_ROAST_FEAST_ITEM.get(), ExtraDelightItems.TRAY.get());
 		feast(ExtraDelightBlocks.MEATLOAF_FEAST.get(), ExtraDelightItems.MEAT_LOAF_FEAST.get(), Items.BOWL);
 
-		feast(ExtraDelightBlocks.BBQ_RIBS_FEAST.get(), ExtraDelightItems.BBQ_RIBS_FEAST_ITEM.get(), Items.BOWL);
+		feast(ExtraDelightBlocks.BBQ_RIBS_FEAST.get(), ExtraDelightItems.BBQ_RIBS_FEAST_ITEM.get(), ExtraDelightItems.TRAY.get());
 		feast(ExtraDelightBlocks.PULLED_PORK_FEAST.get(), ExtraDelightItems.PULLED_PORK_FEAST_ITEM.get(), Items.BOWL);
 
 		feast(ExtraDelightBlocks.RACK_LAMB.get(), ExtraDelightItems.RACK_LAMB_FEAST_ITEM.get(), ExtraDelightItems.TRAY.get());
@@ -306,7 +306,7 @@ public class BlockLootTables extends BlockLootSubProvider {
 				ExtraDelightItems.SQUARE_PAN.get());
 		feast(ExtraDelightBlocks.MONKEY_BREAD.get(), ExtraDelightItems.MONKEY_BREAD_FEAST.get(), Items.AIR);
 		this.dropOther(ExtraDelightBlocks.COFFEE_CAKE.get(), Items.AIR);
-		feast(ExtraDelightBlocks.MINT_LAMB.get(), ExtraDelightItems.MINT_LAMB_FEAST.get(), Items.BOWL);
+		feast(ExtraDelightBlocks.MINT_LAMB.get(), ExtraDelightItems.MINT_LAMB_FEAST.get(), ExtraDelightItems.TRAY.get());
 		feast(ExtraDelightBlocks.CHARCUTERIE_BOARD.get(), ExtraDelightItems.CHARCUTERIE_BOARD_FEAST.get(), Items.BOWL);
 		this.dropOther(ExtraDelightBlocks.MILK_TART.get(), Items.AIR);
 		feast(ExtraDelightBlocks.PUNCH.get(), ExtraDelightItems.PUNCH_FEAST.get(), Items.BOWL);
@@ -456,7 +456,7 @@ public class BlockLootTables extends BlockLootSubProvider {
 		this.dropOther(ExtraDelightBlocks.CHOCOLATE_CAKE.get(), Items.AIR);
 		feast(ExtraDelightBlocks.FUDGE.get(), ExtraDelightItems.FUDGE_BLOCK.get(), ExtraDelightItems.TRAY.get());
 		feast(ExtraDelightBlocks.STICKY_TOFFEE_PUDDING.get(), ExtraDelightItems.STICKY_TOFFEE_PUDDING_BLOCK.get(),
-				Items.BOWL);
+				ExtraDelightItems.SQUARE_PAN.get());
 		feast(ExtraDelightBlocks.CRISP_RICE_TREATS.get(), ExtraDelightItems.CRISP_RICE_TREATS_BLOCK.get(),
 				ExtraDelightItems.TRAY.get());
 		feast(ExtraDelightBlocks.SCOTCHAROOS.get(), ExtraDelightItems.SCOTCHAROO_BLOCK.get(),
@@ -580,7 +580,7 @@ public class BlockLootTables extends BlockLootSubProvider {
 
 		this.add(Fermentation.JAR_DISPLAY_BLOCK.get(), noDrop());
 
-		feast(Fermentation.CHEESYMITE_SCROLL_BLOCK.get(), Fermentation.CHEESYMITE_SCROLL_BLOCK_ITEM.get(), Items.BOWL);
+		feast(Fermentation.CHEESYMITE_SCROLL_BLOCK.get(), Fermentation.CHEESYMITE_SCROLL_BLOCK_ITEM.get(), ExtraDelightItems.SQUARE_PAN.get());
 
         this.dropSelf(ExtraDelightBlocks.SALT_BLOCK.get());
 

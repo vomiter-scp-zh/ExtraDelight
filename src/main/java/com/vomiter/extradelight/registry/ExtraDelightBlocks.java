@@ -6,6 +6,7 @@ import com.vomiter.extradelight.common.blocks.leaf.FruitLeafBlock;
 import com.vomiter.extradelight.common.complex.displays.candybowl.CandyBowlBlock;
 import com.vomiter.extradelight.common.complex.displays.fruitbowl.FruitBowlBlock;
 import com.vomiter.extradelight.common.blocks.*;
+import com.vomiter.extradelight.common.complex.dynamic_feast.DynamicContainerFeastBlock;
 import com.vomiter.extradelight.common.complex.jar.JarBlock;
 import com.vomiter.extradelight.common.complex.portable.chocolatebox.ChocolateBoxBlock;
 import com.vomiter.extradelight.common.blocks.crops.*;
@@ -192,7 +193,7 @@ public class ExtraDelightBlocks {
                     true, bowl));
 
     public static final RegistryObject<RecipeFeastBlock> HASH_FEAST = BLOCKS.register("hash_block",
-            () -> new RecipeFeastBlock(Block.Properties.copy(Blocks.WHITE_WOOL).mapColor(MapColor.COLOR_BROWN),
+            () -> new DynamicContainerFeastBlock(Block.Properties.copy(Blocks.WHITE_WOOL).mapColor(MapColor.COLOR_BROWN),
                     true, pan));
     public static final RegistryObject<RecipeFeastBlock> POT_ROAST_FEAST = BLOCKS.register("potroast_block",
             () -> new RecipeFeastBlock(Block.Properties.copy(Blocks.WHITE_WOOL).mapColor(MapColor.COLOR_BROWN),
@@ -316,7 +317,7 @@ public class ExtraDelightBlocks {
             () -> new RecipeFeastBlock(Block.Properties.copy(Blocks.WHITE_WOOL).mapColor(MapColor.COLOR_GREEN),
                     true, Block.box(2.5D, 0.0D, 2.5D, 13.5D, 4.0D, 13.5D)));
     public static final RegistryObject<RecipeFeastBlock> CORNBREAD = BLOCKS.register("cornbread",
-            () -> new RecipeFeastBlock(Block.Properties.copy(Blocks.WHITE_WOOL).mapColor(MapColor.COLOR_YELLOW),
+            () -> new DynamicContainerFeastBlock(Block.Properties.copy(Blocks.WHITE_WOOL).mapColor(MapColor.COLOR_YELLOW),
                     true, pan));
 
     public static final RegistryObject<Block> CARAMEL_CHEESECAKE = ExtraDelightBlocks.BLOCKS.register(

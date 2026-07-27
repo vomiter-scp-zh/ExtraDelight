@@ -24,6 +24,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.loading.FMLEnvironment;
 import org.slf4j.Logger;
+import vectorwing.farmersdelight.common.block.entity.CookingPotBlockEntity;
 
 @Mod(ExtraDelight.MOD_ID)
 public class ExtraDelight

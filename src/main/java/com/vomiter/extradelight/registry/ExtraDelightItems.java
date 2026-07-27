@@ -11,6 +11,7 @@ import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
 
 import com.vomiter.extradelight.ExtraDelight;
+import com.vomiter.extradelight.common.complex.dynamic_feast.DynamicContainerFeastBlockItem;
 import com.vomiter.extradelight.common.complex.jar.JarItem;
 import com.vomiter.extradelight.common.items.GourmetHotCocoa;
 import com.vomiter.extradelight.common.items.XocolatlItem;
@@ -1168,7 +1169,7 @@ public class ExtraDelightItems {
 			.register("cornbread", () -> new ToolTipConsumableItem(bowlFoodItem(EDFoods.CORNBREAD), true)).advancementMeal()
 			.servingToolTip().finish();
 	public static final RegistryObject<Item> CORNBREAD_FEAST = EDItemGenerator
-			.register("cornbread_feast", () -> new BlockItem(ExtraDelightBlocks.CORNBREAD.get(), stack1Item()))
+			.register("cornbread_feast", () -> new DynamicContainerFeastBlockItem(ExtraDelightBlocks.CORNBREAD.get(), stack1Item().craftRemainder(ModItems.SKILLET.get())))
 			.advancementFeast().finish();
 
 	public static final RegistryObject<Item> CORN_PUDDING = EDItemGenerator
@@ -3103,7 +3104,7 @@ public class ExtraDelightItems {
 
     public static final RegistryObject<Item> HASH_FEAST_ITEM = EDItemGenerator
             .register("hash_block_item",
-                    () -> new BlockItem(ExtraDelightBlocks.HASH_FEAST.get(), stack1Item()))
+                    () -> new DynamicContainerFeastBlockItem(ExtraDelightBlocks.HASH_FEAST.get(), stack1Item().craftRemainder(ModItems.SKILLET.get())))
             .advancementFeast().finish();
 
     public static final RegistryObject<Item> MEAT_PIE_BLOCK_ITEM = EDItemGenerator
