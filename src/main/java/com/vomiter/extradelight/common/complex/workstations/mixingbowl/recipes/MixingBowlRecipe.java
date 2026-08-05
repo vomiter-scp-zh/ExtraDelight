@@ -74,22 +74,21 @@ public class MixingBowlRecipe implements Recipe<MixingBowlRecipeWrapper> {
 	@Override
 	public boolean matches(MixingBowlRecipeWrapper input, Level level) {
 		List<ItemStack> inputs = new ArrayList<>();
-		int i = 0;
 
 		for (int j = 0; j < 9; ++j) {
 			ItemStack itemstack = input.getItem(j);
 			if (!itemstack.isEmpty()) {
-				++i;
-//				if (isSimple)
-//					stackedcontents.accountStack(itemstack, 1);
-//				else
 				inputs.add(itemstack);
 			}
 		}
-		
-		boolean itemMatchFlag = (this.ingredients == null || this.ingredients.isEmpty() || ItemStack.isSameItem(this.ingredients.get(0).getItems()[0],ItemStack.EMPTY)) ? // some failsafes
-				i == 0 
-				: i == this.ingredients.size() && RecipeMatcher.findMatches(inputs, this.ingredients) != null;
+		boolean isEmptyItemRecipe =
+                this.ingredients == null ||
+                this.ingredients.isEmpty();
+
+		boolean itemMatchFlag = (isEmptyItemRecipe)?
+                inputs.isEmpty()
+				: inputs.size() == this.ingredients.size()
+                && RecipeMatcher.findMatches(inputs, this.ingredients) != null;
 		return itemMatchFlag
 				&& matchFluids(input.getTank().getAsList()) && ItemStack.isSameItem(container, input.getItem(9))
 				&& input.getItem(9).getCount() >= container.getCount();
@@ -101,25 +100,17 @@ public class MixingBowlRecipe implements Recipe<MixingBowlRecipeWrapper> {
     }
 
     boolean matchFluids(List<FluidStack> f) {
-//		if (this.fluids.size() < f.size())
-//			return false;
-
 		int count = 0;
-		for (int i = 0; i < fluids.size(); i++) {
-			for (int j = 0; j < f.size(); j++) {
-				SizedFluidIngredient f1 = fluids.get(i);
-				FluidStack f2 = f.get(j);
+        for (SizedFluidIngredient fluid : fluids) {
+            for (FluidStack fluidStack : f) {
+                if (fluid.test(fluidStack)) {
+                    count++;
+                }
+            }
+        }
 
-				if (f1.test(f2)) {
-					count++;
-				}
-			}
-		}
-
-		if (count == fluids.size())
-			return true;
-		return false;
-	}
+        return count == fluids.size();
+    }
 
 
 	/**
